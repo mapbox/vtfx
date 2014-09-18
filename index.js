@@ -1,34 +1,30 @@
 var mapnik = require('mapnik');
+var protobuf = require('protocol-buffers');
 var path = require('path');
+var fs = require('fs');
+
+// Gross!
+var proto = fs.readFileSync(path.dirname(require.resolve('mapnik-vector-tile')) + '/proto/vector_tile.proto', 'utf8');
+proto = proto.replace('package mapnik.vector;', '');
+proto = proto.replace('option optimize_for = LITE_RUNTIME;', '');
+proto = proto.replace('extensions 8 to max;', '');
+proto = proto.replace('extensions 16 to max;', '');
+proto = proto.replace('extensions 16 to 8191;', '');
+var mvt = protobuf(proto);
+
 mapnik.register_datasource(path.join(mapnik.settings.paths.input_plugins,'ogr.input'));
 
 module.exports = vtfx;
 
-// @TODO problems with using toGeoJSON:
-// - expensive to stringify/parse for copying layers
-// - is there a hardcoded buffer size in toGeoJSON ?
-// - round-tripping coordiantes to wgs84 and back could be expensive/lossy
 function vtfx(data, options, callback) {
-    // The z,x,y coordinates here are a lie.
-    var from = new mapnik.VectorTile(0,0,0);
-    from.setData(data);
-    from.parse();
+    var vt = mvt.tile.decode(data);
 
-    var layers = from.names();
-    var to = new mapnik.VectorTile(0,0,0);
-    for (var i = 0; i < layers.length; i++) {
-        var layer = layers[i];
-        // If layer has a config, drop features from it.
-        if (options[layer]) {
-            var geojson = from.toGeoJSON(layer);
-            geojson.features = geojson.features.slice(0,options[layer].limit || 50);
-            to.addGeoJSON(JSON.stringify(geojson), layer, {tolerance:0});
-        // Skip layers without config: just copy contents.
-        } else {
-            to.addGeoJSON(JSON.stringify(from.toGeoJSON(layer)), layer, {tolerance:0});
-        }
+    for (var i = 0; i < vt.layers.length; i++) {
+        if (!options[vt.layers[i].name]) continue;
+        var limit = options[vt.layers[i].name].limit || 50;
+        vt.layers[i].features.slice(0,limit);
     }
 
-    callback(null, to.getData());
+    callback(null, mvt.tile.encode(vt));
 }
 

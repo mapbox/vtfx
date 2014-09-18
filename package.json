@@ -4,7 +4,9 @@
   "main": "./index.js",
   "description": "Sample vtfx",
   "dependencies": {
-    "mapnik": "1.4.15"
+    "mapnik": "1.4.15",
+    "mapnik-vector-tile": "0.5.x",
+    "protocol-buffers": "2.3.x"
   },
   "devDependencies": {
     "tape": "2.13.x"
