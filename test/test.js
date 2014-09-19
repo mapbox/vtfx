@@ -30,6 +30,13 @@ tape('drop', function(t) {
 
 tape('by field', function(t) {
     vtfx(beforepbf, {'poi_label':[{id:'field', field:'type', value: 'Park'}]}, function(err, afterpbf) {
+        pbfEqual(afterpbf, __dirname + '/after-field.pbf', t);
+
+        var vt = new mapnik.VectorTile(14,2621,6331);
+        vt.setData(afterpbf);
+        vt.parse();
+        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-field-poi_label.json', t);
+
         t.end();
     });
 });

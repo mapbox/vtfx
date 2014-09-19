@@ -1,0 +1,583 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.38964259624481,
+          37.791252391504884
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Rincon Park",
+        "name_de": "Rincon Park",
+        "name_en": "Rincon Park",
+        "name_es": "Rincon Park",
+        "name_fr": "Rincon Park",
+        "osm_id": 1000032862802,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40750074386597,
+          37.7879414836017
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "park",
+        "name": "Union Square",
+        "name_de": "Union Square",
+        "name_en": "Union Square",
+        "name_es": "Union Square",
+        "name_fr": "Union Square",
+        "osm_id": 1000025278818,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40148186683655,
+          37.80279489597278
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Levi's Plaza",
+        "name_de": "Levi's Plaza",
+        "name_en": "Levi's Plaza",
+        "name_es": "Levi's Plaza",
+        "name_fr": "Levi's Plaza",
+        "osm_id": 1000025751184,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40604162216187,
+          37.80279913453407
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Pioneer Park",
+        "name_de": "Pioneer Park",
+        "name_en": "Pioneer Park",
+        "name_es": "Pioneer Park",
+        "name_fr": "Pioneer Park",
+        "osm_id": 1000224941774,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41198539733887,
+          37.78446084301026
+        ]
+      },
+      "properties": {
+        "address": "240 Eddy Street San Francisco CA US 94102",
+        "localrank": 1,
+        "maki": "park",
+        "name": "Boeddeker Park",
+        "name_de": "Boeddeker Park",
+        "name_en": "Boeddeker Park",
+        "name_es": "Boeddeker Park",
+        "name_fr": "Boeddeker Park",
+        "osm_id": 1000033619301,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41215705871582,
+          37.792168058155134
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "park",
+        "name": "Huntington Park",
+        "name_de": "Huntington Park",
+        "name_en": "Huntington Park",
+        "name_es": "Huntington Park",
+        "name_fr": "Huntington Park",
+        "osm_id": 1000032946958,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3966109752655,
+          37.79597897476603
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Sue Bierman Park",
+        "name_de": "Sue Bierman Park",
+        "name_en": "Sue Bierman Park",
+        "name_es": "Sue Bierman Park",
+        "name_fr": "Sue Bierman Park",
+        "osm_id": 1000175516006,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4053281545639,
+          37.79483444871761
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Portsmouth Square",
+        "name_de": "Portsmouth Square",
+        "name_en": "Portsmouth Square",
+        "name_es": "Portsmouth Square",
+        "name_fr": "Portsmouth Square",
+        "osm_id": 1000024563014,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41339087486267,
+          37.79822558544467
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Ina Coolbrith Park",
+        "name_de": "Ina Coolbrith Park",
+        "name_en": "Ina Coolbrith Park",
+        "name_es": "Ina Coolbrith Park",
+        "name_fr": "Ina Coolbrith Park",
+        "osm_id": 1000114151121,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.394899725914,
+          37.79485564380559
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Justin Herman Plaza",
+        "name_de": "Justin Herman Plaza",
+        "name_en": "Justin Herman Plaza",
+        "name_es": "Justin Herman Plaza",
+        "name_fr": "Justin Herman Plaza",
+        "osm_id": 1000027146063,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40514576435089,
+          37.791930664187284
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Saint Mary's Square",
+        "name_de": "Saint Mary's Square",
+        "name_en": "Saint Mary's Square",
+        "name_es": "Saint Mary's Square",
+        "name_fr": "Saint Mary's Square",
+        "osm_id": 1000028841124,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40237236022949,
+          37.784634666952996
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Yerba Buena Gardens",
+        "name_de": "Yerba Buena Gardens",
+        "name_en": "Yerba Buena Gardens",
+        "name_es": "Yerba Buena Gardens",
+        "name_fr": "Yerba Buena Gardens",
+        "osm_id": 1000028842443,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.38767921924591,
+          37.7846897817763
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Brannan Street Wharf",
+        "name_de": "Brannan Street Wharf",
+        "name_en": "Brannan Street Wharf",
+        "name_es": "Brannan Street Wharf",
+        "name_fr": "Brannan Street Wharf",
+        "osm_id": 1000207811319,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41009712219238,
+          37.800874802698196
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Washington Square Park",
+        "name_de": "Washington Square Park",
+        "name_en": "Washington Square Park",
+        "name_es": "Washington Square Park",
+        "name_fr": "Washington Square Park",
+        "osm_id": 1000018583270,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41203367710114,
+          37.802379515786946
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "North Beach Playground",
+        "name_de": "North Beach Playground",
+        "name_en": "North Beach Playground",
+        "name_es": "North Beach Playground",
+        "name_fr": "North Beach Playground",
+        "osm_id": 1000035065721,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3990249633789,
+          37.79751345964458
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Sydney G. Walton Square",
+        "name_de": "Sydney G. Walton Square",
+        "name_en": "Sydney G. Walton Square",
+        "name_es": "Sydney G. Walton Square",
+        "name_fr": "Sydney G. Walton Square",
+        "osm_id": 1000023916482,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41178691387177,
+          37.794211310414276
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "park",
+        "name": "Chinese Recreation Center",
+        "name_de": "Chinese Recreation Center",
+        "name_en": "Chinese Recreation Center",
+        "name_es": "Chinese Recreation Center",
+        "name_fr": "Chinese Recreation Center",
+        "osm_id": 1000162056248,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40216314792633,
+          37.79516085239798
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Transamerica Redwood Park",
+        "name_de": "Transamerica Redwood Park",
+        "name_en": "Transamerica Redwood Park",
+        "name_es": "Transamerica Redwood Park",
+        "name_fr": "Transamerica Redwood Park",
+        "osm_id": 1000261988292,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40708231925964,
+          37.79360088412314
+        ]
+      },
+      "properties": {
+        "address": "830 Sacramento Street San Francisco CA US 94108",
+        "localrank": 1,
+        "maki": "park",
+        "name": "Willie \"Woo Woo\" Wong Park",
+        "name_de": "Willie \"Woo Woo\" Wong Park",
+        "name_en": "Willie \"Woo Woo\" Wong Park",
+        "name_es": "Willie \"Woo Woo\" Wong Park",
+        "name_fr": "Willie \"Woo Woo\" Wong Park",
+        "osm_id": 1000035049434,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41071939468384,
+          37.80048060518806
+        ]
+      },
+      "properties": {
+        "localrank": 6,
+        "maki": "park",
+        "name": "Marini Plaza",
+        "name_de": "Marini Plaza",
+        "name_en": "Marini Plaza",
+        "name_es": "Marini Plaza",
+        "name_fr": "Marini Plaza",
+        "osm_id": 1000032857635,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41035997867584,
+          37.795873000876796
+        ]
+      },
+      "properties": {
+        "localrank": 12,
+        "maki": "park",
+        "name": "Woh Hei Yuen Recreation Center",
+        "name_de": "Woh Hei Yuen Recreation Center",
+        "name_en": "Woh Hei Yuen Recreation Center",
+        "name_es": "Woh Hei Yuen Recreation Center",
+        "name_fr": "Woh Hei Yuen Recreation Center",
+        "osm_id": 1000162056252,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40302681922913,
+          37.79687338833521
+        ]
+      },
+      "properties": {
+        "localrank": 15,
+        "maki": "park",
+        "name": "Jackson Square Historic District",
+        "name_de": "Jackson Square Historic District",
+        "name_en": "Jackson Square Historic District",
+        "name_es": "Jackson Square Historic District",
+        "name_fr": "Jackson Square Historic District",
+        "osm_id": -358803650,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40107953548431,
+          37.80020508955023
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Northeast Waterfront Historic District",
+        "name_de": "Northeast Waterfront Historic District",
+        "name_en": "Northeast Waterfront Historic District",
+        "name_es": "Northeast Waterfront Historic District",
+        "name_fr": "Northeast Waterfront Historic District",
+        "osm_id": -358803741,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41497337818146,
+          37.79909453917511
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "park",
+        "name": "Russian Hill-Macondray Lane Historic District",
+        "name_de": "Russian Hill-Macondray Lane Historic District",
+        "name_en": "Russian Hill-Macondray Lane Historic District",
+        "name_es": "Russian Hill-Macondray Lane Historic District",
+        "name_fr": "Russian Hill-Macondray Lane Historic District",
+        "osm_id": -358805395,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41491436958313,
+          37.79768725288382
+        ]
+      },
+      "properties": {
+        "localrank": 4,
+        "maki": "park",
+        "name": "Russian Hill-Vallejo Street Crest Historic District",
+        "name_de": "Russian Hill-Vallejo Street Crest Historic District",
+        "name_en": "Russian Hill-Vallejo Street Crest Historic District",
+        "name_es": "Russian Hill-Vallejo Street Crest Historic District",
+        "name_fr": "Russian Hill-Vallejo Street Crest Historic District",
+        "osm_id": -358805401,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Park"
+      }
+    }
+  ],
+  "name": "poi_label"
+}
