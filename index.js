@@ -13,16 +13,29 @@ proto = proto.replace('extensions 16 to 8191;', '');
 var mvt = protobuf(proto);
 
 module.exports = vtfx;
+module.processors = {};
+module.processors.drop = require('./fx/drop');
 
+// This function is async in prep for needing to use workers.
+// All fx processors should be js and sync for now.
 function vtfx(data, options, callback) {
+    if (!Buffer.isBuffer(data)) return callback(new Error('data must be a buffer'));
+    if (typeof options !== 'object') return callback(new Error('options must be an object'));
+
+    var changed = false;
     var vt = mvt.tile.decode(data);
 
     for (var i = 0; i < vt.layers.length; i++) {
-        if (!options[vt.layers[i].name]) continue;
-        var limit = options[vt.layers[i].name].limit || 50;
-        vt.layers[i].features = vt.layers[i].features.slice(0,limit);
+        var name = vt.layers[i].name;
+        if (!Array.isArray(options[name])) continue;
+        for (var j = 0; j < options[name].length; j++) {
+            var fxopts = options[name][j];
+            if (!module.processors[fxopts.id]) continue;
+            vt.layers[i] = module.processors[fxopts.id](vt.layers[i], fxopts);
+            changed = true;
+        }
     }
 
-    callback(null, mvt.tile.encode(vt));
+    callback(null, changed ? mvt.tile.encode(vt) : data);
 }
 
