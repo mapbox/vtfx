@@ -28,6 +28,12 @@ tape('drop', function(t) {
     });
 });
 
+tape('by field', function(t) {
+    vtfx(beforepbf, {'poi_label':[{id:'field', field:'type', value: 'Park'}]}, function(err, afterpbf) {
+        t.end();
+    });
+});
+
 function pbfEqual(buffer, filepath, assert) {
     if (UPDATE) fs.writeFileSync(filepath, buffer);
     assert.deepEqual(buffer, fs.readFileSync(filepath));

@@ -15,6 +15,7 @@ var mvt = protobuf(proto);
 module.exports = vtfx;
 module.processors = {};
 module.processors.drop = require('./fx/drop');
+module.processors.field = require('./fx/field');
 
 // This function is async in prep for needing to use workers.
 // All fx processors should be js and sync for now.
