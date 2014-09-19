@@ -1,34 +1,41 @@
-var mapnik = require('mapnik');
+var protobuf = require('protocol-buffers');
 var path = require('path');
-mapnik.register_datasource(path.join(mapnik.settings.paths.input_plugins,'ogr.input'));
+var fs = require('fs');
+
+// Gross!
+var proto = fs.readFileSync(path.dirname(require.resolve('mapnik-vector-tile')) + '/proto/vector_tile.proto', 'utf8');
+proto = proto.replace('package mapnik.vector;', '');
+proto = proto.replace('optional uint64 id = 1;', 'optional int64 id = 1;');
+proto = proto.replace('option optimize_for = LITE_RUNTIME;', '');
+proto = proto.replace('extensions 8 to max;', '');
+proto = proto.replace('extensions 16 to max;', '');
+proto = proto.replace('extensions 16 to 8191;', '');
+var mvt = protobuf(proto);
 
 module.exports = vtfx;
+module.processors = {};
+module.processors.drop = require('./fx/drop');
 
-// @TODO problems with using toGeoJSON:
-// - expensive to stringify/parse for copying layers
-// - is there a hardcoded buffer size in toGeoJSON ?
-// - round-tripping coordiantes to wgs84 and back could be expensive/lossy
+// This function is async in prep for needing to use workers.
+// All fx processors should be js and sync for now.
 function vtfx(data, options, callback) {
-    // The z,x,y coordinates here are a lie.
-    var from = new mapnik.VectorTile(0,0,0);
-    from.setData(data);
-    from.parse();
+    if (!Buffer.isBuffer(data)) return callback(new Error('data must be a buffer'));
+    if (typeof options !== 'object') return callback(new Error('options must be an object'));
 
-    var layers = from.names();
-    var to = new mapnik.VectorTile(0,0,0);
-    for (var i = 0; i < layers.length; i++) {
-        var layer = layers[i];
-        // If layer has a config, drop features from it.
-        if (options[layer]) {
-            var geojson = from.toGeoJSON(layer);
-            geojson.features = geojson.features.slice(0,options[layer].limit || 50);
-            to.addGeoJSON(JSON.stringify(geojson), layer, {tolerance:0});
-        // Skip layers without config: just copy contents.
-        } else {
-            to.addGeoJSON(JSON.stringify(from.toGeoJSON(layer)), layer, {tolerance:0});
+    var changed = false;
+    var vt = mvt.tile.decode(data);
+
+    for (var i = 0; i < vt.layers.length; i++) {
+        var name = vt.layers[i].name;
+        if (!Array.isArray(options[name])) continue;
+        for (var j = 0; j < options[name].length; j++) {
+            var fxopts = options[name][j];
+            if (!module.processors[fxopts.id]) continue;
+            vt.layers[i] = module.processors[fxopts.id](vt.layers[i], fxopts);
+            changed = true;
         }
     }
 
-    callback(null, to.getData());
+    callback(null, changed ? mvt.tile.encode(vt) : data);
 }
 
