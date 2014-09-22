@@ -6,6 +6,29 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.40092396736145,
+          37.78583446496891
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "museum",
+        "name": "SFMOMA",
+        "name_de": "SFMOMA",
+        "name_en": "SFMOMA",
+        "name_es": "SFMOMA",
+        "name_fr": "SFMOMA",
+        "osm_id": 1000041692824,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.38964259624481,
           37.791252391504884
         ]
@@ -283,6 +306,29 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.39432573318481,
+          37.79893346559687
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "museum",
+        "name": "San Francisco Belle",
+        "name_de": "San Francisco Belle",
+        "name_en": "San Francisco Belle",
+        "name_es": "San Francisco Belle",
+        "name_fr": "San Francisco Belle",
+        "osm_id": 1000281243626,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.38767921924591,
           37.7846897817763
         ]
@@ -375,6 +421,30 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.41186201572418,
+          37.794809014604034
+        ]
+      },
+      "properties": {
+        "address": "San Francicsco CA",
+        "localrank": 1,
+        "maki": "museum",
+        "name": "Cable Car Barn and Museum",
+        "name_de": "Cable Car Barn and Museum",
+        "name_en": "Cable Car Barn and Museum",
+        "name_es": "Cable Car Barn and Museum",
+        "name_fr": "Cable Car Barn and Museum",
+        "osm_id": 1000030029681,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.41178691387177,
           37.794211310414276
         ]
@@ -445,6 +515,52 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.4036705493927,
+          37.78603796234702
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "museum",
+        "name": "Contemporary Jewish Museum",
+        "name_de": "Contemporary Jewish Museum",
+        "name_en": "Contemporary Jewish Museum",
+        "name_es": "Contemporary Jewish Museum",
+        "name_fr": "Contemporary Jewish Museum",
+        "osm_id": 1000118106934,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.39536106586456,
+          37.79823406309142
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "museum",
+        "name": "Santa Rosa",
+        "name_de": "Santa Rosa",
+        "name_en": "Santa Rosa",
+        "name_es": "Santa Rosa",
+        "name_fr": "Santa Rosa",
+        "osm_id": 1000281243360,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.41071939468384,
           37.80048060518806
         ]
@@ -461,6 +577,216 @@
         "ref": "",
         "scalerank": 4,
         "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3985207080841,
+          37.8009044733934
+        ]
+      },
+      "properties": {
+        "address": "San Francisco",
+        "localrank": 1,
+        "maki": "museum",
+        "name": "Exploratorium",
+        "name_de": "Exploratorium",
+        "name_en": "Exploratorium",
+        "name_es": "Exploratorium",
+        "name_fr": "Exploratorium",
+        "osm_id": -621529017,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40085422992706,
+          37.78699608830537
+        ]
+      },
+      "properties": {
+        "localrank": 34,
+        "maki": "museum",
+        "name": "Cartoon Art Museum",
+        "name_de": "Cartoon Art Museum",
+        "name_en": "Cartoon Art Museum",
+        "name_es": "Cartoon Art Museum",
+        "name_fr": "Cartoon Art Museum",
+        "osm_id": -1206749895,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40886330604553,
+          37.79909877794875
+        ]
+      },
+      "properties": {
+        "localrank": 25,
+        "maki": "museum",
+        "name": "North Beach Museum",
+        "name_de": "North Beach Museum",
+        "name_en": "North Beach Museum",
+        "name_es": "North Beach Museum",
+        "name_fr": "North Beach Museum",
+        "osm_id": -368173974,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40143895149231,
+          37.78666116958167
+        ]
+      },
+      "properties": {
+        "localrank": 7,
+        "maki": "museum",
+        "name": "Cartoon Art Museum",
+        "name_de": "Cartoon Art Museum",
+        "name_en": "Cartoon Art Museum",
+        "name_es": "Cartoon Art Museum",
+        "name_fr": "Cartoon Art Museum",
+        "osm_id": -368173967,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41029024124146,
+          37.79948874408232
+        ]
+      },
+      "properties": {
+        "localrank": 28,
+        "maki": "museum",
+        "name": "Museo Italo Americano",
+        "name_de": "Museo Italo Americano",
+        "name_en": "Museo Italo Americano",
+        "name_es": "Museo Italo Americano",
+        "name_fr": "Museo Italo Americano",
+        "osm_id": -368173940,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40330576896667,
+          37.79381707734472
+        ]
+      },
+      "properties": {
+        "localrank": 9,
+        "maki": "museum",
+        "name": "Pacific Heritage Museum",
+        "name_de": "Pacific Heritage Museum",
+        "name_en": "Pacific Heritage Museum",
+        "name_es": "Pacific Heritage Museum",
+        "name_fr": "Pacific Heritage Museum",
+        "osm_id": -368173977,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.39278614521027,
+          37.79265132209005
+        ]
+      },
+      "properties": {
+        "localrank": 11,
+        "maki": "museum",
+        "name": "Jewish Community Museum",
+        "name_de": "Jewish Community Museum",
+        "name_en": "Jewish Community Museum",
+        "name_es": "Jewish Community Museum",
+        "name_fr": "Jewish Community Museum",
+        "osm_id": -368173969,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.39373028278351,
+          37.793770447487695
+        ]
+      },
+      "properties": {
+        "localrank": 30,
+        "maki": "museum",
+        "name": "San Francisco Railway Musuem",
+        "name_de": "San Francisco Railway Musuem",
+        "name_en": "San Francisco Railway Musuem",
+        "name_es": "San Francisco Railway Musuem",
+        "name_fr": "San Francisco Railway Musuem",
+        "osm_id": -386591692,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum",
+        "website": "www.streetcar.org/museum/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40149259567261,
+          37.78657214029849
+        ]
+      },
+      "properties": {
+        "address": "685 Mission Street San Francisco",
+        "localrank": 12,
+        "maki": "museum",
+        "name": "Museum of the African Diaspora",
+        "name_de": "Museum of the African Diaspora",
+        "name_en": "Museum of the African Diaspora",
+        "name_es": "Museum of the African Diaspora",
+        "name_fr": "Museum of the African Diaspora",
+        "osm_id": -415567060,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
       }
     },
     {
@@ -514,6 +840,53 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.40879893302917,
+          37.79388490253878
+        ]
+      },
+      "properties": {
+        "address": "965 Clay Street San Francisco CA 94108",
+        "localrank": 6,
+        "maki": "museum",
+        "name": "Chinese Historical Society of America",
+        "name_de": "Chinese Historical Society of America",
+        "name_en": "Chinese Historical Society of America",
+        "name_es": "Chinese Historical Society of America",
+        "name_fr": "Chinese Historical Society of America",
+        "osm_id": -806240639,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40948557853699,
+          37.78925569015392
+        ]
+      },
+      "properties": {
+        "localrank": 17,
+        "maki": "museum",
+        "name": "San Francisco Museum of Craft + Design",
+        "name_de": "San Francisco Museum of Craft + Design",
+        "name_en": "San Francisco Museum of Craft + Design",
+        "name_es": "San Francisco Museum of Craft + Design",
+        "name_fr": "San Francisco Museum of Craft + Design",
+        "osm_id": -634155039,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.40107953548431,
           37.80020508955023
         ]
@@ -537,6 +910,52 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.40214169025421,
+          37.78557161335955
+        ]
+      },
+      "properties": {
+        "localrank": 13,
+        "maki": "museum",
+        "name": "Yerba Buena Center for the Arts Gallery",
+        "name_de": "Yerba Buena Center for the Arts Gallery",
+        "name_en": "Yerba Buena Center for the Arts Gallery",
+        "name_es": "Yerba Buena Center for the Arts Gallery",
+        "name_fr": "Yerba Buena Center for the Arts Gallery",
+        "osm_id": 1000024563073,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40127801895142,
+          37.785037428176075
+        ]
+      },
+      "properties": {
+        "localrank": 14,
+        "maki": "museum",
+        "name": "Yerba Buena Center for the Arts Theater",
+        "name_de": "Yerba Buena Center for the Arts Theater",
+        "name_en": "Yerba Buena Center for the Arts Theater",
+        "name_es": "Yerba Buena Center for the Arts Theater",
+        "name_fr": "Yerba Buena Center for the Arts Theater",
+        "osm_id": 1000024563077,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.41497337818146,
           37.79909453917511
         ]
@@ -553,6 +972,30 @@
         "ref": "",
         "scalerank": 4,
         "type": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40151941776276,
+          37.78687314363376
+        ]
+      },
+      "properties": {
+        "address": "678 Mission Street San Francisco",
+        "localrank": 15,
+        "maki": "museum",
+        "name": "California Historical Society Museum & Bookstore",
+        "name_de": "California Historical Society Museum & Bookstore",
+        "name_en": "California Historical Society Museum & Bookstore",
+        "name_es": "California Historical Society Museum & Bookstore",
+        "name_fr": "California Historical Society Museum & Bookstore",
+        "osm_id": -415567011,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Museum"
       }
     },
     {
