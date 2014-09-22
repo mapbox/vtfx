@@ -13,6 +13,6 @@ function fx(layer, options) {
                 }
             }
         }
-    })
+    });
     return layer;
 }
