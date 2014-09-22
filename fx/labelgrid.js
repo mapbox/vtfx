@@ -5,14 +5,11 @@ function fx(layer, options) {
     var order = options.order || null;
     var grid = {}, newfeatures = [];
 
-    // 262144
     if (262144 % size !== 0) {
         console.log(size, "does not divide evenly into 262144");
     }
 
-    console.log('old:\t', layer.features.length);
-
-    // to bucket feature coordinates into nearest-grid-coord buckets,
+    // to bucket features into nearest-grid-coord buckets,
     // find the nearest multiple of `size` param
     function snap(c) {
         if ( (c % size) > size/2 ) {
@@ -38,7 +35,6 @@ function fx(layer, options) {
     }
 
     layer.features = newfeatures;
-    console.log('new:\t', layer.features.length);
     return layer;
 }
 
