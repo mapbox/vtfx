@@ -8,9 +8,9 @@ function fx(layer, options) {
     if (!field && sort) {
         console.log(new Error('order by field is not set'))
     } else {
-        var sort = options.sort || 1; // 0 asc, 1 desc
+        var sort = options.sort || 1; // 1 asc, -1 desc
     }
-    // console.log(layer.features[1].id, layer.features[layer.features.length-1].id);
+
     layer.features = layer.features.sort(function(a, b) {
         for (var f = 0; f<layer.features.length; f++) {
             var feature = layer.features[f];
@@ -23,7 +23,6 @@ function fx(layer, options) {
             }
         }
     })
-    // console.log(layer.features[1].id, layer.features[layer.features.length-1].id);
     return layer;
 
 }
