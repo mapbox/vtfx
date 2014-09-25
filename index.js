@@ -16,6 +16,7 @@ module.exports = vtfx;
 module.processors = {};
 module.processors.drop = require('./fx/drop');
 module.processors.labelgrid = require('./fx/labelgrid');
+module.processors.labelgrid = require('./fx/orderby');
 
 // This function is async in prep for needing to use workers.
 // All fx processors should be js and sync for now.
