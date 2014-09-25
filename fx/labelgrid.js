@@ -13,7 +13,7 @@ function fx(layer, options) {
         console.log(new Error(size+" does not divide evenly into 262144"));
     }
 
-    if (layer.keys.indexOf(order) === -1) {
+    if (order && layer.keys.indexOf(order) === -1) {
         console.log(new Error("field "+order+" does not exist"));
     }
 
