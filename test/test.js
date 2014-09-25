@@ -28,6 +28,19 @@ tape('drop', function(t) {
     });
 });
 
+tape('labelgrid', function(t) {
+    vtfx(beforepbf, {'poi_label':[{id:'labelgrid', size:1024, order: 'scalerank', sort: 0}]}, function(err, afterpbf) {
+        pbfEqual(afterpbf, __dirname + '/after-labelgrid-poi_label.pbf', t);
+
+        var vt = new mapnik.VectorTile(14,2621,6331);
+        vt.setData(afterpbf);
+        vt.parse();
+        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-labelgrid-poi_label.json', t);
+
+        t.end();
+    });
+});
+
 function pbfEqual(buffer, filepath, assert) {
     if (UPDATE) fs.writeFileSync(filepath, buffer);
     assert.deepEqual(buffer, fs.readFileSync(filepath));
