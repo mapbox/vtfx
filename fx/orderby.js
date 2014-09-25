@@ -10,18 +10,18 @@ function fx(layer, options) {
     } else {
         var sort = options.sort || 1; // 1 asc, -1 desc
     }
-
     layer.features = layer.features.sort(function(a, b) {
-        for (var f = 0; f<layer.features.length; f++) {
-            var feature = layer.features[f];
-            for (var i = 0; i<feature.tags.length; i+=2) {
-                if (layer.keys[feature.tags[i]] === field) {
-                    var oa = a.layer.values[feature.tags[i+1]].int_value,
-                        ob = b.layer.values[feature.tags[i+1]].int_value;
-                    return (oa < ob) ? (-1 * sort) : (1 * sort);
-                }
+        for (var i = 0; i<a.tags.length; i+=2) {
+            if (layer.keys[a.tags[i]] === field) {
+                var oa = layer.values[a.tags[i+1]].int_value;
             }
         }
+        for (var i = 0; i<b.tags.length; i+=2) {
+            if (layer.keys[b.tags[i]] === field) {
+                var ob = layer.values[b.tags[i+1]].int_value;
+            }
+        }
+        return (oa < ob) ? (-1*sort) : (1*sort);
     })
     return layer;
 
