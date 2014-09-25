@@ -9,7 +9,7 @@ function fx(layer, options) {
     }
 
     function snap(c) {
-        return ((c%size) > size/2) ? c+(size - c%size) : c - c%size;
+        return ((c%size) > size/2) ? c+(size - c%size) : c-c%size;
     }
 
     var grid = {}, newfeatures = [];
