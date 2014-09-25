@@ -6,7 +6,7 @@ function fx(layer, options) {
     if (!order && sort) {
         console.log(new Error('order by is not set'))
     } else {
-        var sort = options.sort || 'asc';
+        var sort = options.sort || 0; // 0 asc, 1 desc
     }
     // is this how errors work?
     if (262144 % size !== 0) {
@@ -18,39 +18,33 @@ function fx(layer, options) {
     }
 
     function snap(c) {
-        return ((c%size)>size/2) ? c+(size-c%size) : c-(c%size);
+        return ((c%size) > size/2) ? c+(size - c%size) : c - c%size;
     }
 
-    var grid = {}, newfeatures = [];
+    var grid = {}, newfeatures = [], ordervalue = 0;
 
-    for (var i=0; i<layer.features.length; i++) {
+    for (var i = 0; i<layer.features.length; i++) {
         if (layer.features[i].type !== 1 ) {
             console.log(new Error("non-point geometry"));
         }
         var feature = layer.features[i];
-        var coordname = snap(feature.geometry[1])+','+snap(feature.geometry[2]);
-        if (!grid[coordname]) { grid[coordname] = []; }
+        var coord = snap(feature.geometry[1])+','+snap(feature.geometry[2]);
+        if (!grid[coord]) { grid[coord] = {}; grid[coord].value = 0; }
 
-        for (var j = 0; j<feature.tags.length; j+=2) {
-            if (layer.keys[feature.tags[j]] == order) {
-                // except what if `order` is not an int_value ?
-                var orderValue = layer.values[feature.tags[j+1]].int_value;
+        if (order) {
+            for (var j = 0; j<feature.tags.length; j+=2) {
+                if (layer.keys[feature.tags[j]] === order) {
+                    var ordervalue = layer.values[feature.tags[j+1]].int_value;
+                }
             }
         }
-        grid[coordname].push([orderValue, feature])
+        if ([grid[coord].value, ordervalue].sort()[sort] === ordervalue) {
+            grid[coord].value = ordervalue;
+            grid[coord].feat = feature;
+        }
     }
-    // get max `order` from grid
-    // this will need to respect the sort order direction (asc vs desc)
-    for (coord in grid) {
-        // this is gross, should probably make grid[coord] an obj with 2 arrays
-        var o = 0, max = 0;
-        for (var b=0; b<grid[coord].length; b++) {
-            if (max > grid[coord][b][0]) {
-                max = grid[coord][b][0];
-                o = b;
-            }
-        }
-        newfeatures.push(grid[coord][o][1]);
+    for ( coord in grid ) {
+        newfeatures.push(grid[coord].feat);
     }
 
     //console.log('old:\t', layer.features.length);
