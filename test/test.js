@@ -63,7 +63,7 @@ function precision(coords) {
         }
     } else if (Array.isArray(coords[0])) {
         for (var i = 0; i < coords.length; i++) {
-            coords[i] = roundify(coords[i]);
+            coords[i] = precision(coords[i]);
         }
     } else {
         throw new Error('Unhandled coords type ' + (typeof coords[0]));
