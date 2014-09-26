@@ -27,15 +27,19 @@ function vtfx(data, options, callback) {
     var changed = false;
     var vt = mvt.tile.decode(data);
 
-    for (var i = 0; i < vt.layers.length; i++) {
-        var name = vt.layers[i].name;
-        if (!Array.isArray(options[name])) continue;
-        for (var j = 0; j < options[name].length; j++) {
-            var fxopts = options[name][j];
-            if (!module.processors[fxopts.id]) continue;
-            vt.layers[i] = module.processors[fxopts.id](vt.layers[i], fxopts);
-            changed = true;
+    try {
+        for (var i = 0; i < vt.layers.length; i++) {
+            var name = vt.layers[i].name;
+            if (!Array.isArray(options[name])) continue;
+            for (var j = 0; j < options[name].length; j++) {
+                var fxopts = options[name][j];
+                if (!module.processors[fxopts.id]) continue;
+                vt.layers[i] = module.processors[fxopts.id](vt.layers[i], fxopts);
+                changed = true;
+            }
         }
+    } catch(err) {
+        return callback(err);
     }
 
     callback(null, changed ? mvt.tile.encode(vt) : data);
