@@ -28,6 +28,13 @@ tape('drop', function(t) {
     });
 });
 
+tape('drop err', function(t) {
+    vtfx(beforepbf, {'poi_label':[{id:'drop', limit:'asdf'}]}, function(err, afterpbf) {
+        t.equal(err.toString(), 'Error: options.limit must be a number');
+        t.end();
+    });
+});
+
 tape('labelgrid', function(t) {
     vtfx(beforepbf, {'poi_label':[{id:'labelgrid', size:1024, order: 'scalerank', sort: 0}]}, function(err, afterpbf) {
         pbfEqual(afterpbf, __dirname + '/after-labelgrid-poi_label.pbf', t);
