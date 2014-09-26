@@ -4,9 +4,8 @@ function fx(layer, options) {
     var size = options.size || null;
 
     // is this how errors work?
-    if (layer.extent % size !== 0) {
-        console.log(new Error(size+" does not divide evenly into layer extent"));
-    }
+    if (layer.extent%size !== 0) throw new Error(size+" does not divide evenly into layer extent");
+
     function snap(c) {
         return ((c%size) > size/2) ? c+(size - c%size) : c-c%size;
     }
