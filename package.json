@@ -1,8 +1,8 @@
 {
-  "name": "vtfx-drop",
+  "name": "vtfx",
   "version": "0.0.0",
   "main": "./index.js",
-  "description": "Sample vtfx",
+  "description": "vector tile post-processors",
   "dependencies": {
     "mapnik-vector-tile": "0.5.x",
     "protocol-buffers": "https://github.com/mapbox/protocol-buffers/archive/mvt-hacks.tar.gz"
