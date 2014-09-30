@@ -1,5 +1,24 @@
 module.exports = fx;
 
+module.exports.parameters = {
+    "name": "orderby",
+    "display": "Order by feature",
+    "description": "Returns sorted layer features based on which field to order by and sort direction.",
+    "options": [
+        {
+            "field": "field",
+            "type": "string"
+        },
+        {
+            "field": "sort",
+            "type": "number",
+            "options": [{ "1": "asc"}, {"-1": "desc" }],
+            "default": 1
+        }
+    ],
+    "chainable": false
+}
+
 function fx(layer, options) {
     var field = options.field;
     if (!field) throw new Error('field is not set');
