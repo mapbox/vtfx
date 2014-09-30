@@ -13,6 +13,7 @@ proto = proto.replace('extensions 16 to 8191;', '');
 var mvt = protobuf(proto);
 
 module.exports = vtfx;
+module.parameters = require('./parameters');
 module.processors = {};
 module.processors.drop = require('./fx/drop');
 module.processors.labelgrid = require('./fx/labelgrid');
