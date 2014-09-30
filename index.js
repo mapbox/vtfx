@@ -13,11 +13,10 @@ proto = proto.replace('extensions 16 to 8191;', '');
 var mvt = protobuf(proto);
 
 module.exports = vtfx;
-module.exports.parameters = require('./parameters');
-module.processors = {};
-module.processors.drop = require('./fx/drop');
-module.processors.labelgrid = require('./fx/labelgrid');
-module.processors.orderby = require('./fx/orderby');
+module.exports.processors = {};
+module.exports.processors.drop = require('./fx/drop');
+module.exports.processors.labelgrid = require('./fx/labelgrid');
+module.exports.processors.orderby = require('./fx/orderby');
 
 // This function is async in prep for needing to use workers.
 // All fx processors should be js and sync for now.
