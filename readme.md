@@ -26,7 +26,3 @@ Summary of main motivations/goals/challenges:
 > - Simplify geometries in an ugly/aggressive way
 >
 > These tricks are not generalized, usually tied to postgres or data-specific configurations. A rough goal here might be to move these to postprocessors/datasource-agnostic libraries that can be used across projects.
-
-#### Contributing
-
-Add details on each new fx to `parameters.json`.
