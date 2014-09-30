@@ -33,8 +33,8 @@ function vtfx(data, options, callback) {
             if (!Array.isArray(options[name])) continue;
             for (var j = 0; j < options[name].length; j++) {
                 var fxopts = options[name][j];
-                if (!module.processors[fxopts.id]) continue;
-                vt.layers[i] = module.processors[fxopts.id](vt.layers[i], fxopts);
+                if (!module.exports.processors[fxopts.id]) continue;
+                vt.layers[i] = module.exports.processors[fxopts.id](vt.layers[i], fxopts);
                 changed = true;
             }
         }
