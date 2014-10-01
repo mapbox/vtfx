@@ -6,29 +6,23 @@ function fx(layer, options) {
     for (var i = 0; i<layer.features.length; i++) {
         var feature = layer.features[i];
         // only process lines with more than 1 point
-        if (feature.type !== 2 && feature.geometry.length > 3) {
-            var geoms = [], pos = 3 ;
-            //get first moveto()
-            geoms.push([feature.geometry[1], feature.geometry[2]]);
-            var repeat = (feature.geometry[pos]>>3);
-            //now get all the lineto(), for all multipart parts
-            // TODO: make this work
+        if (feature.type !== 2) {
+            var geoms = [], part = [], arr = [], pos = 0 ;
             while (pos < feature.geometry.length) {
-                console.log(feature.geometry[pos],repeat,pos);
-                var part = [];
-                for (var d=4; d<pos; d++) {
-                    part.push(feature.geometry[d]);
+                part.push([feature.geometry[pos+1],feature.geometry[pos+2]]);
+                repeat = (feature.geometry[pos+3]>>3);
+                for (var d=pos+4; d<pos+4+(repeat*2); d++) {
+                    arr.push(feature.geometry[d]);
                 }
-                for (var l=0; l<part.length; l+=2) {
-                    var x = geoms[geoms.length-1][0] + part[l];
-                    var y = geoms[geoms.length-1][1] + part[l+1];
-                    geoms.push([x,y]);
+                console.log(arr.length / 2)
+                for (var l=0; l<arr.length; l+=2) {
+                    var x = part[part.length-1][0] + arr[l];
+                    var y = part[part.length-1][1] + arr[l+1];
+                    part.push([x,y]);
                 }
-                pos = 7+(repeat*2);
-                repeat = (feature.geometry[pos]>>3);
-
+                geoms.push(part);
+                pos = pos+5+(repeat*2);
             }
-            console.log(geoms);
         }
         count++;
     }
