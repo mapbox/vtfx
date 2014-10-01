@@ -17,6 +17,7 @@ module.processors = {};
 module.processors.drop = require('./fx/drop');
 module.processors.labelgrid = require('./fx/labelgrid');
 module.processors.orderby = require('./fx/orderby');
+module.processors.linelabel = require('./fx/linelabel');
 
 // This function is async in prep for needing to use workers.
 // All fx processors should be js and sync for now.
