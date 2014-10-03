@@ -1,5 +1,18 @@
 module.exports = fx;
 
+module.exports.parameters = {
+    "name": "linelabel",
+    "display": "Only keep line geometries long enough display labels",
+    "description": "Check line length against the value of a given labelfield, dropping all geometries too short to be labeled.",
+    "options": [
+        {
+            "field": "labelfield",
+            "type": "string"
+        }
+    ],
+    "chainable": false
+};
+
 function fx(layer, options) {
     var field = options.labelfield;
     layer.features = layer.features.filter(function(feature){
