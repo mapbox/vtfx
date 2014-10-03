@@ -61,6 +61,19 @@ tape('orderby', function(t) {
     });
 });
 
+tape('linelabel', function(t) {
+    vtfx(beforepbf, {'road':[{id:'linelabel', labelfield:'class'}]}, function(err, afterpbf) {
+        pbfEqual(afterpbf, __dirname + '/after-linelabel-road.pbf', t);
+
+        var vt = new mapnik.VectorTile(14,2621,6331);
+        vt.setData(afterpbf);
+        vt.parse();
+        jsonEqual(vt.toGeoJSON('road'), __dirname + '/after-linelabel-road.json', t);
+
+        t.end();
+    });
+});
+
 function pbfEqual(buffer, filepath, assert) {
     if (UPDATE) fs.writeFileSync(filepath, buffer);
     assert.deepEqual(buffer, fs.readFileSync(filepath));
@@ -83,7 +96,7 @@ function precision(coords) {
         }
     } else if (Array.isArray(coords[0])) {
         for (var i = 0; i < coords.length; i++) {
-            coords[i] = roundify(coords[i]);
+            coords[i] = precision(coords[i]);
         }
     } else {
         throw new Error('Unhandled coords type ' + (typeof coords[0]));
