@@ -13,12 +13,13 @@ proto = proto.replace('extensions 16 to 8191;', '');
 var mvt = protobuf(proto);
 
 module.exports = vtfx;
-module.processors = {};
-module.processors.drop = require('./fx/drop');
-module.processors.keepfield = require('./fx/keepfield');
-module.processors.dropfield = require('./fx/dropfield');
-module.processors.labelgrid = require('./fx/labelgrid');
-module.processors.orderby = require('./fx/orderby');
+module.exports.processors = {};
+module.exports.processors.drop = require('./fx/drop');
+module.exports.processors.labelgrid = require('./fx/labelgrid');
+module.exports.processors.orderby = require('./fx/orderby');
+module.exports.processors.linelabel = require('./fx/linelabel');
+module.exports.processors.keepfield = require('./fx/keepfield');
+module.exports.processors.dropfield = require('./fx/dropfield');
 
 // This function is async in prep for needing to use workers.
 // All fx processors should be js and sync for now.
@@ -35,8 +36,8 @@ function vtfx(data, options, callback) {
             if (!Array.isArray(options[name])) continue;
             for (var j = 0; j < options[name].length; j++) {
                 var fxopts = options[name][j];
-                if (!module.processors[fxopts.id]) continue;
-                vt.layers[i] = module.processors[fxopts.id](vt.layers[i], fxopts);
+                if (!module.exports.processors[fxopts.id]) continue;
+                vt.layers[i] = module.exports.processors[fxopts.id](vt.layers[i], fxopts);
                 changed = true;
             }
         }

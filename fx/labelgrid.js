@@ -1,5 +1,18 @@
 module.exports = fx;
 
+module.exports.parameters = {
+    "name": "labelgrid",
+    "display": "Snap features to grid",
+    "description": "Snaps features to grid of specified size (in px), features to preserve are prioritized by order of input field.",
+    "options": [
+        {
+            "field": "size",
+            "type": "number"
+        }
+    ],
+    "chainable": false
+};
+
 function fx(layer, options) {
     var size = options.size || null;
 
