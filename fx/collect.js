@@ -7,7 +7,7 @@ function fx(layer, options) {
 
     for (var i=0; i<layer.features.length; i++) {
         var feature = layer.features[i];
-        var value = getvalue(feature);
+        var value = field !== null ? getvalue(feature) : "feat";
         if (!bucket[value]) {
             bucket[value] = feature;
         } else {
