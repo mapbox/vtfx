@@ -75,7 +75,7 @@ tape('linelabel', function(t) {
 });
 
 tape('drop field', function(t) {
-    vtfx(beforepbf, {'poi_label':[{id:'dropfield', fields: [{field:'type', value: 'Park'}, {field:'type', value: 'Museum'}] }]}, function(err, afterpbf) {
+    vtfx(beforepbf, {'poi_label':[{id:'dropfield', fields: [{ "type": ["Park", "Museum"] }] }] }, function(err, afterpbf) {
         pbfEqual(afterpbf, __dirname + '/after-drop-field.pbf', t);
 
         var vt = new mapnik.VectorTile(14,2621,6331);
@@ -88,7 +88,7 @@ tape('drop field', function(t) {
 });
 
 tape('keep field', function(t) {
-    vtfx(beforepbf, {'poi_label':[{id:'keepfield', fields: [{field:'type', value: 'Park'}, {field:'type', value: 'Museum'}] }]}, function(err, afterpbf) {
+    vtfx(beforepbf, {'poi_label':[{id:'keepfield', fields: [{ "type": ["Park", "Museum"] }]}] }, function(err, afterpbf) {
         pbfEqual(afterpbf, __dirname + '/after-keep-field.pbf', t);
         
         var vt = new mapnik.VectorTile(14,2621,6331);
