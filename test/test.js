@@ -74,6 +74,33 @@ tape('linelabel', function(t) {
     });
 });
 
+tape('drop field', function(t) {
+    vtfx(beforepbf, {'poi_label':[{id:'dropfield', fields: [{ "type": ["Park", "Museum"] }] }] }, function(err, afterpbf) {
+        pbfEqual(afterpbf, __dirname + '/after-drop-field.pbf', t);
+
+        var vt = new mapnik.VectorTile(14,2621,6331);
+        vt.setData(afterpbf);
+        vt.parse();
+        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-drop-field-poi_label.json', t);
+
+        t.end();
+    });
+});
+
+tape('keep field', function(t) {
+    vtfx(beforepbf, {'poi_label':[{id:'keepfield', fields: [{ "type": ["Park", "Museum"] }]}] }, function(err, afterpbf) {
+        pbfEqual(afterpbf, __dirname + '/after-keep-field.pbf', t);
+        
+        var vt = new mapnik.VectorTile(14,2621,6331);
+        vt.setData(afterpbf);
+        vt.parse();
+        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-keep-field-poi_label.json', t);
+        
+        t.end();
+    });
+});
+
+
 function pbfEqual(buffer, filepath, assert) {
     if (UPDATE) fs.writeFileSync(filepath, buffer);
     assert.deepEqual(buffer, fs.readFileSync(filepath));
@@ -103,4 +130,3 @@ function precision(coords) {
     }
     return coords;
 }
-

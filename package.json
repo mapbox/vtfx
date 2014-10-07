@@ -5,7 +5,8 @@
   "description": "vector tile post-processors",
   "dependencies": {
     "mapnik-vector-tile": "0.5.x",
-    "protocol-buffers": "https://github.com/mapbox/protocol-buffers/archive/mvt-hacks.tar.gz"
+    "protocol-buffers": "https://github.com/mapbox/protocol-buffers/archive/mvt-hacks.tar.gz",
+    "feature-filter": "https://github.com/mapbox/feature-filter/tarball/master"
   },
   "devDependencies": {
     "mapnik": "1.4.15",
