@@ -14,6 +14,22 @@ tape('before', function(t) {
     t.end();
 });
 
+tape('double-encode', function(t) {
+    vtfx(beforepbf, {'poi_label':[{id:'drop', limit:100}]}, function(err, afterpbf) {
+        t.ifError(err);
+        vtfx(afterpbf, {'poi_label':[{id:'drop', limit:10}]}, function(err, afterpbf) {
+            pbfEqual(afterpbf, __dirname + '/after-double-encode.pbf', t);
+
+            var vt = new mapnik.VectorTile(14,2621,6331);
+            vt.setData(afterpbf);
+            vt.parse();
+            jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-double-encode-poi_label.json', t);
+
+            t.end();
+        });
+    });
+});
+
 tape('drop', function(t) {
     vtfx(beforepbf, {'poi_label':[{id:'drop', limit:100}]}, function(err, afterpbf) {
         t.ifError(err);
