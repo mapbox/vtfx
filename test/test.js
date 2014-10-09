@@ -74,6 +74,62 @@ tape('linelabel', function(t) {
     });
 });
 
+// tape('generate garbage collection test fix', function(t) {
+//     vtfx(fs.readFileSync(__dirname + '/before.pbf'), {'poi_label':[{id:'drop', limit:10}]}, function(err, afterpbf) {
+//         pbfEqual(afterpbf, __dirname + '/before-garbage.pbf', t);
+
+//         var vt = new mapnik.VectorTile(14,2621,6331);
+//         vt.setData(afterpbf);
+//         vt.parse();
+//         console.log(vt.toGeoJSON('poi_label'))
+//         jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/before-garbage.json', t);
+
+//         t.end();
+//     });
+// });
+
+tape('garbage collection', function(t) {
+    var protobuf = require('protocol-buffers');
+    var path = require('path');
+    var beforeGarbagepbf = fs.readFileSync(__dirname + '/before-garbage.pbf');
+    var cleaner = require('../fx/cleaner_change_index');
+
+    // Gross!
+    var proto = fs.readFileSync(path.dirname(require.resolve('mapnik-vector-tile')) + '/proto/vector_tile.proto', 'utf8');
+    proto = proto.replace('package mapnik.vector;', '');
+    proto = proto.replace('optional uint64 id = 1;', 'optional int64 id = 1;');
+    proto = proto.replace('option optimize_for = LITE_RUNTIME;', '');
+    proto = proto.replace('extensions 8 to max;', '');
+    proto = proto.replace('extensions 16 to max;', '');
+    proto = proto.replace('extensions 16 to 8191;', '');
+    var mvt = protobuf(proto);
+
+    var tile = mvt.tile.decode(beforeGarbagepbf);
+
+    for (var i = 0; i < tile.layers.length; i++) {
+        // should the garbage collector be called for all layers or just modified ones?
+        // if just modified ones... when? After each filter or at the end of all?
+        var name = tile.layers[i].name;
+        if (name === 'poi_label'){
+            cleaner(tile.layers[i]);
+        }
+    }
+
+    var afterpbf = mvt.tile.encode(tile);
+    pbfEqual(afterpbf, __dirname + '/after-garbage-poi_label(drop).pbf', t);
+
+    vt = new mapnik.VectorTile(14,2621,6331);
+    vt.setData(afterpbf);
+    // apparently the original protobuf used as beforeGarbagepbf
+    // cannot be parsed again by mapnik.VectorTile.
+    // beforeGarbagepbf was generating using a test and the drop filter with a limit of 10.
+    vt.parse();
+
+    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-garbage-poi_label(drop).json', t);
+
+    t.end();
+});
+
 function pbfEqual(buffer, filepath, assert) {
     if (UPDATE) fs.writeFileSync(filepath, buffer);
     assert.deepEqual(buffer, fs.readFileSync(filepath));
