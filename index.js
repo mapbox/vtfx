@@ -1,6 +1,7 @@
 var protobuf = require('protocol-buffers');
 var path = require('path');
 var fs = require('fs');
+var cleaner = require('./fx/cleaner_change_index');
 
 // Gross!
 var proto = fs.readFileSync(path.dirname(require.resolve('mapnik-vector-tile')) + '/proto/vector_tile.proto', 'utf8');
@@ -27,6 +28,7 @@ function vtfx(data, options, callback) {
 
     var changed = false;
     var vt = mvt.tile.decode(data);
+    var changedLayers = {};
 
     try {
         for (var i = 0; i < vt.layers.length; i++) {
@@ -36,8 +38,13 @@ function vtfx(data, options, callback) {
                 var fxopts = options[name][j];
                 if (!module.exports.processors[fxopts.id]) continue;
                 vt.layers[i] = module.exports.processors[fxopts.id](vt.layers[i], fxopts);
+                changedLayers[i] = changedLayers[i] || true;
                 changed = true;
             }
+        }
+        changedLayers = Object.keys(changedLayers).map(Number);
+        for (var i = 0; i < changedLayers.length; i++) {
+            vt.layers[changedLayers[i]] = cleaner(vt.layers[changedLayers[i]]);
         }
     } catch(err) {
         return callback(err);
