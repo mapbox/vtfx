@@ -1,3 +1,5 @@
+module.exports = cleaner;
+
 // This garbage collector doesn't renumber the tags in the feature layer.
 // Placeholders remain in the layer.keys and layer.values arrays so maintain
 // the index reference to the layer.features[i].tags.

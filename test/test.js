@@ -87,53 +87,55 @@ tape('linelabel', function(t) {
 //     });
 // });
 
-tape('garbage collection', function(t) {
-    var protobuf = require('protocol-buffers');
-    var path = require('path');
-    var beforeGarbagepbf = fs.readFileSync(__dirname + '/before-garbage.pbf');
+tape('garbage collection - change index', function(t) {
     var cleaner = require('../fx/cleaner_change_index');
+    var beforeGarbagepbf = fs.readFileSync(__dirname + '/before-garbage.pbf');
 
-    // Gross!
-    var proto = fs.readFileSync(path.dirname(require.resolve('mapnik-vector-tile')) + '/proto/vector_tile.proto', 'utf8');
-    proto = proto.replace('package mapnik.vector;', '');
-    proto = proto.replace('optional uint64 id = 1;', 'optional int64 id = 1;');
-    proto = proto.replace('option optimize_for = LITE_RUNTIME;', '');
-    proto = proto.replace('extensions 8 to max;', '');
-    proto = proto.replace('extensions 16 to max;', '');
-    proto = proto.replace('extensions 16 to 8191;', '');
-    var mvt = protobuf(proto);
-
+    var mvt = encodePBF(beforeGarbagepbf);
     var tile = mvt.tile.decode(beforeGarbagepbf);
 
     for (var i = 0; i < tile.layers.length; i++) {
         // should the garbage collector be called for all layers or just modified ones?
         // if just modified ones... when? After each filter or at the end of all?
-        var layer = tile.layers[i],
-            name = layer.name;
-
+        var name = tile.layers[i].name;
         if (name === 'poi_label'){
-            cleaner(layer);
-            jsonEqual(layer, __dirname + '/after-garbage-poi_label(drop).json', t, false);
-
-            // reconstruct the features
-            var features = [];
-            for (var ix = 0; ix < layer.features.length; ix++){
-                var feature = layer.features[ix];
-                features.push({properties: {}})
-                for (var iz = 0; iz < feature.tags.length; iz+= 2){
-                    var values = Object.keys(layer.values[feature.tags[ix+1]]),
-                        value;
-                    for (var iy = 0; iy < values.length; iy++){
-                        if (layer.values[feature.tags[iz+1]][values[iy]] != null) value = layer.values[feature.tags[iz+1]][values[iy]];
-                    }
-                    features[ix].properties[layer.keys[feature.tags[iz]]] = value;
-                }
-            }
-            jsonEqual(features, __dirname + '/after-garbage-poi_label(drop)-reconstructed.json', t, false);
+            cleaner(tile.layers[i]);
         }
     }
     var afterpbf = mvt.tile.encode(tile);
-    pbfEqual(afterpbf, __dirname + '/after-garbage-poi_label(drop).pbf', t);
+    pbfEqual(afterpbf, __dirname + '/after-garbage-reindex-poi_label.pbf', t);
+
+    var vt = new mapnik.VectorTile(14,2621,6331);
+    vt.setData(afterpbf);
+    vt.parse();
+    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-garbage-reindex-poi_label.json', t);
+
+
+    t.end();
+});
+
+tape('garbage collection - keep index', function(t) {
+    var cleaner = require('../fx/cleaner_keep_index');
+    var beforeGarbagepbf = fs.readFileSync(__dirname + '/before-garbage.pbf');
+
+    var mvt = encodePBF(beforeGarbagepbf);
+    var tile = mvt.tile.decode(beforeGarbagepbf);
+
+    for (var i = 0; i < tile.layers.length; i++) {
+        // should the garbage collector be called for all layers or just modified ones?
+        // if just modified ones... when? After each filter or at the end of all?
+        var name = tile.layers[i].name;
+        if (name === 'poi_label'){
+            cleaner(tile.layers[i]);
+        }
+    }
+    var afterpbf = mvt.tile.encode(tile);
+    pbfEqual(afterpbf, __dirname + '/after-garbage-keepindex-poi_label.pbf', t);
+
+    var vt = new mapnik.VectorTile(14,2621,6331);
+    vt.setData(afterpbf);
+    vt.parse();
+    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-garbage-keepindex-poi_label.json', t);
 
     t.end();
 });
@@ -168,5 +170,20 @@ function precision(coords) {
         throw new Error('Unhandled coords type ' + (typeof coords[0]));
     }
     return coords;
+}
+
+function encodePBF(pbf) {
+    var protobuf = require('protocol-buffers');
+    var path = require('path');
+
+    // Gross!
+    var proto = fs.readFileSync(path.dirname(require.resolve('mapnik-vector-tile')) + '/proto/vector_tile.proto', 'utf8');
+    proto = proto.replace('package mapnik.vector;', '');
+    proto = proto.replace('optional uint64 id = 1;', 'optional int64 id = 1;');
+    proto = proto.replace('option optimize_for = LITE_RUNTIME;', '');
+    proto = proto.replace('extensions 8 to max;', '');
+    proto = proto.replace('extensions 16 to max;', '');
+    proto = proto.replace('extensions 16 to 8191;', '');
+    return mvt = protobuf(proto);
 }
 
