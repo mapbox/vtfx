@@ -1,0 +1,142 @@
+[
+  {
+    "properties": {
+      "localrank": 0,
+      "maki": "rail-light",
+      "name": "Powell",
+      "name_de": "Powell",
+      "name_en": "Powell",
+      "name_es": "Powell",
+      "name_fr": "Powell",
+      "network": "light",
+      "osm_id": -32209661164,
+      "ref": "",
+      "scalerank": 3,
+      "type": "Rail Station"
+    }
+  },
+  {
+    "properties": {
+      "localrank": 0,
+      "maki": "rail-light",
+      "name": "Montgomery",
+      "name_de": "Montgomery",
+      "name_en": "Montgomery",
+      "name_es": "Montgomery",
+      "name_fr": "Montgomery",
+      "network": "light",
+      "osm_id": -32209661167,
+      "ref": "",
+      "scalerank": 3,
+      "type": "Rail Station"
+    }
+  },
+  {
+    "properties": {
+      "localrank": 0,
+      "maki": "rail-light",
+      "name": "Embarcadero",
+      "name_de": "Embarcadero",
+      "name_en": "Embarcadero",
+      "name_es": "Embarcadero",
+      "name_fr": "Embarcadero",
+      "network": "light",
+      "osm_id": -32209661170,
+      "ref": "",
+      "scalerank": 3,
+      "type": "Rail Station"
+    }
+  },
+  {
+    "properties": {
+      "localrank": 0,
+      "maki": "rail-light",
+      "name": "Montgomery Muni",
+      "name_de": "Montgomery Muni",
+      "name_en": "Montgomery Muni",
+      "name_es": "Montgomery Muni",
+      "name_fr": "Montgomery Muni",
+      "network": "light",
+      "osm_id": -32635999094,
+      "ref": "",
+      "scalerank": 3,
+      "type": "Rail Station"
+    }
+  },
+  {
+    "properties": {
+      "localrank": 0,
+      "maki": "rail-light",
+      "name": "Powell Muni",
+      "name_de": "Powell Muni",
+      "name_en": "Powell Muni",
+      "name_es": "Powell Muni",
+      "name_fr": "Powell Muni",
+      "network": "light",
+      "osm_id": -32635999339,
+      "ref": "",
+      "scalerank": 3,
+      "type": "Rail Station"
+    }
+  },
+  {
+    "properties": {
+      "localrank": 0,
+      "maki": "rail-light",
+      "name": "Embarcadero Muni",
+      "name_de": "Embarcadero Muni",
+      "name_en": "Embarcadero Muni",
+      "name_es": "Embarcadero Muni",
+      "name_fr": "Embarcadero Muni",
+      "network": "light",
+      "osm_id": -32635999555,
+      "ref": "",
+      "scalerank": 3,
+      "type": "Rail Station"
+    }
+  },
+  {
+    "properties": {
+      "localrank": 0,
+      "maki": "entrance",
+      "network": "entrance",
+      "osm_id": -31281300174,
+      "ref": "",
+      "scalerank": 4,
+      "type": "Rail Station"
+    }
+  },
+  {
+    "properties": {
+      "localrank": 0,
+      "maki": "entrance",
+      "network": "entrance",
+      "osm_id": -31296141503,
+      "ref": "",
+      "scalerank": 4,
+      "type": "Rail Station"
+    }
+  },
+  {
+    "properties": {
+      "localrank": 0,
+      "maki": "entrance",
+      "network": "entrance",
+      "osm_id": -32291202751,
+      "ref": "",
+      "scalerank": 4,
+      "type": "Rail Station"
+    }
+  },
+  {
+    "properties": {
+      "localrank": 0,
+      "maki": "entrance",
+      "network": "entrance",
+      "osm_id": -32291202760,
+      "ref": "",
+      "scalerank": 4,
+      "type": "Rail Station"
+    }
+  }
+]

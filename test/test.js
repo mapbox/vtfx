@@ -81,7 +81,6 @@ tape('linelabel', function(t) {
 //         var vt = new mapnik.VectorTile(14,2621,6331);
 //         vt.setData(afterpbf);
 //         vt.parse();
-//         console.log(vt.toGeoJSON('poi_label'))
 //         jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/before-garbage.json', t);
 
 //         t.end();
@@ -109,23 +108,32 @@ tape('garbage collection', function(t) {
     for (var i = 0; i < tile.layers.length; i++) {
         // should the garbage collector be called for all layers or just modified ones?
         // if just modified ones... when? After each filter or at the end of all?
-        var name = tile.layers[i].name;
+        var layer = tile.layers[i],
+            name = layer.name;
+
         if (name === 'poi_label'){
-            cleaner(tile.layers[i]);
+            cleaner(layer);
+            jsonEqual(layer, __dirname + '/after-garbage-poi_label(drop).json', t, false);
+
+            // reconstruct the features
+            var features = [];
+            for (var ix = 0; ix < layer.features.length; ix++){
+                var feature = layer.features[ix];
+                features.push({properties: {}})
+                for (var iz = 0; iz < feature.tags.length; iz+= 2){
+                    var values = Object.keys(layer.values[feature.tags[ix+1]]),
+                        value;
+                    for (var iy = 0; iy < values.length; iy++){
+                        if (layer.values[feature.tags[iz+1]][values[iy]] != null) value = layer.values[feature.tags[iz+1]][values[iy]];
+                    }
+                    features[ix].properties[layer.keys[feature.tags[iz]]] = value;
+                }
+            }
+            jsonEqual(features, __dirname + '/after-garbage-poi_label(drop)-reconstructed.json', t, false);
         }
     }
-
     var afterpbf = mvt.tile.encode(tile);
     pbfEqual(afterpbf, __dirname + '/after-garbage-poi_label(drop).pbf', t);
-
-    vt = new mapnik.VectorTile(14,2621,6331);
-    vt.setData(afterpbf);
-    // apparently the original protobuf used as beforeGarbagepbf
-    // cannot be parsed again by mapnik.VectorTile.
-    // beforeGarbagepbf was generating using a test and the drop filter with a limit of 10.
-    vt.parse();
-
-    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-garbage-poi_label(drop).json', t);
 
     t.end();
 });
@@ -135,10 +143,12 @@ function pbfEqual(buffer, filepath, assert) {
     assert.deepEqual(buffer, fs.readFileSync(filepath));
 }
 
-function jsonEqual(data, filepath, assert) {
-    if (Array.isArray(data.features)) {
-        for (var i = 0; i < data.features.length; i++) {
-            data.features[i].geometry.coordinates = precision(data.features[i].geometry.coordinates);
+function jsonEqual(data, filepath, assert, encoded) {
+    if (encoded !== false){
+        if (Array.isArray(data.features)) {
+            for (var i = 0; i < data.features.length; i++) {
+                data.features[i].geometry.coordinates = precision(data.features[i].geometry.coordinates);
+            }
         }
     }
     if (UPDATE) fs.writeFileSync(filepath, JSON.stringify(data, null, 2));

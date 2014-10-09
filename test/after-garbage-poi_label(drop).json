@@ -1,0 +1,559 @@
+{
+  "version": 1,
+  "name": "poi_label",
+  "features": [
+    {
+      "id": -32209661164,
+      "tags": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        2,
+        4,
+        2,
+        5,
+        2,
+        6,
+        2,
+        7,
+        3,
+        8,
+        4,
+        9,
+        5,
+        10,
+        6,
+        11,
+        7
+      ],
+      "type": 1,
+      "geometry": [
+        9,
+        1028,
+        9678
+      ],
+      "raster": null
+    },
+    {
+      "id": -32209661167,
+      "tags": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        8,
+        3,
+        8,
+        4,
+        8,
+        5,
+        8,
+        6,
+        8,
+        7,
+        3,
+        8,
+        9,
+        9,
+        5,
+        10,
+        6,
+        11,
+        7
+      ],
+      "type": 1,
+      "geometry": [
+        9,
+        3166,
+        7540
+      ],
+      "raster": null
+    },
+    {
+      "id": -32209661170,
+      "tags": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        10,
+        3,
+        10,
+        4,
+        10,
+        5,
+        10,
+        6,
+        10,
+        7,
+        3,
+        8,
+        11,
+        9,
+        5,
+        10,
+        6,
+        11,
+        7
+      ],
+      "type": 1,
+      "geometry": [
+        9,
+        4764,
+        5944
+      ],
+      "raster": null
+    },
+    {
+      "id": -32635999094,
+      "tags": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        12,
+        3,
+        12,
+        4,
+        12,
+        5,
+        12,
+        6,
+        12,
+        7,
+        3,
+        8,
+        13,
+        9,
+        5,
+        10,
+        6,
+        11,
+        7
+      ],
+      "type": 1,
+      "geometry": [
+        9,
+        3156,
+        7530
+      ],
+      "raster": null
+    },
+    {
+      "id": -32635999339,
+      "tags": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        14,
+        3,
+        14,
+        4,
+        14,
+        5,
+        14,
+        6,
+        14,
+        7,
+        3,
+        8,
+        15,
+        9,
+        5,
+        10,
+        6,
+        11,
+        7
+      ],
+      "type": 1,
+      "geometry": [
+        9,
+        1018,
+        9664
+      ],
+      "raster": null
+    },
+    {
+      "id": -32635999555,
+      "tags": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        16,
+        3,
+        16,
+        4,
+        16,
+        5,
+        16,
+        6,
+        16,
+        7,
+        3,
+        8,
+        17,
+        9,
+        5,
+        10,
+        6,
+        11,
+        7
+      ],
+      "type": 1,
+      "geometry": [
+        9,
+        4748,
+        5928
+      ],
+      "raster": null
+    },
+    {
+      "id": -31281300174,
+      "tags": [
+        0,
+        0,
+        1,
+        18,
+        7,
+        18,
+        8,
+        19,
+        9,
+        5,
+        10,
+        20,
+        11,
+        7
+      ],
+      "type": 1,
+      "geometry": [
+        9,
+        3348,
+        7072
+      ],
+      "raster": null
+    },
+    {
+      "id": -31296141503,
+      "tags": [
+        0,
+        0,
+        1,
+        18,
+        7,
+        18,
+        8,
+        21,
+        9,
+        5,
+        10,
+        20,
+        11,
+        7
+      ],
+      "type": 1,
+      "geometry": [
+        9,
+        2804,
+        7970
+      ],
+      "raster": null
+    },
+    {
+      "id": -32291202751,
+      "tags": [
+        0,
+        0,
+        1,
+        18,
+        7,
+        18,
+        8,
+        22,
+        9,
+        5,
+        10,
+        20,
+        11,
+        7
+      ],
+      "type": 1,
+      "geometry": [
+        9,
+        3306,
+        7324
+      ],
+      "raster": null
+    },
+    {
+      "id": -32291202760,
+      "tags": [
+        0,
+        0,
+        1,
+        18,
+        7,
+        18,
+        8,
+        23,
+        9,
+        5,
+        10,
+        20,
+        11,
+        7
+      ],
+      "type": 1,
+      "geometry": [
+        9,
+        2796,
+        7984
+      ],
+      "raster": null
+    }
+  ],
+  "keys": [
+    "localrank",
+    "maki",
+    "name",
+    "name_de",
+    "name_en",
+    "name_es",
+    "name_fr",
+    "network",
+    "osm_id",
+    "ref",
+    "scalerank",
+    "type"
+  ],
+  "values": [
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": 0,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "rail-light",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "Powell",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "light",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": -32209661164,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": 3,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "Rail Station",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "Montgomery",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": -32209661167,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "Embarcadero",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": -32209661170,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "Montgomery Muni",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": -32635999094,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "Powell Muni",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": -32635999339,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "Embarcadero Muni",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": -32635999555,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": "entrance",
+      "float_value": null,
+      "double_value": null,
+      "int_value": null,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": -31281300174,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": 4,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": -31296141503,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": -32291202751,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    },
+    {
+      "string_value": null,
+      "float_value": null,
+      "double_value": null,
+      "int_value": -32291202760,
+      "uint_value": null,
+      "sint_value": null,
+      "bool_value": null
+    }
+  ],
+  "extent": 4096
+}
