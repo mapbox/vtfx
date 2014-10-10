@@ -5,17 +5,14 @@ var fixtures = {
 	linelabel: getLayer(fs.readFileSync(__dirname + '/before-garbage-linelabel-poi_label.pbf'), 'road'),
 	dropTen: getLayer(fs.readFileSync(__dirname + '/before-garbage.pbf'), 'poi_label'),
 	dropHundred: getLayer(fs.readFileSync(__dirname + '/before-garbage-drop100-poi_label.pbf'), 'poi_label'),
-	labelgrid: getLayer(fs.readFileSync(__dirname + '/after-labelgrid-poi_label-garbage.pbf'), 'poi_label')
+	labelgrid: getLayer(fs.readFileSync(__dirname + '/before-garbage-labelgrid-poi_label.pbf'), 'poi_label')
 }
 
 var Benchmark = require('benchmark');
 var suite = new Benchmark.Suite;
 
 // add tests
-suite.add('cleaner#linelabel', function(){
-	cleaner(fixtures.linelabel);
-})
-.add('cleaner#dropTen', function(){
+suite.add('cleaner#dropTen', function(){
 	cleaner(fixtures.dropTen);
 })
 .add('cleaner#dropHundred', function(){
@@ -24,13 +21,13 @@ suite.add('cleaner#linelabel', function(){
 .add('cleaner#labelgrid', function(){
 	cleaner(fixtures.labelgrid);
 })
+.add('cleaner#linelabel', function(){
+	cleaner(fixtures.linelabel);
+})
 // add listeners
 .on('cycle', function(event) {
 	var test = event.target.name.split('#')[1];
   	console.log(fixtures[test].features.length + ' features: ' + String(event.target));
-})
-.on('complete', function() {
- 	console.log('Fastest is ' + this.filter('fastest').pluck('name'));
 })
 .run();
 
