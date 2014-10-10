@@ -14,53 +14,62 @@ function cleaner(layer){
         keys: {},
         values: {}
     };
+
     for (var i in layer.features){
-        var featureLength = layer.features[i].tags.length;
+        var tags = layer.features[i].tags,
+            featureLength = tags.length;
         for (var ix = 0; ix < featureLength; ix +=2){
-            var exists = keys.indexOf(layer.features[i].tags[ix]);
+            var exists = keys.indexOf(tags[ix]);
             if (exists >= 0 && keys.length > 0) {
-                // once a key is confirmed to exist, don't let it be checked for again
+                // approximation of a refcount
                 kept.keys[keys[exists]] = true;
+                // once a key is confirmed to exist, don't let it be checked for again
                 keys.splice(exists, 1);
             }
-            exists = values.indexOf(layer.features[i].tags[ix+1]);
+            exists = values.indexOf(tags[ix+1]);
             if (exists >= 0 && values.length > 0) {
-                // once a value is confirmed to exist, don't let it be checked for again
+                // approximation of a refcount
                 kept.values[values[exists]] = true;
+                // once a value is confirmed to exist, don't let it be checked for again
                 values.splice(exists, 1);
             }
         }
     }
+
+    // set the values for each kept key to its new index
     keys = Object.keys(kept.keys);
     for (var i = 0; i < keys.length; i ++){
         kept.keys[keys[i]] = i;
     }
+    // set the values for each kept value to its new index
     values = Object.keys(kept.values);
     for (var i = 0; i < values.length; i ++){
         kept.values[values[i]] = i;
     }
 
     for (var i in layer.features){
-        featureLength = layer.features[i].tags.length;
+        tags = layer.features[i].tags;
+        featureLength = tags.length;
+
         for (var ix = 0; ix < featureLength; ix +=2){
             var delta;
             // offset key values for removed items
-            delta = layer.features[i].tags[ix] - kept.keys[layer.features[i].tags[ix]];
-            layer.features[i].tags[ix] = layer.features[i].tags[ix] - delta;
+            // delta is the difference between the current ix and the new one, as calculated above
+            delta = tags[ix] - kept.keys[tags[ix]];
+            tags[ix] = tags[ix] - delta;
 
             // offset value values for removed items
-            delta = layer.features[i].tags[ix + 1] - kept.values[layer.features[i].tags[ix + 1]];
-            layer.features[i].tags[ix + 1] = layer.features[i].tags[ix + 1] - delta;
+            delta = tags[ix + 1] - kept.values[tags[ix + 1]];
+            tags[ix + 1] = tags[ix + 1] - delta;
         }
     }
 
+    // remove keys and values that are no longer referenced
     for (var i = layer.keys.length - 1; i >= 0; i--){
         if (kept.keys[i] === undefined) layer.keys.splice(i, 1);
     }
-
     for (var i = layer.values.length - 1; i >= 0; i--){
         if (kept.values[i] === undefined) layer.values.splice(i, 1);
     }
-
     return layer;
 }
