@@ -9,7 +9,9 @@
   },
   "devDependencies": {
     "mapnik": "1.4.15",
-    "tape": "2.13.x"
+    "tape": "2.13.x",
+    "benchmark": "1.0.0"
+
   },
   "scripts": {
     "test": "tape test/*.js"
