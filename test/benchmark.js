@@ -1,36 +1,64 @@
 var fs = require('fs');
-var cleaner = require('../fx/cleaner_change_index');
-
-var fixtures = {
-	linelabel: getLayer(fs.readFileSync(__dirname + '/before-garbage-linelabel-poi_label.pbf'), 'road'),
-	dropTen: getLayer(fs.readFileSync(__dirname + '/before-garbage.pbf'), 'poi_label'),
-	dropHundred: getLayer(fs.readFileSync(__dirname + '/before-garbage-drop100-poi_label.pbf'), 'poi_label'),
-	labelgrid: getLayer(fs.readFileSync(__dirname + '/before-garbage-labelgrid-poi_label.pbf'), 'poi_label')
-}
-
 var Benchmark = require('benchmark');
+var cleaner = require('../fx/cleaner_change_index');
 var suite = new Benchmark.Suite;
 
+var fixtures = {
+    drop10: getLayer(fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf'), 'poi_label'),
+    drop100: getLayer(fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop100-poi_label.pbf'), 'poi_label'),
+    drop200: getLayer(fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop200-poi_label.pbf'), 'poi_label'),
+    drop1000: getLayer(fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop1000-poi_label.pbf'), 'poi_label'),
+    labelgrid2048: getLayer(fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid2048-poi_label.pbf'), 'poi_label'),
+    labelgrid1024: getLayer(fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid1024-poi_label.pbf'), 'poi_label'),
+    labelgrid512: getLayer(fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid512-poi_label.pbf'), 'poi_label'),
+    labelgrid256: getLayer(fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid256-poi_label.pbf'), 'poi_label'),
+    linelabel: getLayer(fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-linelabel-poi_label.pbf'), 'road')
+};
+
+var data = {};
+
+console.log('Benchmarks for garbage collector: ');
+
 // add tests
-suite.add('cleaner#dropTen', function(){
-	cleaner(fixtures.dropTen);
+suite.add('cleaner#drop10', function(){
+    cleaner(fixtures.drop10);
 })
-.add('cleaner#dropHundred', function(){
-	cleaner(fixtures.dropHundred);
+.add('cleaner#drop100', function(){
+    cleaner(fixtures.drop100);
 })
-.add('cleaner#labelgrid', function(){
-	cleaner(fixtures.labelgrid);
+.add('cleaner#drop200', function(){
+    cleaner(fixtures.drop200);
+})
+.add('cleaner#drop1000', function(){
+    cleaner(fixtures.drop1000);
+})
+.add('cleaner#labelgrid256', function(){
+    cleaner(fixtures.labelgrid256);
+})
+.add('cleaner#labelgrid512', function(){
+    cleaner(fixtures.labelgrid512);
+})
+.add('cleaner#labelgrid1024', function(){
+    cleaner(fixtures.labelgrid1024);
+})
+.add('cleaner#labelgrid2048', function(){
+    cleaner(fixtures.labelgrid2048);
 })
 .add('cleaner#linelabel', function(){
-	cleaner(fixtures.linelabel);
+    cleaner(fixtures.linelabel);
 })
 // add listeners
 .on('cycle', function(event) {
-	var test = event.target.name.split('#')[1];
-  	console.log(fixtures[test].features.length + ' features: ' + String(event.target));
+    var test = event.target.name.split('#')[1],
+        series = /\D+/.exec(test)[0];
+    data[series] = data[series] || {};
+    data[series][parseInt(fixtures[test].features.length)] = event.target.hz;
+    console.log(String(event.target) + ' for ' + fixtures[test].features.length + ' features ');
+})
+.on('complete', function(){
+    console.log('Benchmark data:\n', data);
 })
 .run();
-
 
 function encodePBF(pbf) {
     var protobuf = require('protocol-buffers');
@@ -48,14 +76,14 @@ function encodePBF(pbf) {
 }
 
 function getLayer(pbf, layerName) {
-	var mvt = encodePBF(pbf);
-	var tile = mvt.tile.decode(pbf);
+    var mvt = encodePBF(pbf);
+    var tile = mvt.tile.decode(pbf);
 
-	for (var i = 0; i < tile.layers.length; i++) {
-	    var name = tile.layers[i].name;
-	    if (name === layerName){
-	    	var layer = tile.layers[i]
-	    }
-	}
-	return layer;
+    for (var i = 0; i < tile.layers.length; i++) {
+        var name = tile.layers[i].name;
+        if (name === layerName){
+            var layer = tile.layers[i];
+        }
+    }
+    return layer;
 }

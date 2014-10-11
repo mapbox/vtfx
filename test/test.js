@@ -76,12 +76,12 @@ tape('linelabel', function(t) {
 
 // tape('generate garbage collection test fix', function(t) {
 //     vtfx(fs.readFileSync(__dirname + '/before.pbf'), {'poi_label':[{id:'drop', limit:10}]}, function(err, afterpbf) {
-//         pbfEqual(afterpbf, __dirname + '/before-garbage.pbf', t);
+//         pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf', t);
 
 //         var vt = new mapnik.VectorTile(14,2621,6331);
 //         vt.setData(afterpbf);
 //         vt.parse();
-//         jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/before-garbage.json', t);
+//         jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.json', t);
 
 //         t.end();
 //     });
@@ -89,7 +89,7 @@ tape('linelabel', function(t) {
 
 tape('garbage collection - change index', function(t) {
     var cleaner = require('../fx/cleaner_change_index');
-    var beforeGarbagepbf = fs.readFileSync(__dirname + '/before-garbage.pbf');
+    var beforeGarbagepbf = fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf');
 
     var mvt = encodePBF(beforeGarbagepbf);
     var tile = mvt.tile.decode(beforeGarbagepbf);
@@ -103,12 +103,12 @@ tape('garbage collection - change index', function(t) {
         }
     }
     var afterpbf = mvt.tile.encode(tile);
-    pbfEqual(afterpbf, __dirname + '/after-garbage-reindex-poi_label.pbf', t);
+    pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/after-garbage-reindex-poi_label.pbf', t);
 
     var vt = new mapnik.VectorTile(14,2621,6331);
     vt.setData(afterpbf);
     vt.parse();
-    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-garbage-reindex-poi_label.json', t);
+    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-reindex-poi_label.json', t);
 
 
     t.end();
@@ -116,7 +116,7 @@ tape('garbage collection - change index', function(t) {
 
 tape('garbage collection - keep index', function(t) {
     var cleaner = require('../fx/cleaner_keep_index');
-    var beforeGarbagepbf = fs.readFileSync(__dirname + '/before-garbage.pbf');
+    var beforeGarbagepbf = fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf');
 
     var mvt = encodePBF(beforeGarbagepbf);
     var tile = mvt.tile.decode(beforeGarbagepbf);
@@ -130,12 +130,12 @@ tape('garbage collection - keep index', function(t) {
         }
     }
     var afterpbf = mvt.tile.encode(tile);
-    pbfEqual(afterpbf, __dirname + '/after-garbage-keepindex-poi_label.pbf', t);
+    pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/after-garbage-keepindex-poi_label.pbf', t);
 
     var vt = new mapnik.VectorTile(14,2621,6331);
     vt.setData(afterpbf);
     vt.parse();
-    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-garbage-keepindex-poi_label.json', t);
+    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-keepindex-poi_label.json', t);
 
     t.end();
 });
