@@ -9,15 +9,19 @@ module.exports = cleaner;
 // but there's still a lot of iteration and extra objects created.
 function cleaner(layer){
     var keys = {};
-    var keysKeys = Object.keys(layer.keys);
-    for (var i = 0; i < keysKeys.length; i ++){
-        keys[i] = keysKeys[i];
+    var keysIx = Object.keys(layer.keys);
+    for (var i = 0; i < keysIx.length; i ++){
+        keys[i] = keysIx[i];
     }
     var values = {};
-    var valuesKeys = Object.keys(layer.values);
-    for (var i = 0; i < valuesKeys.length; i ++){
-        values[i] = valuesKeys[i];
+    var valuesIx = Object.keys(layer.values);
+    for (var i = 0; i < valuesIx.length; i ++){
+        values[i] = valuesIx[i];
     }
+
+    keysIx = [];
+    valuesIx = [];
+
     var kept = {
         keys: {},
         values: {}
@@ -30,12 +34,13 @@ function cleaner(layer){
     for (var i in layer.features){
         var tags = layer.features[i].tags,
             featureLength = tags.length;
-        if (keys.length === 0 && values.length === 0) continue;
+        if (keys === {} && values === {}) continue;
         for (var ix = 0; ix < featureLength; ix +=2){
             if (keys[tags[ix]]) {
                 // approximation of a refcount
                 kept.keys[keys[tags[ix]]] = counters.keys;
                 counters.keys += 1;
+                keysIx.push(keys[tags[ix]]);
                 // once a key is confirmed to exist, don't let it be checked for again
                 delete keys[tags[ix]];
             }
@@ -43,6 +48,7 @@ function cleaner(layer){
                 // approximation of a refcount
                 kept.values[values[tags[ix+1]]] = counters.values;
                 counters.values += 1;
+                valuesIx.push(values[tags[ix+1]]);
                 // once a value is confirmed to exist, don't let it be checked for again
                 delete values[tags[ix+1]];
 
@@ -51,29 +57,20 @@ function cleaner(layer){
             tags[ix+1] = kept.values[tags[ix+1]]
         }
     }
-    // turn the keys into numbers
-    keys = Object.keys(kept.keys);
-
-    for (var i = 0; i < keys.length; i++){
-        keys[i] = Number(keys[i]);
-    }
-    values = Object.keys(kept.values);
-    for (var i = 0; i < values.length; i++){
-        values[i] = Number(values[i]);
-    }
 
     // set the values for each kept key to its new index
     finalKeys = [];
-    for (var i = 0; i < keys.length; i ++){
-        finalKeys.push(layer.keys[keys[i]]);
+    for (var i = 0; i < keysIx.length; i ++){
+        finalKeys.push(layer.keys[keysIx[i]]);
     }
     // set the values for each value key to its new index
     finalValues = [];
-    for (var i = 0; i < values.length; i ++){
-        finalValues.push(layer.values[values[i]]);
+    for (var i = 0; i < valuesIx.length; i ++){
+        finalValues.push(layer.values[valuesIx[i]]);
     }
 
     layer.keys = finalKeys;
     layer.values = finalValues;
+
     return layer;
 }
