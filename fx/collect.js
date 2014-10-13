@@ -6,13 +6,15 @@ function fx(layer, options) {
     var newfeatures = [], bucket = {};
 
     for (var i=0; i<layer.features.length; i++) {
+
         var feature = layer.features[i];
-        var value = (field != null) ? getvalue(feature) : "feat";
-        if (!bucket[value]) {
-            bucket[value] = feature;
+        var value = (field != null) ? getvalue(feature) : [0, "feat"];
+        if (!bucket[value[1]]) {
+            bucket[value[1]] = feature;
         } else {
-            bucket[value].geometry = bucket[value].geometry.concat(feature.geometry);
+            bucket[value[1]].geometry = bucket[value[1]].geometry.concat(feature.geometry);
         }
+        bucket[value[1]].tags = [value[0], feature.tags[value[0]+1]];
     }
     for (i in bucket) {
         newfeatures.push(bucket[i]);
@@ -22,21 +24,16 @@ function fx(layer, options) {
 
     function getvalue(feature) {
         for (var i = 0; i<feature.tags.length; i+=2) {
-            if (layer.keys[feature.tags[i]] !== field) {
-                // drop tags that reference features that need to go away
-                feature.tags.splice(i,1);
-                feature.tags.splice(i+1,1);
-                // drop keys + values eaten by groupby
-                layer.keys.splice(feature.tags[i], 1);
-                layer.values.splice(feature.tags[i+1], 1);
-            } else {
+            if (layer.keys[feature.tags[i]] == field) {
                 for (v in layer.values[feature.tags[i+1]]) {
                     var value = layer.values[feature.tags[i+1]][v];
                     if (value != 'null' ) {
-                        return (typeof value === 'string') ? value.toLowerCase() : value;
+                        value = (typeof value === 'string') ? value.toLowerCase() : value;
+                        return [i, value];
                     };
                 }
             }
         }
+
     }
 }
