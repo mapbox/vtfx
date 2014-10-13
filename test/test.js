@@ -103,19 +103,19 @@ tape('garbage collection - change index', function(t) {
         }
     }
     var afterpbf = mvt.tile.encode(tile);
-    pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/after-garbage-reindex-poi_label.pbf', t);
+    pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/after-garbage-poi_label.pbf', t);
 
     var vt = new mapnik.VectorTile(14,2621,6331);
     vt.setData(afterpbf);
     vt.parse();
-    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-reindex-poi_label.json', t);
+    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-poi_label.json', t);
 
 
     t.end();
 });
 
-tape('garbage collection - keep index', function(t) {
-    var cleaner = require('../fx/cleaner_keep_index');
+tape('garbage collection - single feature loop', function(t) {
+    var cleaner = require('../fx/cleaner_singlefeatloop');
     var beforeGarbagepbf = fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf');
 
     var mvt = encodePBF(beforeGarbagepbf);
@@ -130,12 +130,12 @@ tape('garbage collection - keep index', function(t) {
         }
     }
     var afterpbf = mvt.tile.encode(tile);
-    pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/after-garbage-keepindex-poi_label.pbf', t);
+    pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/after-garbage-singlefeatloop-drop10-poi_label.pbf', t);
 
     var vt = new mapnik.VectorTile(14,2621,6331);
     vt.setData(afterpbf);
     vt.parse();
-    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-keepindex-poi_label.json', t);
+    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-singlefeatloop-drop10-poi_label.json', t);
 
     t.end();
 });

@@ -1,7 +1,11 @@
 var fs = require('fs');
 var Benchmark = require('benchmark');
-var cleaner = require('../fx/cleaner_change_index');
 var suite = new Benchmark.Suite;
+
+var fn = {
+    cleaner: require('../fx/cleaner_change_index'),
+    cleaner_singlefeatloop: require('../fx/cleaner_singlefeatloop')
+}
 
 var fixtures = {
     drop10: getLayer(fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf'), 'poi_label'),
@@ -20,39 +24,24 @@ var data = {};
 console.log('Benchmarks for garbage collector: ');
 
 // add tests
-suite.add('cleaner#drop10', function(){
-    cleaner(fixtures.drop10);
-})
-.add('cleaner#drop100', function(){
-    cleaner(fixtures.drop100);
-})
-.add('cleaner#drop200', function(){
-    cleaner(fixtures.drop200);
-})
-.add('cleaner#drop1000', function(){
-    cleaner(fixtures.drop1000);
-})
-.add('cleaner#labelgrid256', function(){
-    cleaner(fixtures.labelgrid256);
-})
-.add('cleaner#labelgrid512', function(){
-    cleaner(fixtures.labelgrid512);
-})
-.add('cleaner#labelgrid1024', function(){
-    cleaner(fixtures.labelgrid1024);
-})
-.add('cleaner#labelgrid2048', function(){
-    cleaner(fixtures.labelgrid2048);
-})
-.add('cleaner#linelabel', function(){
-    cleaner(fixtures.linelabel);
-})
+for (var i in fn){
+    for (var ix in fixtures){
+        (function(i, ix){
+            suite.add(i + '#' + ix, function(){
+                fn[i](fixtures[ix]);
+            })
+        })(i, ix);
+    }
+}
+
 // add listeners
-.on('cycle', function(event) {
+suite.on('cycle', function(event) {
+    var fn = event.target.name.split('#')[0];
     var test = event.target.name.split('#')[1],
         series = /\D+/.exec(test)[0];
-    data[series] = data[series] || {};
-    data[series][parseInt(fixtures[test].features.length)] = event.target.hz;
+    data[fn] = data[fn] || {};
+    data[fn][series] = data[fn][series] || {};
+    data[fn][series][parseInt(fixtures[test].features.length)] = event.target.hz;
     console.log(String(event.target) + ' for ' + fixtures[test].features.length + ' features ');
 })
 .on('complete', function(){
