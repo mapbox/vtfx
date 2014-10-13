@@ -7,7 +7,7 @@ function fx(layer, options) {
 
     for (var i=0; i<layer.features.length; i++) {
         var feature = layer.features[i];
-        var value = field !== null ? getvalue(feature) : "feat";
+        var value = (field != null) ? getvalue(feature) : "feat";
         if (!bucket[value]) {
             bucket[value] = feature;
         } else {
@@ -20,16 +20,20 @@ function fx(layer, options) {
     layer.features = newfeatures;
     return layer
 
-    function getvalue(x) {
-        for (var i = 0; i<x.tags.length; i+=2) {
-            if (layer.keys[x.tags[i]] === field) {
-                for (v in layer.values[x.tags[i+1]]) {
-                    var value = layer.values[x.tags[i+1]][v];
+    function getvalue(feature) {
+        for (var i = 0; i<feature.tags.length; i+=2) {
+            //console.log(layer.keys[i]);
+            if (layer.keys[feature.tags[i]] !== field) {
+                // drop keys + values eaten by groupby
+                layer.keys.splice(feature.tags[i], 1);
+                layer.values.splice(feature.tags[i+1], 1);
+            } else {
+                for (v in layer.values[feature.tags[i+1]]) {
+                    var value = layer.values[feature.tags[i+1]][v];
                     if (value != 'null' ) {
                         return (typeof value === 'string') ? value.toLowerCase() : value;
                     };
                 }
-
             }
         }
     }
