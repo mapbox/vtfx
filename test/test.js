@@ -87,8 +87,8 @@ tape('linelabel', function(t) {
 //     });
 // });
 
-tape('garbage collection - change index', function(t) {
-    var cleaner = require('../fx/cleaner_change_index');
+tape('garbage collection - single feature loop', function(t) {
+    var cleaner = require('../fx/cleaner');
     var beforeGarbagepbf = fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf');
 
     var mvt = encodePBF(beforeGarbagepbf);
@@ -109,36 +109,6 @@ tape('garbage collection - change index', function(t) {
     vt.setData(afterpbf);
     vt.parse();
     jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-poi_label.json', t);
-
-
-    t.end();
-});
-
-tape('garbage collection - single feature loop', function(t) {
-    // this garbage collector will create a different index for keys and features
-    // than the one above since it reindexes on the fly, and thus the outcomes can't be compared
-
-    var cleaner = require('../fx/cleaner_singlefeatloop');
-    var beforeGarbagepbf = fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf');
-
-    var mvt = encodePBF(beforeGarbagepbf);
-    var tile = mvt.tile.decode(beforeGarbagepbf);
-
-    for (var i = 0; i < tile.layers.length; i++) {
-        // should the garbage collector be called for all layers or just modified ones?
-        // if just modified ones... when? After each filter or at the end of all?
-        var name = tile.layers[i].name;
-        if (name === 'poi_label'){
-            cleaner(tile.layers[i]);
-        }
-    }
-    var afterpbf = mvt.tile.encode(tile);
-    pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/after-garbage-singlefeatloop-drop10-poi_label.pbf', t);
-
-    var vt = new mapnik.VectorTile(14,2621,6331);
-    vt.setData(afterpbf);
-    vt.parse();
-    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-singlefeatloop-drop10-poi_label.json', t);
 
     t.end();
 });
