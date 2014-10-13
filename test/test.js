@@ -115,6 +115,9 @@ tape('garbage collection - change index', function(t) {
 });
 
 tape('garbage collection - single feature loop', function(t) {
+    // this garbage collector will create a different index for keys and features
+    // than the one above since it reindexes on the fly, and thus the outcomes can't be compared
+
     var cleaner = require('../fx/cleaner_singlefeatloop');
     var beforeGarbagepbf = fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf');
 
