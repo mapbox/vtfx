@@ -22,8 +22,10 @@ function fx(layer, options) {
 
     function getvalue(feature) {
         for (var i = 0; i<feature.tags.length; i+=2) {
-            //console.log(layer.keys[i]);
             if (layer.keys[feature.tags[i]] !== field) {
+                // drop tags that reference features that need to go away
+                feature.tags.splice(i,1);
+                feature.tags.splice(i+1,1);
                 // drop keys + values eaten by groupby
                 layer.keys.splice(feature.tags[i], 1);
                 layer.values.splice(feature.tags[i+1], 1);
