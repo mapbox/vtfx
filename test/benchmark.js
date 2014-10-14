@@ -22,14 +22,14 @@ var functions = [
 
 var fixtures = [
   { name: 'drop10', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf'), layer: 'poi_label'},
-  { name: 'drop100', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop100-poi_label.pbf'), layer: 'poi_label'},
-  { name: 'drop200', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop200-poi_label.pbf'), layer: 'poi_label'},
-  { name: 'drop1000', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop1000-poi_label.pbf'), layer: 'poi_label'},
-  { name: 'labelgrid2048', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid2048-poi_label.pbf'), layer: 'poi_label'},
-  { name: 'labelgrid1024', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid1024-poi_label.pbf'), layer: 'poi_label'},
-  { name: 'labelgrid512', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid512-poi_label.pbf'), layer: 'poi_label'},
-  { name: 'labelgrid256', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid256-poi_label.pbf'), layer: 'poi_label'},
-  { name: 'linelabel', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-linelabel-poi_label.pbf'), layer: 'road'}
+  // { name: 'drop100', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop100-poi_label.pbf'), layer: 'poi_label'},
+  // { name: 'drop200', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop200-poi_label.pbf'), layer: 'poi_label'},
+  // { name: 'drop1000', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop1000-poi_label.pbf'), layer: 'poi_label'},
+  // { name: 'labelgrid2048', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid2048-poi_label.pbf'), layer: 'poi_label'},
+  // { name: 'labelgrid1024', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid1024-poi_label.pbf'), layer: 'poi_label'},
+  // { name: 'labelgrid512', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid512-poi_label.pbf'), layer: 'poi_label'},
+  // { name: 'labelgrid256', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-labelgrid256-poi_label.pbf'), layer: 'poi_label'},
+  // { name: 'linelabel', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-linelabel-poi_label.pbf'), layer: 'road'}
 ];
 
 var data = {};
@@ -43,10 +43,10 @@ functions.forEach(function(fn) {
     suite.add({
       name: fixture.name + '#' + fn.name,
       fn: function() {
-        this.fx(layer);
+        this.fx(JSON.parse(layer));
       },
       setup: function() {
-        var layer = this.getLayer(this.fixture);
+        var layer = JSON.stringify(this.getLayer(this.fixture));
       },
       fixture: fixture,
       getLayer: getLayer,

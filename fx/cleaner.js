@@ -7,7 +7,7 @@ module.exports = cleaner;
 
 // Deletion from layer.keys and layer.values is done in place-ish,
 // but there's still a lot of iteration and extra objects created.
-function cleaner(layer){
+function cleaner(layer) {
     var keys = {};
     var keysIx = Object.keys(layer.keys);
     for (var i = 0; i < keysIx.length; i ++){
