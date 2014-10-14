@@ -31,6 +31,10 @@ var fixtures = {
     linelabel: {file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-linelabel-poi_label.pbf'), layer: 'road'}
 };
 
+for (var k in fixtures) {
+  fixtures[k].tile =  mvt.tile.decode(fixtures[k].file);
+}
+
 var data = {};
 
 console.log('Benchmarks for garbage collector: ');
@@ -63,13 +67,12 @@ suite.on('cycle', function(event) {
 .run();
 
 function getLayer(options) {
-    var pbf = options.file,
-        layerName = options.layer,
-        tile = mvt.tile.decode(pbf);
+    var layerName = options.layer,
+        tile = options.tile;
 
     for (var i = 0; i < tile.layers.length; i++) {
         var name = tile.layers[i].name;
-        if (name === layerName){
+        if (name === layerName) {
             var layer = tile.layers[i];
         }
     }
