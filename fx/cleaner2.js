@@ -7,20 +7,16 @@ module.exports = cleaner;
 
 // Deletion from layer.keys and layer.values is done in place-ish,
 // but there's still a lot of iteration and extra objects created.
-function cleaner(layer){
-    var keys = {};
-    var keysIx = Object.keys(layer.keys);
-    for (var i = 0; i < keysIx.length; i ++){
-        keys[i] = keysIx[i];
-    }
-    var values = {};
-    var valuesIx = Object.keys(layer.values);
-    for (var i = 0; i < valuesIx.length; i ++){
-        values[i] = valuesIx[i];
+function cleaner(layer) {
+    var keys = Object.keys(layer.keys);
+    var values = Object.keys(layer.values);
+
+    if (keys.length === 0 && values.length === 0) {
+      return layer;
     }
 
-    keysIx = [];
-    valuesIx = [];
+    var keysIx = [];
+    var valuesIx = [];
 
     var kept = {
         keys: {},
@@ -31,11 +27,10 @@ function cleaner(layer){
         values: 0
     };
 
-    for (var i in layer.features){
+    for (var i in layer.features) {
         var tags = layer.features[i].tags,
             featureLength = tags.length;
-        if (keys === {} && values === {}) continue;
-        for (var ix = 0; ix < featureLength; ix +=2){
+        for (var ix = 0; ix < featureLength; ix +=2) {
             if (keys[tags[ix]]) {
                 // approximation of a refcount
                 kept.keys[keys[tags[ix]]] = counters.keys;
@@ -53,8 +48,8 @@ function cleaner(layer){
                 delete values[tags[ix+1]];
 
             }
-            tags[ix] = kept.keys[tags[ix]]
-            tags[ix+1] = kept.values[tags[ix+1]]
+            tags[ix] = kept.keys[tags[ix]];
+            tags[ix+1] = kept.values[tags[ix+1]];
         }
     }
 
