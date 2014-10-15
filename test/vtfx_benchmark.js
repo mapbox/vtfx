@@ -1,13 +1,26 @@
 var fs = require('fs');
 var Benchmark = require('benchmark');
 var suite = new Benchmark.Suite();
-var vtfx = require('../index.js');
+
+var protobuf = require('protocol-buffers');
+var path = require('path');
+
+// Gross!
+var proto = fs.readFileSync(path.dirname(require.resolve('mapnik-vector-tile')) + '/proto/vector_tile.proto', 'utf8');
+proto = proto.replace('package mapnik.vector;', '');
+proto = proto.replace('optional uint64 id = 1;', 'optional int64 id = 1;');
+proto = proto.replace('option optimize_for = LITE_RUNTIME;', '');
+proto = proto.replace('extensions 8 to max;', '');
+proto = proto.replace('extensions 16 to max;', '');
+proto = proto.replace('extensions 16 to 8191;', '');
+var mvt = protobuf(proto);
 
 var functions = [
-  { name: 'drop100', options: {'poi_label':[{id:'drop', limit:100}]}},
-  { name: 'labelgrid1024', options: {'poi_label':[{id:'labelgrid', size:1024}]}},
-  { name: 'orderby-scalerank', options: {'poi_label':[{id:'orderby', field:'scalerank'}]}},
-  { name: 'linelabel-class', options: {'poi_label':[{id:'orderby', field:'scalerank'}]}}
+  { name: 'drop100', fn: require('./../fx/drop'), options: { limit:100 }, layer: 'poi_label'},
+  { name: 'labelgrid1024', fn: require('./../fx/labelgrid'), options: { size:1024 }, layer: 'poi_label'},
+  { name: 'labelgrid256', fn: require('./../fx/labelgrid'), options: { size:256 }, layer: 'poi_label'},
+  { name: 'orderby-scalerank', fn: require('./../fx/orderby'), options: { field:'scalerank' }, layer: 'poi_label'},
+  { name: 'linelabel-class', fn: require('./../fx/linelabel'), options:  { labelfield:'class' }, layer: 'poi_label'}
 ];
 
 var fixture = fs.readFileSync(__dirname + '/before.pbf');
@@ -19,11 +32,14 @@ functions.forEach(function(fn) {
   suite.add({
       name: 'vtfx#' + fn.name,
       fn: function() {
-        this.vtfx(this.fixture, this.fx.options, function(){});
+        this.fx.fn(JSON.parse(layer), this.fx.options);
+      },
+      setup: function() {
+        var layer = JSON.stringify(this.getLayer(this.fixture, this.fx.layer));
       },
       fixture: fixture,
       fx: fn,
-      vtfx: vtfx
+      getLayer: getLayer
     });
 });
 
@@ -32,3 +48,14 @@ suite.on('cycle', function(event) {
   console.log(String(event.target), event.target.hz);
 })
 .run();
+
+function getLayer(pbf, layerName) {
+  var tile = mvt.tile.decode(pbf);
+
+  for (var i = 0; i < tile.layers.length; i++) {
+    var name = tile.layers[i].name;
+    if (name === layerName) {
+      return tile.layers[i];
+    }
+  }
+}
