@@ -23,17 +23,15 @@ function fx(layer, options) {
 
         function place(pail) {
             if (!bucket[pail]) {
-                console.log(pail);
                 bucket[pail] = feature;
             } else {
                 bucket[pail].geometry = bucket[pail].geometry.concat(feature.geometry);
             }
             bucket[pail].tags = (arr != "") ? [arr[0],feature.tags[arr[0]+1]] : [];
         }
-
-        for (b in bucket) {
-            newfeatures.push(bucket[b]);
-        }
+    }
+    for (b in bucket) {
+        newfeatures.push(bucket[b]);
     }
     layer.features = newfeatures;
     return layer
