@@ -1,7 +1,7 @@
 var protobuf = require('protocol-buffers');
 var path = require('path');
 var fs = require('fs');
-var cleaner = require('./fx/cleaner_change_index');
+var cleaner = require('./fx/cleaner');
 
 // Gross!
 var proto = fs.readFileSync(path.dirname(require.resolve('mapnik-vector-tile')) + '/proto/vector_tile.proto', 'utf8');

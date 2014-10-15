@@ -35,7 +35,7 @@ function fx(layer, options) {
             if (layer.keys[x.tags[i]] === field) {
                 for (v in layer.values[x.tags[i+1]]) {
                     var value = layer.values[x.tags[i+1]][v];
-                    if (value != 'null' ) {
+                    if (value !== null ) {
                         return (typeof value === 'string') ? value.toLowerCase() : value;
                     };
                 }

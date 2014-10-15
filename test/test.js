@@ -48,14 +48,27 @@ tape('labelgrid', function(t) {
     });
 });
 
-tape('orderby', function(t) {
-    vtfx(beforepbf, {'poi_label':[{id:'orderby', field:'scalerank'}]}, function(err, afterpbf) {
-        pbfEqual(afterpbf, __dirname + '/after-orderby-poi_label.pbf', t);
+tape('orderby number', function(t) {
+    vtfx(beforepbf, {'poi_label':[{id:'orderby', field:'scalerank', sort: 1}]}, function(err, afterpbf) {
+        pbfEqual(afterpbf, __dirname + '/after-orderby-number-poi_label.pbf', t);
 
         var vt = new mapnik.VectorTile(14,2621,6331);
         vt.setData(afterpbf);
         vt.parse();
-        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-orderby-poi_label.json', t);
+        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-orderby-number-poi_label.json', t);
+
+        t.end();
+    });
+});
+
+tape('orderby string', function(t) {
+    vtfx(beforepbf, {'poi_label':[{id:'orderby', field:'name', sort: -1}]}, function(err, afterpbf) {
+        pbfEqual(afterpbf, __dirname + '/after-orderby-string-poi_label.pbf', t);
+
+        var vt = new mapnik.VectorTile(14,2621,6331);
+        vt.setData(afterpbf);
+        vt.parse();
+        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-orderby-string-poi_label.json', t);
 
         t.end();
     });
@@ -74,6 +87,7 @@ tape('linelabel', function(t) {
     });
 });
 
+// use this test to generate garbage collector features for the benchmarks
 // tape('generate garbage collection test fix', function(t) {
 //     vtfx(fs.readFileSync(__dirname + '/before.pbf'), {'poi_label':[{id:'drop', limit:10}]}, function(err, afterpbf) {
 //         pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf', t);
@@ -87,16 +101,14 @@ tape('linelabel', function(t) {
 //     });
 // });
 
-tape('garbage collection - change index', function(t) {
-    var cleaner = require('../fx/cleaner_change_index');
+tape('garbage collection', function(t) {
+    var cleaner = require('../fx/cleaner');
     var beforeGarbagepbf = fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf');
 
     var mvt = encodePBF(beforeGarbagepbf);
     var tile = mvt.tile.decode(beforeGarbagepbf);
 
     for (var i = 0; i < tile.layers.length; i++) {
-        // should the garbage collector be called for all layers or just modified ones?
-        // if just modified ones... when? After each filter or at the end of all?
         var name = tile.layers[i].name;
         if (name === 'poi_label'){
             cleaner(tile.layers[i]);
@@ -109,36 +121,6 @@ tape('garbage collection - change index', function(t) {
     vt.setData(afterpbf);
     vt.parse();
     jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-poi_label.json', t);
-
-
-    t.end();
-});
-
-tape('garbage collection - single feature loop', function(t) {
-    // this garbage collector will create a different index for keys and features
-    // than the one above since it reindexes on the fly, and thus the outcomes can't be compared
-
-    var cleaner = require('../fx/cleaner_singlefeatloop');
-    var beforeGarbagepbf = fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf');
-
-    var mvt = encodePBF(beforeGarbagepbf);
-    var tile = mvt.tile.decode(beforeGarbagepbf);
-
-    for (var i = 0; i < tile.layers.length; i++) {
-        // should the garbage collector be called for all layers or just modified ones?
-        // if just modified ones... when? After each filter or at the end of all?
-        var name = tile.layers[i].name;
-        if (name === 'poi_label'){
-            cleaner(tile.layers[i]);
-        }
-    }
-    var afterpbf = mvt.tile.encode(tile);
-    pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/after-garbage-singlefeatloop-drop10-poi_label.pbf', t);
-
-    var vt = new mapnik.VectorTile(14,2621,6331);
-    vt.setData(afterpbf);
-    vt.parse();
-    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-singlefeatloop-drop10-poi_label.json', t);
 
     t.end();
 });
