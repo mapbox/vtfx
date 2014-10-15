@@ -48,6 +48,5 @@ function fx(layer, options) {
                 }
             }
         }
-
     }
 }

@@ -87,6 +87,32 @@ tape('linelabel', function(t) {
     });
 });
 
+tape('collect on field', function(t) {
+    vtfx(beforepbf, {'road':[{id:'collect', field:'class'}]}, function(err, afterpbf) {
+        pbfEqual(afterpbf, __dirname + '/after-collect-field-road.pbf', t);
+
+        var vt = new mapnik.VectorTile(14,2621,6331);
+        vt.setData(afterpbf);
+        vt.parse();
+        jsonEqual(vt.toGeoJSON('road'), __dirname + '/after-collect-field-road.json', t);
+
+        t.end();
+    });
+});
+
+tape('collect all', function(t) {
+    vtfx(beforepbf, {'road':[{id:'collect'}]}, function(err, afterpbf) {
+        pbfEqual(afterpbf, __dirname + '/after-collect-all-road.pbf', t);
+
+        var vt = new mapnik.VectorTile(14,2621,6331);
+        vt.setData(afterpbf);
+        vt.parse();
+        jsonEqual(vt.toGeoJSON('road'), __dirname + '/after-collect-all-road.json', t);
+
+        t.end();
+    });
+});
+
 // use this test to generate garbage collector features for the benchmarks
 // tape('generate garbage collection test fix', function(t) {
 //     vtfx(fs.readFileSync(__dirname + '/before.pbf'), {'poi_label':[{id:'drop', limit:10}]}, function(err, afterpbf) {
