@@ -14,16 +14,15 @@ proto = proto.replace('extensions 8 to max;', '');
 proto = proto.replace('extensions 16 to max;', '');
 proto = proto.replace('extensions 16 to 8191;', '');
 var mvt = protobuf(proto);
+var tile = mvt.tile.decode(fs.readFileSync(__dirname + '/before.pbf'));
 
 var functions = [
-  { name: 'drop100', fn: require('./../fx/drop'), options: { limit:100 }, layer: 'poi_label'},
+  { name: 'drop100', fn: require('./../fx/drop'), options: { limit: 100 }, layer: 'poi_label'},
   { name: 'labelgrid1024', fn: require('./../fx/labelgrid'), options: { size:1024 }, layer: 'poi_label'},
   { name: 'labelgrid256', fn: require('./../fx/labelgrid'), options: { size:256 }, layer: 'poi_label'},
   { name: 'orderby-scalerank', fn: require('./../fx/orderby'), options: { field:'scalerank' }, layer: 'poi_label'},
   { name: 'linelabel-class', fn: require('./../fx/linelabel'), options:  { labelfield:'class' }, layer: 'poi_label'}
 ];
-
-var fixture = fs.readFileSync(__dirname + '/before.pbf');
 
 console.log('Benchmarks for VTFX (this may take a few minutes): ');
 
@@ -35,9 +34,9 @@ functions.forEach(function(fn) {
         this.fx.fn(JSON.parse(layer), this.fx.options);
       },
       setup: function() {
-        var layer = JSON.stringify(this.getLayer(this.fixture, this.fx.layer));
+        var layer = JSON.stringify(this.getLayer(this.tile, this.fx.layer));
       },
-      fixture: fixture,
+      tile: tile,
       fx: fn,
       getLayer: getLayer
     });
@@ -49,9 +48,7 @@ suite.on('cycle', function(event) {
 })
 .run();
 
-function getLayer(pbf, layerName) {
-  var tile = mvt.tile.decode(pbf);
-
+function getLayer(tile, layerName) {
   for (var i = 0; i < tile.layers.length; i++) {
     var name = tile.layers[i].name;
     if (name === layerName) {
