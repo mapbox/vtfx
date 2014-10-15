@@ -2,7 +2,7 @@
 
 These parameters explain the API for each function, and allow Mapbox Studio to generate a UI for new VTFX filters.
 
-```
+``` javascript
 module.exports.parameters = {
     // Function name
     "name": "orderby",
