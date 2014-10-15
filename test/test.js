@@ -49,7 +49,7 @@ tape('labelgrid', function(t) {
 });
 
 tape('orderby', function(t) {
-    vtfx(beforepbf, {'poi_label':[{id:'orderby', field:'scalerank'}]}, function(err, afterpbf) {
+    vtfx(beforepbf, {'poi_label':[{id:'orderby', field:'scalerank', sort: 1}]}, function(err, afterpbf) {
         pbfEqual(afterpbf, __dirname + '/after-orderby-poi_label.pbf', t);
 
         var vt = new mapnik.VectorTile(14,2621,6331);
