@@ -6,18 +6,34 @@ function fx(layer, options) {
     var newfeatures = [], bucket = {};
 
     for (var i=0; i<layer.features.length; i++) {
-
         var feature = layer.features[i];
-        var value = (field != null) ? getvalue(feature) : [0, "feat"];
-        if (!bucket[value[1]]) {
-            bucket[value[1]] = feature;
-        } else {
-            bucket[value[1]].geometry = bucket[value[1]].geometry.concat(feature.geometry);
+        var arr = (field != null) ? getvalue(feature) : "";
+        var value = (arr != "") ? arr[1] : "";
+        switch (feature.type) {
+            case 1:
+                place(value+"_point");
+                break;
+            case 2:
+                place(value+"_line");
+                break;
+            case 3:
+                place(value+"_poly");
+                break;
         }
-        bucket[value[1]].tags = [value[0], feature.tags[value[0]+1]];
-    }
-    for (i in bucket) {
-        newfeatures.push(bucket[i]);
+
+        function place(pail) {
+            if (!bucket[pail]) {
+                console.log(pail);
+                bucket[pail] = feature;
+            } else {
+                bucket[pail].geometry = bucket[pail].geometry.concat(feature.geometry);
+            }
+            bucket[pail].tags = (arr != "") ? [arr[0],feature.tags[arr[0]+1]] : [];
+        }
+
+        for (b in bucket) {
+            newfeatures.push(bucket[b]);
+        }
     }
     layer.features = newfeatures;
     return layer
