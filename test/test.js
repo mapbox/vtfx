@@ -48,14 +48,27 @@ tape('labelgrid', function(t) {
     });
 });
 
-tape('orderby', function(t) {
+tape('orderby number', function(t) {
     vtfx(beforepbf, {'poi_label':[{id:'orderby', field:'scalerank', sort: 1}]}, function(err, afterpbf) {
-        pbfEqual(afterpbf, __dirname + '/after-orderby-poi_label.pbf', t);
+        pbfEqual(afterpbf, __dirname + '/after-orderby-number-poi_label.pbf', t);
 
         var vt = new mapnik.VectorTile(14,2621,6331);
         vt.setData(afterpbf);
         vt.parse();
-        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-orderby-poi_label.json', t);
+        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-orderby-number-poi_label.json', t);
+
+        t.end();
+    });
+});
+
+tape('orderby string', function(t) {
+    vtfx(beforepbf, {'poi_label':[{id:'orderby', field:'name', sort: -1}]}, function(err, afterpbf) {
+        pbfEqual(afterpbf, __dirname + '/after-orderby-string-poi_label.pbf', t);
+
+        var vt = new mapnik.VectorTile(14,2621,6331);
+        vt.setData(afterpbf);
+        vt.parse();
+        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-orderby-string-poi_label.json', t);
 
         t.end();
     });
