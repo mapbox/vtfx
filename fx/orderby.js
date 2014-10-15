@@ -22,7 +22,8 @@ module.exports.parameters = {
 function fx(layer, options) {
     var field = options.field;
     if (!field) throw new Error('field is not set');
-    if (field && layer.keys.indexOf(field) === -1) throw new Error("field "+field+" does not exist");
+    var fieldidx = layer.keys.indexOf(field);
+    if (fieldidx === -1) throw new Error("field "+field+" does not exist");
 
     var sort = options.sort || 1; // 1 asc, -1 desc
 
@@ -32,15 +33,16 @@ function fx(layer, options) {
 
     function getvalue(x) {
         for (var i = 0; i<x.tags.length; i+=2) {
-            if (layer.keys[x.tags[i]] === field) {
-                for (v in layer.values[x.tags[i+1]]) {
-                    var value = layer.values[x.tags[i+1]][v];
-                    if (value !== null ) {
-                        return (typeof value === 'string') ? value.toLowerCase() : value;
-                    };
-                }
-
-            }
+            if (x.tags[i] !== fieldidx) continue;
+            var values = layer.values[x.tags[i+1]];
+            var value = values.string_value ||
+                values.int_value ||
+                values.float_value ||
+                values.double_value ||
+                values.uint_value ||
+                values.sint_value ||
+                values.bool_value || null;
+            return (typeof value === 'string') ? value.toLowerCase() : value;
         }
     }
     return layer;
