@@ -17,7 +17,6 @@ var mvt = protobuf(proto);
 
 var functions = [
   { name: 'cleaner', fn: require('../fx/cleaner') },
-  { name: 'cleaner2', fn: require('../fx/cleaner2') }
 ];
 
 var fixtures = [
@@ -32,7 +31,7 @@ var fixtures = [
   { name: 'linelabel', file: fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-linelabel-poi_label.pbf'), layer: 'road'}
 ];
 
-console.log('Benchmarks for garbage collector: ');
+console.log('Benchmarks for garbage collector (this will take a few minutes): ');
 
 // add tests
 functions.forEach(function(fn) {
@@ -52,15 +51,9 @@ functions.forEach(function(fn) {
   });
 });
 
-var counter = 0;
 // add listeners
 suite.on('cycle', function(event) {
-  var length = getLayer(fixtures[counter]).features.length;
-  counter += 1;
-  console.log(String(event.target), event.target.hz.toFixed(2), 'for', length, 'features');
-})
-.on('complete', function(){
-  console.log('Benchmark data:\n', data);
+  console.log(String(event.target), event.target.hz);
 })
 .run();
 

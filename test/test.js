@@ -74,6 +74,7 @@ tape('linelabel', function(t) {
     });
 });
 
+// use this test to generate garbage collector features for the benchmarks
 // tape('generate garbage collection test fix', function(t) {
 //     vtfx(fs.readFileSync(__dirname + '/before.pbf'), {'poi_label':[{id:'drop', limit:10}]}, function(err, afterpbf) {
 //         pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf', t);
@@ -87,7 +88,7 @@ tape('linelabel', function(t) {
 //     });
 // });
 
-tape('garbage collection - single feature loop', function(t) {
+tape('garbage collection', function(t) {
     var cleaner = require('../fx/cleaner');
     var beforeGarbagepbf = fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf');
 
@@ -95,8 +96,6 @@ tape('garbage collection - single feature loop', function(t) {
     var tile = mvt.tile.decode(beforeGarbagepbf);
 
     for (var i = 0; i < tile.layers.length; i++) {
-        // should the garbage collector be called for all layers or just modified ones?
-        // if just modified ones... when? After each filter or at the end of all?
         var name = tile.layers[i].name;
         if (name === 'poi_label'){
             cleaner(tile.layers[i]);

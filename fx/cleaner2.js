@@ -30,6 +30,7 @@ function cleaner(layer) {
     for (var i in layer.features) {
         var tags = layer.features[i].tags,
             featureLength = tags.length;
+        if (keys.length === 0 && values.length === 0) continue;
         for (var ix = 0; ix < featureLength; ix +=2) {
             if (keys[tags[ix]]) {
                 // approximation of a refcount
