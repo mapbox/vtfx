@@ -1,5 +1,16 @@
 module.exports = fx;
-module.exports.parameters = {};
+module.exports.parameters = {
+    "name": "collect",
+    "display": "Group features by attribue",
+    "description": "Groups all features with the supplied field into one object. If no field is given features are grouped by geometery type",
+    "options": [
+        {
+            "field": "field",
+            "type": null
+        }
+    ],
+    "chainable": false
+};
 
 function fx(layer, options) {
     var field = options.field;
