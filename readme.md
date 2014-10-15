@@ -27,3 +27,10 @@ Summary of main motivations/goals/challenges:
 >
 > These tricks are not generalized, usually tied to postgres or data-specific configurations. A rough goal here might be to move these to postprocessors/datasource-agnostic libraries that can be used across projects.
 
+** Tests **
+
+`npm test`
+
+for benchmarks on the garbage collector:
+
+`node test/benchmark.js`
