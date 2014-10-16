@@ -10,6 +10,7 @@ module.exports.parameters = {
     "options": [ { "field": "dropkey", "type": "string" } ], "chainable": false };
 
 function dropkey(layer, options) {
+    if (!options.dropkey) throw new Error('dropkey option required');
     var keyId = layer.keys.length
     while (keyId--)
         if (layer.keys[keyId] === options.dropkey) break;  
