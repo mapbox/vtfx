@@ -2,8 +2,8 @@ var tape = require('tape');
 var util = require('./util.js');
 var linelabel = require('../fx/linelabel.js');
 
-tape('orderby string', function(assert) {
-    // Creates geojson with features in order B, A, C, null
+tape('linelabel by name', function(assert) {
+    // Creates geojson with features where the line segment is long enough to be labeled with the given string
     var vt = util.fromGeoJSON({
         "type": "FeatureCollection",
         "features": [{

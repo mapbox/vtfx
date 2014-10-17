@@ -4,7 +4,7 @@ var cleaner = require('../fx/cleaner.js');
 var vtfx = require('../index.js');
 
 tape('cleaner cleans drop 5', function(assert) {
-    // Creates geojson with features in order B, A, C, null
+    // Cleans up dereferenced keys and values for deleted features
     var vt = util.fromGeoJSON({
         "type": "FeatureCollection",
         "features": ['oak', 'maple', 'birch', 'teak', 'aspen', 'beech', 'dogwood', 'chestnut', 'sycamore', 'ash', 'apples','Bananas','apples','cartography', null].map(function(val,i) {
@@ -40,7 +40,7 @@ tape('cleaner cleans drop 5', function(assert) {
 });
 
 tape('cleaner cleans removed feature and reindexes', function(assert) {
-    // Creates geojson with features in order B, A, C, null
+    // Cleans up dereferenced keys and values for deleted features and reindexes feature tags
     var vt = util.fromGeoJSON({
         "type": "FeatureCollection",
         "features": ['oak', 'cat', 'maple', 'birch', 'teak', 'aspen', 'beech', 'dogwood', 'chestnut', 'sycamore', 'ash'].map(function(val,i) {
