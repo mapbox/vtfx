@@ -35,14 +35,13 @@ function fx(layer, options) {
         for (var i = 0; i<x.tags.length; i+=2) {
             if (x.tags[i] !== fieldidx) continue;
             var values = layer.values[x.tags[i+1]];
-            var value = values.string_value ||
-                values.int_value ||
-                values.float_value ||
-                values.double_value ||
-                values.uint_value ||
-                values.sint_value ||
-                values.bool_value || null;
-            return (typeof value === 'string') ? value.toLowerCase() : value;
+            return values.string_value !== null ? values.string_value.toLowerCase() : values.string_value ||
+                values.int_value !== null ? values.int_value : values.int_value ||
+                values.float_value !== null ? values.float_value : values.float_value ||
+                values.double_value !== null ? values.double_value : values.double_value ||
+                values.uint_value !== null ? values.uint_value : values.uint_value ||
+                values.sint_value !== null ? values.sint_value : values.sint_value ||
+                values.bool_value !== null ? values.bool_value : values.bool_value || null;
         }
     }
     return layer;
