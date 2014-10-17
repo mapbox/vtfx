@@ -27,7 +27,10 @@ function fx(layer, options) {
     var sort = options.sort || 1; // 1 asc, -1 desc
 
     layer.features = layer.features.sort(function(a, b) {
-        return (getvalue(a) < getvalue(b)) ? -sort : sort;
+        var va = getvalue(a);
+        var vb = getvalue(b);
+        if (va === vb) { return va - vb; }
+        return (va > vb) ? sort : -sort;
     });
 
     function getvalue(x) {
