@@ -29,7 +29,7 @@ function fx(layer, options) {
     layer.features = layer.features.sort(function(a, b) {
         var va = getvalue(a);
         var vb = getvalue(b);
-        if (va === vb) { return va - vb; }
+        if (va === vb) return 0;
         return (va > vb) ? sort : -sort;
     });
 
