@@ -14,27 +14,6 @@ tape('before', function(t) {
     t.end();
 });
 
-tape('drop', function(t) {
-    vtfx(beforepbf, {'poi_label':[{id:'drop', limit:100}]}, function(err, afterpbf) {
-        t.ifError(err);
-        pbfEqual(afterpbf, __dirname + '/after-drop.pbf', t);
-
-        var vt = new mapnik.VectorTile(14,2621,6331);
-        vt.setData(afterpbf);
-        vt.parse();
-        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-drop-poi_label.json', t);
-
-        t.end();
-    });
-});
-
-tape('drop err', function(t) {
-    vtfx(beforepbf, {'poi_label':[{id:'drop', limit:'asdf'}]}, function(err, afterpbf) {
-        t.equal(err.toString(), 'Error: options.limit must be a number');
-        t.end();
-    });
-});
-
 tape('labelgrid', function(t) {
     vtfx(beforepbf, {'poi_label':[{id:'labelgrid', size:1024}]}, function(err, afterpbf) {
         pbfEqual(afterpbf, __dirname + '/after-labelgrid-poi_label.pbf', t);
@@ -85,44 +64,6 @@ tape('linelabel', function(t) {
 
         t.end();
     });
-});
-
-// use this test to generate garbage collector features for the benchmarks
-// tape('generate garbage collection test fix', function(t) {
-//     vtfx(fs.readFileSync(__dirname + '/before.pbf'), {'poi_label':[{id:'drop', limit:10}]}, function(err, afterpbf) {
-//         pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf', t);
-
-//         var vt = new mapnik.VectorTile(14,2621,6331);
-//         vt.setData(afterpbf);
-//         vt.parse();
-//         jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.json', t);
-
-//         t.end();
-//     });
-// });
-
-tape('garbage collection', function(t) {
-    var cleaner = require('../fx/cleaner');
-    var beforeGarbagepbf = fs.readFileSync(__dirname + '/garbagecollector-fixtures/before-garbage-drop10-poi_label.pbf');
-
-    var mvt = encodePBF(beforeGarbagepbf);
-    var tile = mvt.tile.decode(beforeGarbagepbf);
-
-    for (var i = 0; i < tile.layers.length; i++) {
-        var name = tile.layers[i].name;
-        if (name === 'poi_label'){
-            cleaner(tile.layers[i]);
-        }
-    }
-    var afterpbf = mvt.tile.encode(tile);
-    pbfEqual(afterpbf, __dirname + '/garbagecollector-fixtures/after-garbage-poi_label.pbf', t);
-
-    var vt = new mapnik.VectorTile(14,2621,6331);
-    vt.setData(afterpbf);
-    vt.parse();
-    jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/garbagecollector-fixtures/after-garbage-poi_label.json', t);
-
-    t.end();
 });
 
 function pbfEqual(buffer, filepath, assert) {
