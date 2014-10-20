@@ -14,27 +14,6 @@ tape('before', function(t) {
     t.end();
 });
 
-tape('drop', function(t) {
-    vtfx(beforepbf, {'poi_label':[{id:'drop', limit:100}]}, function(err, afterpbf) {
-        t.ifError(err);
-        pbfEqual(afterpbf, __dirname + '/after-drop.pbf', t);
-
-        var vt = new mapnik.VectorTile(14,2621,6331);
-        vt.setData(afterpbf);
-        vt.parse();
-        jsonEqual(vt.toGeoJSON('poi_label'), __dirname + '/after-drop-poi_label.json', t);
-
-        t.end();
-    });
-});
-
-tape('drop err', function(t) {
-    vtfx(beforepbf, {'poi_label':[{id:'drop', limit:'asdf'}]}, function(err, afterpbf) {
-        t.equal(err.toString(), 'Error: options.limit must be a number');
-        t.end();
-    });
-});
-
 tape('labelgrid', function(t) {
     vtfx(beforepbf, {'poi_label':[{id:'labelgrid', size:1024}]}, function(err, afterpbf) {
         pbfEqual(afterpbf, __dirname + '/after-labelgrid-poi_label.pbf', t);
@@ -87,6 +66,7 @@ tape('linelabel', function(t) {
     });
 });
 
+<<<<<<< HEAD
 tape('collect on field', function(t) {
     vtfx(beforepbf, {'road':[{id:'collect', field:'class'}]}, function(err, afterpbf) {
         pbfEqual(afterpbf, __dirname + '/after-collect-field-road.pbf', t);
@@ -151,6 +131,8 @@ tape('garbage collection', function(t) {
     t.end();
 });
 
+=======
+>>>>>>> master
 function pbfEqual(buffer, filepath, assert) {
     if (UPDATE) fs.writeFileSync(filepath, buffer);
     assert.deepEqual(buffer, fs.readFileSync(filepath));

@@ -31,177 +31,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4011063576,
-          37.7893235195
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677860436,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4018573761,
-          37.789166664
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677860418,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4005484581,
-          37.7897601697
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677860415,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4013102055,
-          37.7895142893
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677860408,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4022275209,
-          37.7887893615
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677860443,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4065297842,
-          37.7850501469
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677844661,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4056661129,
-          37.7860803576
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677844660,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4054354429,
-          37.785906537
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677844648,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4067497253,
-          37.7852197299
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677844643,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4067336321,
           37.7981196148
         ]
@@ -226,44 +55,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4080049992,
-          37.7842870187
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1950609166,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3976463079,
-          37.7920875139
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -386587552,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4027049541,
           37.7885646748
         ]
@@ -280,158 +71,6 @@
         "ref": "",
         "scalerank": 4,
         "type": "Fast Food"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.400687933,
-          37.7904554131
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -3078438194,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4021685123,
-          37.788522281
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -2068535608,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4023669958,
-          37.7888487126
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -386569186,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4008005857,
-          37.7899212633
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -2068535617,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3958224058,
-          37.7934694722
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -309820442,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4021470547,
-          37.7885519566
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -3063596865,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3960638046,
-          37.7936644704
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -309820436,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4081498384,
-          37.7837655432
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677844664,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
       }
     },
     {
@@ -670,6 +309,29 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.4128597975,
+          37.7859446928
+        ]
+      },
+      "properties": {
+        "localrank": 21,
+        "maki": "grocery",
+        "name": "X-Press Market",
+        "name_de": "X-Press Market",
+        "name_en": "X-Press Market",
+        "name_es": "X-Press Market",
+        "name_fr": "X-Press Market",
+        "osm_id": -1609669970,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Convenience"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.4123394489,
           37.7877040761
         ]
@@ -788,48 +450,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.3978340626,
-          37.7922358849
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -386586392,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4128597975,
-          37.7859446928
-        ]
-      },
-      "properties": {
-        "localrank": 21,
-        "maki": "grocery",
-        "name": "X-Press Market",
-        "name_de": "X-Press Market",
-        "name_en": "X-Press Market",
-        "name_es": "X-Press Market",
-        "name_fr": "X-Press Market",
-        "osm_id": -1609669970,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Convenience"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4070823193,
           37.7936008841
         ]
@@ -926,19 +546,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.3967719078,
-          37.7933804512
+          -122.4083697796,
+          37.7991708371
         ]
       },
       "properties": {
-        "localrank": 3,
+        "address": "488 Columbus Avenue San Francisco",
+        "localrank": 12,
         "maki": "bank",
         "name": "Wells Fargo",
         "name_de": "Wells Fargo",
         "name_en": "Wells Fargo",
         "name_es": "Wells Fargo",
         "name_fr": "Wells Fargo",
-        "osm_id": 1000032612473,
+        "osm_id": -411281590,
         "ref": "",
         "scalerank": 4,
         "type": "Bank"
@@ -968,44 +589,19 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4046844244,
-          37.7870215251
+          -122.3963910341,
+          37.7855631343
         ]
       },
       "properties": {
-        "address": "San Francisco",
-        "localrank": 12,
+        "localrank": 4,
         "maki": "bank",
         "name": "Wells Fargo",
         "name_de": "Wells Fargo",
         "name_en": "Wells Fargo",
         "name_es": "Wells Fargo",
         "name_fr": "Wells Fargo",
-        "osm_id": -384346934,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Bank"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4083697796,
-          37.7991708371
-        ]
-      },
-      "properties": {
-        "address": "488 Columbus Avenue San Francisco",
-        "localrank": 12,
-        "maki": "bank",
-        "name": "Wells Fargo",
-        "name_de": "Wells Fargo",
-        "name_en": "Wells Fargo",
-        "name_es": "Wells Fargo",
-        "name_fr": "Wells Fargo",
-        "osm_id": -411281590,
+        "osm_id": -1532496946,
         "ref": "",
         "scalerank": 4,
         "type": "Bank"
@@ -1040,6 +636,53 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.3967719078,
+          37.7933804512
+        ]
+      },
+      "properties": {
+        "localrank": 3,
+        "maki": "bank",
+        "name": "Wells Fargo",
+        "name_de": "Wells Fargo",
+        "name_en": "Wells Fargo",
+        "name_es": "Wells Fargo",
+        "name_fr": "Wells Fargo",
+        "osm_id": 1000032612473,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4046844244,
+          37.7870215251
+        ]
+      },
+      "properties": {
+        "address": "San Francisco",
+        "localrank": 12,
+        "maki": "bank",
+        "name": "Wells Fargo",
+        "name_de": "Wells Fargo",
+        "name_en": "Wells Fargo",
+        "name_es": "Wells Fargo",
+        "name_fr": "Wells Fargo",
+        "osm_id": -384346934,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.3940843344,
           37.792290994
         ]
@@ -1053,29 +696,6 @@
         "name_es": "Wells Fargo",
         "name_fr": "Wells Fargo",
         "osm_id": -2035218073,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Bank"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3963910341,
-          37.7855631343
-        ]
-      },
-      "properties": {
-        "localrank": 4,
-        "maki": "bank",
-        "name": "Wells Fargo",
-        "name_de": "Wells Fargo",
-        "name_en": "Wells Fargo",
-        "name_es": "Wells Fargo",
-        "name_fr": "Wells Fargo",
-        "osm_id": -1532496946,
         "ref": "",
         "scalerank": 4,
         "type": "Bank"
@@ -1272,6 +892,31 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.4122428894,
+          37.8059864638
+        ]
+      },
+      "properties": {
+        "address": "320 Bay and Powell 94133",
+        "localrank": 1,
+        "maki": "grocery",
+        "name": "Walgreens",
+        "name_de": "Walgreens",
+        "name_en": "Walgreens",
+        "name_es": "Walgreens",
+        "name_fr": "Walgreens",
+        "osm_id": -1945590093,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Supermarket",
+        "website": "http://www.walgreens.com/locator/Walgreens-320-BAY-ST-SAN-FRANCISCO-CA-94133/id=2125"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.4087828398,
           37.7890055688
         ]
@@ -1311,31 +956,6 @@
         "ref": "",
         "scalerank": 4,
         "type": "Chemist"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4122428894,
-          37.8059864638
-        ]
-      },
-      "properties": {
-        "address": "320 Bay and Powell 94133",
-        "localrank": 1,
-        "maki": "grocery",
-        "name": "Walgreens",
-        "name_de": "Walgreens",
-        "name_en": "Walgreens",
-        "name_es": "Walgreens",
-        "name_fr": "Walgreens",
-        "osm_id": -1945590093,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Supermarket",
-        "website": "http://www.walgreens.com/locator/Walgreens-320-BAY-ST-SAN-FRANCISCO-CA-94133/id=2125"
       }
     },
     {
@@ -1670,29 +1290,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4025815725,
-          37.7926979527
-        ]
-      },
-      "properties": {
-        "localrank": 2,
-        "maki": "bank",
-        "name": "US Bank",
-        "name_de": "US Bank",
-        "name_en": "US Bank",
-        "name_es": "US Bank",
-        "name_fr": "US Bank",
-        "osm_id": -1206893696,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Bank"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.402613759,
           37.7911294539
         ]
@@ -1706,6 +1303,29 @@
         "name_es": "US Bank",
         "name_fr": "US Bank",
         "osm_id": -1205027717,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4025815725,
+          37.7926979527
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "bank",
+        "name": "US Bank",
+        "name_de": "US Bank",
+        "name_en": "US Bank",
+        "name_es": "US Bank",
+        "name_fr": "US Bank",
+        "osm_id": -1206893696,
         "ref": "",
         "scalerank": 4,
         "type": "Bank"
@@ -2650,29 +2270,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.3989337683,
-          37.787517541
-        ]
-      },
-      "properties": {
-        "localrank": 13,
-        "maki": "restaurant",
-        "name": "The Toaster Oven",
-        "name_de": "The Toaster Oven",
-        "name_en": "The Toaster Oven",
-        "name_es": "The Toaster Oven",
-        "name_fr": "The Toaster Oven",
-        "osm_id": -1613829037,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3920351267,
           37.791167607
         ]
@@ -2686,6 +2283,29 @@
         "name_es": "The Toaster Oven",
         "name_fr": "The Toaster Oven",
         "osm_id": -2051867290,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3989337683,
+          37.787517541
+        ]
+      },
+      "properties": {
+        "localrank": 13,
+        "maki": "restaurant",
+        "name": "The Toaster Oven",
+        "name_de": "The Toaster Oven",
+        "name_en": "The Toaster Oven",
+        "name_es": "The Toaster Oven",
+        "name_fr": "The Toaster Oven",
+        "osm_id": -1613829037,
         "ref": "",
         "scalerank": 4,
         "type": "Restaurant"
@@ -4275,53 +3895,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.3967665434,
-          37.794444458
-        ]
-      },
-      "properties": {
-        "localrank": 5,
-        "maki": "fast-food",
-        "name": "Subway",
-        "name_de": "Subway",
-        "name_en": "Subway",
-        "name_es": "Subway",
-        "name_fr": "Subway",
-        "osm_id": -950977345,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Fast Food"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4120122194,
-          37.7886833773
-        ]
-      },
-      "properties": {
-        "address": "701 Sutter Street San Francisco CA US",
-        "localrank": 2,
-        "maki": "fast-food",
-        "name": "Subway",
-        "name_de": "Subway",
-        "name_en": "Subway",
-        "name_es": "Subway",
-        "name_fr": "Subway",
-        "osm_id": -621851559,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Fast Food"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4083644152,
           37.7853299586
         ]
@@ -4335,6 +3908,76 @@
         "name_es": "Subway",
         "name_fr": "Subway",
         "osm_id": -808884817,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Fast Food"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3988157511,
+          37.7870469619
+        ]
+      },
+      "properties": {
+        "address": "168 2nd Street San Francisco 94105",
+        "localrank": 4,
+        "maki": "fast-food",
+        "name": "Subway",
+        "name_de": "Subway",
+        "name_en": "Subway",
+        "name_es": "Subway",
+        "name_fr": "Subway",
+        "osm_id": -1613829032,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Fast Food"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4087023735,
+          37.7837613035
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "fast-food",
+        "name": "Subway",
+        "name_de": "Subway",
+        "name_en": "Subway",
+        "name_es": "Subway",
+        "name_fr": "Subway",
+        "osm_id": -1393986255,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Fast Food"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3967665434,
+          37.794444458
+        ]
+      },
+      "properties": {
+        "localrank": 5,
+        "maki": "fast-food",
+        "name": "Subway",
+        "name_de": "Subway",
+        "name_en": "Subway",
+        "name_es": "Subway",
+        "name_fr": "Subway",
+        "osm_id": -950977345,
         "ref": "",
         "scalerank": 4,
         "type": "Fast Food"
@@ -4369,11 +4012,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4087023735,
-          37.7837613035
+          -122.4120122194,
+          37.7886833773
         ]
       },
       "properties": {
+        "address": "701 Sutter Street San Francisco CA US",
         "localrank": 2,
         "maki": "fast-food",
         "name": "Subway",
@@ -4381,31 +4025,7 @@
         "name_en": "Subway",
         "name_es": "Subway",
         "name_fr": "Subway",
-        "osm_id": -1393986255,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Fast Food"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3988157511,
-          37.7870469619
-        ]
-      },
-      "properties": {
-        "address": "168 2nd Street San Francisco 94105",
-        "localrank": 4,
-        "maki": "fast-food",
-        "name": "Subway",
-        "name_de": "Subway",
-        "name_en": "Subway",
-        "name_es": "Subway",
-        "name_fr": "Subway",
-        "osm_id": -1613829032,
+        "osm_id": -621851559,
         "ref": "",
         "scalerank": 4,
         "type": "Fast Food"
@@ -4646,145 +4266,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4081927538,
-          37.7865212664
-        ]
-      },
-      "properties": {
-        "localrank": 13,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -808930741,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4041104317,
-          37.7841259128
-        ]
-      },
-      "properties": {
-        "localrank": 7,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -1395112633,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4010580778,
-          37.7977381191
-        ]
-      },
-      "properties": {
-        "localrank": 2,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -2166577123,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe",
-        "website": "starbucks.com"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4029785395,
-          37.8030025852
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -1900829412,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.397018671,
-          37.7937789256
-        ]
-      },
-      "properties": {
-        "localrank": 7,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -2310115693,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4038368464,
-          37.7906716156
-        ]
-      },
-      "properties": {
-        "localrank": 7,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -2338783975,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4032199383,
           37.7874624283
         ]
@@ -4798,145 +4279,6 @@
         "name_es": "Starbucks",
         "name_fr": "Starbucks",
         "osm_id": -2365742144,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3948943615,
-          37.7966572041
-        ]
-      },
-      "properties": {
-        "localrank": 2,
-        "maki": "restaurant",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -365489125,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3967504501,
-          37.7857751115
-        ]
-      },
-      "properties": {
-        "localrank": 2,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -775379090,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4010366201,
-          37.7877719069
-        ]
-      },
-      "properties": {
-        "localrank": 12,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -1320562873,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4107891321,
-          37.7871614274
-        ]
-      },
-      "properties": {
-        "address": "442 Geary Street San Francisco CA",
-        "localrank": 16,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -725100826,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4098986387,
-          37.7860294833
-        ]
-      },
-      "properties": {
-        "localrank": 5,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -2586388026,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.415086031,
-          37.8053337506
-        ]
-      },
-      "properties": {
-        "localrank": 3,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -1857231112,
         "ref": "",
         "scalerank": 4,
         "type": "Cafe"
@@ -4993,52 +4335,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4055534601,
-          37.7862329801
-        ]
-      },
-      "properties": {
-        "localrank": 12,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -808930817,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4014550447,
-          37.793643275
-        ]
-      },
-      "properties": {
-        "localrank": 4,
-        "maki": "cafe",
-        "name": "Starbucks",
-        "name_de": "Starbucks",
-        "name_en": "Starbucks",
-        "name_es": "Starbucks",
-        "name_fr": "Starbucks",
-        "osm_id": -2300024035,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.403960228,
           37.7844989995
         ]
@@ -5052,6 +4348,76 @@
         "name_es": "Starbucks",
         "name_fr": "Starbucks",
         "osm_id": -2682480971,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3967504501,
+          37.7857751115
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -775379090,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4041104317,
+          37.7841259128
+        ]
+      },
+      "properties": {
+        "localrank": 7,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -1395112633,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4107891321,
+          37.7871614274
+        ]
+      },
+      "properties": {
+        "address": "442 Geary Street San Francisco CA",
+        "localrank": 16,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -725100826,
         "ref": "",
         "scalerank": 4,
         "type": "Cafe"
@@ -5085,6 +4451,214 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.415086031,
+          37.8053337506
+        ]
+      },
+      "properties": {
+        "localrank": 3,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -1857231112,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4010366201,
+          37.7877719069
+        ]
+      },
+      "properties": {
+        "localrank": 12,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -1320562873,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4029785395,
+          37.8030025852
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -1900829412,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4055534601,
+          37.7862329801
+        ]
+      },
+      "properties": {
+        "localrank": 12,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -808930817,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4081927538,
+          37.7865212664
+        ]
+      },
+      "properties": {
+        "localrank": 13,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -808930741,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3948943615,
+          37.7966572041
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "restaurant",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -365489125,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4010580778,
+          37.7977381191
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -2166577123,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe",
+        "website": "starbucks.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4014550447,
+          37.793643275
+        ]
+      },
+      "properties": {
+        "localrank": 4,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -2300024035,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.397018671,
+          37.7937789256
+        ]
+      },
+      "properties": {
+        "localrank": 7,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -2310115693,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.4057143927,
           37.7904469346
         ]
@@ -5098,6 +4672,52 @@
         "name_es": "Starbucks",
         "name_fr": "Starbucks",
         "osm_id": -1484799258,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4038368464,
+          37.7906716156
+        ]
+      },
+      "properties": {
+        "localrank": 7,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -2338783975,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4098986387,
+          37.7860294833
+        ]
+      },
+      "properties": {
+        "localrank": 5,
+        "maki": "cafe",
+        "name": "Starbucks",
+        "name_de": "Starbucks",
+        "name_en": "Starbucks",
+        "name_es": "Starbucks",
+        "name_fr": "Starbucks",
+        "osm_id": -2586388026,
         "ref": "",
         "scalerank": 4,
         "type": "Cafe"
@@ -6116,29 +5736,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4122697115,
-          37.8095593302
-        ]
-      },
-      "properties": {
-        "localrank": 2,
-        "maki": "ferry",
-        "name": "San Francisco Pier 41",
-        "name_de": "San Francisco Pier 41",
-        "name_en": "San Francisco Pier 41",
-        "name_es": "San Francisco Pier 41",
-        "name_fr": "San Francisco Pier 41",
-        "osm_id": -1142601033,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Ferry Terminal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4125754833,
           37.8093898031
         ]
@@ -6152,6 +5749,29 @@
         "name_es": "San Francisco Pier 41",
         "name_fr": "San Francisco Pier 41",
         "osm_id": -1142601042,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Ferry Terminal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4122697115,
+          37.8095593302
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "ferry",
+        "name": "San Francisco Pier 41",
+        "name_de": "San Francisco Pier 41",
+        "name_en": "San Francisco Pier 41",
+        "name_es": "San Francisco Pier 41",
+        "name_fr": "San Francisco Pier 41",
+        "osm_id": -1142601033,
         "ref": "",
         "scalerank": 4,
         "type": "Ferry Terminal"
@@ -8550,12 +8170,11 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4020344019,
-          37.7864788714
+          -122.3994648457,
+          37.7914685916
         ]
       },
       "properties": {
-        "address": "692 Mission Street San Francisco 94105",
         "localrank": 8,
         "maki": "cafe",
         "name": "Peet's Coffee & Tea",
@@ -8563,30 +8182,7 @@
         "name_en": "Peet's Coffee & Tea",
         "name_es": "Peet's Coffee & Tea",
         "name_fr": "Peet's Coffee & Tea",
-        "osm_id": -2576592003,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Cafe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4063581228,
-          37.78690282
-        ]
-      },
-      "properties": {
-        "localrank": 32,
-        "maki": "cafe",
-        "name": "Peet's Coffee & Tea",
-        "name_de": "Peet's Coffee & Tea",
-        "name_en": "Peet's Coffee & Tea",
-        "name_es": "Peet's Coffee & Tea",
-        "name_fr": "Peet's Coffee & Tea",
-        "osm_id": -808930779,
+        "osm_id": -1617283411,
         "ref": "",
         "scalerank": 4,
         "type": "Cafe"
@@ -8620,11 +8216,35 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.3994648457,
-          37.7914685916
+          -122.4063581228,
+          37.78690282
         ]
       },
       "properties": {
+        "localrank": 32,
+        "maki": "cafe",
+        "name": "Peet's Coffee & Tea",
+        "name_de": "Peet's Coffee & Tea",
+        "name_en": "Peet's Coffee & Tea",
+        "name_es": "Peet's Coffee & Tea",
+        "name_fr": "Peet's Coffee & Tea",
+        "osm_id": -808930779,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4020344019,
+          37.7864788714
+        ]
+      },
+      "properties": {
+        "address": "692 Mission Street San Francisco 94105",
         "localrank": 8,
         "maki": "cafe",
         "name": "Peet's Coffee & Tea",
@@ -8632,7 +8252,7 @@
         "name_en": "Peet's Coffee & Tea",
         "name_es": "Peet's Coffee & Tea",
         "name_fr": "Peet's Coffee & Tea",
-        "osm_id": -1617283411,
+        "osm_id": -2576592003,
         "ref": "",
         "scalerank": 4,
         "type": "Cafe"
@@ -8997,30 +8617,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4146568775,
-          37.7866569301
-        ]
-      },
-      "properties": {
-        "address": "696 Geary Street San Francisco CA US",
-        "localrank": 4,
-        "maki": "restaurant",
-        "name": "Osha Thai",
-        "name_de": "Osha Thai",
-        "name_en": "Osha Thai",
-        "name_es": "Osha Thai",
-        "name_fr": "Osha Thai",
-        "osm_id": -380314308,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3988372087,
           37.7874369917
         ]
@@ -9058,6 +8654,30 @@
         "name_es": "Osha Thai",
         "name_fr": "Osha Thai",
         "osm_id": -3018371855,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4146568775,
+          37.7866569301
+        ]
+      },
+      "properties": {
+        "address": "696 Geary Street San Francisco CA US",
+        "localrank": 4,
+        "maki": "restaurant",
+        "name": "Osha Thai",
+        "name_de": "Osha Thai",
+        "name_en": "Osha Thai",
+        "name_es": "Osha Thai",
+        "name_fr": "Osha Thai",
+        "osm_id": -380314308,
         "ref": "",
         "scalerank": 4,
         "type": "Restaurant"
@@ -10532,6 +10152,29 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.4016159773,
+          37.7943300038
+        ]
+      },
+      "properties": {
+        "localrank": 6,
+        "maki": "restaurant",
+        "name": "Mixt Greens",
+        "name_de": "Mixt Greens",
+        "name_en": "Mixt Greens",
+        "name_es": "Mixt Greens",
+        "name_fr": "Mixt Greens",
+        "osm_id": -2823795228,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.3939609528,
           37.7929353442
         ]
@@ -10550,29 +10193,6 @@
         "scalerank": 4,
         "type": "Restaurant",
         "website": "http://mixtgreens.com/"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4016159773,
-          37.7943300038
-        ]
-      },
-      "properties": {
-        "localrank": 6,
-        "maki": "restaurant",
-        "name": "Mixt Greens",
-        "name_de": "Mixt Greens",
-        "name_en": "Mixt Greens",
-        "name_es": "Mixt Greens",
-        "name_fr": "Mixt Greens",
-        "osm_id": -2823795228,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant"
       }
     },
     {
@@ -11697,29 +11317,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4096465111,
-          37.7868392278
-        ]
-      },
-      "properties": {
-        "localrank": 15,
-        "maki": "restaurant",
-        "name": "Lori's Diner",
-        "name_de": "Lori's Diner",
-        "name_en": "Lori's Diner",
-        "name_es": "Lori's Diner",
-        "name_fr": "Lori's Diner",
-        "osm_id": -808930669,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4088525772,
           37.7893574342
         ]
@@ -11733,6 +11330,29 @@
         "name_es": "Lori's Diner",
         "name_fr": "Lori's Diner",
         "osm_id": -1486061262,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4096465111,
+          37.7868392278
+        ]
+      },
+      "properties": {
+        "localrank": 15,
+        "maki": "restaurant",
+        "name": "Lori's Diner",
+        "name_de": "Lori's Diner",
+        "name_en": "Lori's Diner",
+        "name_es": "Lori's Diner",
+        "name_fr": "Lori's Diner",
+        "osm_id": -808930669,
         "ref": "",
         "scalerank": 4,
         "type": "Restaurant"
@@ -12026,29 +11646,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.3930811882,
-          37.791578811
-        ]
-      },
-      "properties": {
-        "localrank": 4,
-        "maki": "restaurant",
-        "name": "Lee's Deli",
-        "name_de": "Lee's Deli",
-        "name_en": "Lee's Deli",
-        "name_es": "Lee's Deli",
-        "name_fr": "Lee's Deli",
-        "osm_id": -2055534986,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3959618807,
           37.7853765938
         ]
@@ -12085,6 +11682,29 @@
         "name_es": "Lee's Deli",
         "name_fr": "Lee's Deli",
         "osm_id": -1293838066,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3930811882,
+          37.791578811
+        ]
+      },
+      "properties": {
+        "localrank": 4,
+        "maki": "restaurant",
+        "name": "Lee's Deli",
+        "name_de": "Lee's Deli",
+        "name_en": "Lee's Deli",
+        "name_es": "Lee's Deli",
+        "name_fr": "Lee's Deli",
+        "osm_id": -2055534986,
         "ref": "",
         "scalerank": 4,
         "type": "Restaurant"
@@ -12167,31 +11787,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4122428894,
-          37.8011418385
-        ]
-      },
-      "properties": {
-        "address": "775 Filbert Street",
-        "localrank": 4,
-        "maki": "laundry",
-        "name": "Laundry Locker Kiosk",
-        "name_de": "Laundry Locker Kiosk",
-        "name_en": "Laundry Locker Kiosk",
-        "name_es": "Laundry Locker Kiosk",
-        "name_fr": "Laundry Locker Kiosk",
-        "osm_id": -3049749734,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Laundry",
-        "website": "https://laundrylocker.com"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3888003826,
           37.7846473858
         ]
@@ -12206,6 +11801,31 @@
         "name_es": "Laundry Locker Kiosk",
         "name_fr": "Laundry Locker Kiosk",
         "osm_id": -3049761192,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Laundry",
+        "website": "https://laundrylocker.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4122428894,
+          37.8011418385
+        ]
+      },
+      "properties": {
+        "address": "775 Filbert Street",
+        "localrank": 4,
+        "maki": "laundry",
+        "name": "Laundry Locker Kiosk",
+        "name_de": "Laundry Locker Kiosk",
+        "name_en": "Laundry Locker Kiosk",
+        "name_es": "Laundry Locker Kiosk",
+        "name_fr": "Laundry Locker Kiosk",
+        "osm_id": -3049749734,
         "ref": "",
         "scalerank": 4,
         "type": "Laundry",
@@ -13204,29 +12824,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.400945425,
-          37.7876871183
-        ]
-      },
-      "properties": {
-        "localrank": 17,
-        "maki": "fast-food",
-        "name": "Jamba Juice",
-        "name_de": "Jamba Juice",
-        "name_en": "Jamba Juice",
-        "name_es": "Jamba Juice",
-        "name_fr": "Jamba Juice",
-        "osm_id": -1320562860,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Fast Food"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3993682861,
           37.79147707
         ]
@@ -13240,6 +12837,29 @@
         "name_es": "Jamba Juice",
         "name_fr": "Jamba Juice",
         "osm_id": -1617283400,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Fast Food"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400945425,
+          37.7876871183
+        ]
+      },
+      "properties": {
+        "localrank": 17,
+        "maki": "fast-food",
+        "name": "Jamba Juice",
+        "name_de": "Jamba Juice",
+        "name_en": "Jamba Juice",
+        "name_es": "Jamba Juice",
+        "name_fr": "Jamba Juice",
+        "osm_id": -1320562860,
         "ref": "",
         "scalerank": 4,
         "type": "Fast Food"
@@ -13812,29 +13432,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4002319574,
-          37.7873564422
-        ]
-      },
-      "properties": {
-        "localrank": 30,
-        "maki": "bar",
-        "name": "House of Shields",
-        "name_de": "House of Shields",
-        "name_en": "House of Shields",
-        "name_es": "House of Shields",
-        "name_fr": "House of Shields",
-        "osm_id": -2026996050,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Bar"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4012887478,
           37.788238242
         ]
@@ -13848,6 +13445,29 @@
         "name_es": "House of Shields",
         "name_fr": "House of Shields",
         "osm_id": -479491671,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Bar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4002319574,
+          37.7873564422
+        ]
+      },
+      "properties": {
+        "localrank": 30,
+        "maki": "bar",
+        "name": "House of Shields",
+        "name_de": "House of Shields",
+        "name_en": "House of Shields",
+        "name_es": "House of Shields",
+        "name_fr": "House of Shields",
+        "osm_id": -2026996050,
         "ref": "",
         "scalerank": 4,
         "type": "Bar"
@@ -14545,29 +14165,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.394207716,
-          37.7952498713
-        ]
-      },
-      "properties": {
-        "localrank": 4,
-        "maki": "park",
-        "name": "Harry Bridges Plaza",
-        "name_de": "Harry Bridges Plaza",
-        "name_en": "Harry Bridges Plaza",
-        "name_es": "Harry Bridges Plaza",
-        "name_fr": "Harry Bridges Plaza",
-        "osm_id": 1000104682438,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Common"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3942506313,
           37.7953346512
         ]
@@ -14584,6 +14181,29 @@
         "ref": "",
         "scalerank": 4,
         "type": "Bicycle Rental"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.394207716,
+          37.7952498713
+        ]
+      },
+      "properties": {
+        "localrank": 4,
+        "maki": "park",
+        "name": "Harry Bridges Plaza",
+        "name_de": "Harry Bridges Plaza",
+        "name_en": "Harry Bridges Plaza",
+        "name_es": "Harry Bridges Plaza",
+        "name_fr": "Harry Bridges Plaza",
+        "osm_id": 1000104682438,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Common"
       }
     },
     {
@@ -18219,29 +17839,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4066156149,
-          37.797653342
-        ]
-      },
-      "properties": {
-        "localrank": 18,
-        "maki": "shop",
-        "name": "City Lights Bookstore",
-        "name_de": "City Lights Bookstore",
-        "name_en": "City Lights Bookstore",
-        "name_es": "City Lights Bookstore",
-        "name_fr": "City Lights Bookstore",
-        "osm_id": 1000032858754,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Books"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4065512419,
           37.7976194312
         ]
@@ -18255,6 +17852,29 @@
         "name_es": "City Lights Bookstore",
         "name_fr": "City Lights Bookstore",
         "osm_id": -3067865733,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Books"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4066156149,
+          37.797653342
+        ]
+      },
+      "properties": {
+        "localrank": 18,
+        "maki": "shop",
+        "name": "City Lights Bookstore",
+        "name_de": "City Lights Bookstore",
+        "name_en": "City Lights Bookstore",
+        "name_es": "City Lights Bookstore",
+        "name_fr": "City Lights Bookstore",
+        "osm_id": 1000032858754,
         "ref": "",
         "scalerank": 4,
         "type": "Books"
@@ -18429,29 +18049,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.3965197802,
-          37.7928378442
-        ]
-      },
-      "properties": {
-        "localrank": 2,
-        "maki": "bank",
-        "name": "Citi Bank",
-        "name_de": "Citi Bank",
-        "name_en": "Citi Bank",
-        "name_es": "Citi Bank",
-        "name_fr": "Citi Bank",
-        "osm_id": -386596676,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Bank"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4016106129,
           37.7893574342
         ]
@@ -18466,6 +18063,29 @@
         "name_es": "Citi Bank",
         "name_fr": "Citi Bank",
         "osm_id": -386574705,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3965197802,
+          37.7928378442
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "bank",
+        "name": "Citi Bank",
+        "name_de": "Citi Bank",
+        "name_en": "Citi Bank",
+        "name_es": "Citi Bank",
+        "name_fr": "Citi Bank",
+        "osm_id": -386596676,
         "ref": "",
         "scalerank": 4,
         "type": "Bank"
@@ -18596,30 +18216,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4001568556,
-          37.7870257646
-        ]
-      },
-      "properties": {
-        "address": "126 New Montgomery Street San Francisco 94104",
-        "localrank": 36,
-        "maki": "restaurant",
-        "name": "Chipotle Mexican Grill",
-        "name_de": "Chipotle Mexican Grill",
-        "name_en": "Chipotle Mexican Grill",
-        "name_es": "Chipotle Mexican Grill",
-        "name_fr": "Chipotle Mexican Grill",
-        "osm_id": -1293838105,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4084609747,
           37.7864873504
         ]
@@ -18634,6 +18230,30 @@
         "name_es": "Chipotle Mexican Grill",
         "name_fr": "Chipotle Mexican Grill",
         "osm_id": -808930719,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4001568556,
+          37.7870257646
+        ]
+      },
+      "properties": {
+        "address": "126 New Montgomery Street San Francisco 94104",
+        "localrank": 36,
+        "maki": "restaurant",
+        "name": "Chipotle Mexican Grill",
+        "name_de": "Chipotle Mexican Grill",
+        "name_en": "Chipotle Mexican Grill",
+        "name_es": "Chipotle Mexican Grill",
+        "name_fr": "Chipotle Mexican Grill",
+        "osm_id": -1293838105,
         "ref": "",
         "scalerank": 4,
         "type": "Restaurant"
@@ -20446,29 +20066,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4148929119,
-          37.8085379234
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "restaurant",
-        "name": "Boudin",
-        "name_de": "Boudin",
-        "name_en": "Boudin",
-        "name_es": "Boudin",
-        "name_fr": "Boudin",
-        "osm_id": 1000037312428,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4073129892,
           37.7866442116
         ]
@@ -20485,6 +20082,29 @@
         "ref": "",
         "scalerank": 4,
         "type": "Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4148929119,
+          37.8085379234
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "restaurant",
+        "name": "Boudin",
+        "name_de": "Boudin",
+        "name_en": "Boudin",
+        "name_es": "Boudin",
+        "name_fr": "Boudin",
+        "osm_id": 1000037312428,
+        "ref": "",
+        "scalerank": 3,
+        "type": "Restaurant"
       }
     },
     {
@@ -21244,6 +20864,29 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.398622632,
+          37.791769575
+        ]
+      },
+      "properties": {
+        "localrank": 6,
+        "maki": "bank",
+        "name": "Bank of the West",
+        "name_de": "Bank of the West",
+        "name_en": "Bank of the West",
+        "name_es": "Bank of the West",
+        "name_fr": "Bank of the West",
+        "osm_id": -386585954,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.4086916447,
           37.7994548341
         ]
@@ -21258,29 +20901,6 @@
         "name_es": "Bank of the West",
         "name_fr": "Bank of the West",
         "osm_id": -334973993,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Bank"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.398622632,
-          37.791769575
-        ]
-      },
-      "properties": {
-        "localrank": 6,
-        "maki": "bank",
-        "name": "Bank of the West",
-        "name_de": "Bank of the West",
-        "name_en": "Bank of the West",
-        "name_es": "Bank of the West",
-        "name_fr": "Bank of the West",
-        "osm_id": -386585954,
         "ref": "",
         "scalerank": 4,
         "type": "Bank"
@@ -21338,30 +20958,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.401766181,
-          37.7887088135
-        ]
-      },
-      "properties": {
-        "address": "33 New Montgomery Street",
-        "localrank": 29,
-        "maki": "bank",
-        "name": "Bank of America",
-        "name_de": "Bank of America",
-        "name_en": "Bank of America",
-        "name_es": "Bank of America",
-        "name_fr": "Bank of America",
-        "osm_id": -340235848,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Bank"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4080854654,
           37.784634667
         ]
@@ -21408,30 +21004,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4078065157,
-          37.7946521707
-        ]
-      },
-      "properties": {
-        "address": "Stockton Street San Francisco",
-        "localrank": 10,
-        "maki": "bank",
-        "name": "Bank of America",
-        "name_de": "Bank of America",
-        "name_en": "Bank of America",
-        "name_es": "Bank of America",
-        "name_fr": "Bank of America",
-        "osm_id": 1000256730074,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Bank"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4030214548,
           37.7925241477
         ]
@@ -21456,6 +21028,30 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.4078065157,
+          37.7946521707
+        ]
+      },
+      "properties": {
+        "address": "Stockton Street San Francisco",
+        "localrank": 10,
+        "maki": "bank",
+        "name": "Bank of America",
+        "name_de": "Bank of America",
+        "name_en": "Bank of America",
+        "name_es": "Bank of America",
+        "name_fr": "Bank of America",
+        "osm_id": 1000256730074,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.4091905355,
           37.7993403876
         ]
@@ -21470,6 +21066,30 @@
         "name_es": "Bank of America",
         "name_fr": "Bank of America",
         "osm_id": -411283248,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.401766181,
+          37.7887088135
+        ]
+      },
+      "properties": {
+        "address": "33 New Montgomery Street",
+        "localrank": 29,
+        "maki": "bank",
+        "name": "Bank of America",
+        "name_de": "Bank of America",
+        "name_en": "Bank of America",
+        "name_es": "Bank of America",
+        "name_fr": "Bank of America",
+        "osm_id": -340235848,
         "ref": "",
         "scalerank": 4,
         "type": "Bank"
@@ -21893,6 +21513,25 @@
         "ref": "",
         "scalerank": 4,
         "type": "Pub"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4067497253,
+          37.7852197299
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1677844643,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
       }
     },
     {
@@ -22368,29 +22007,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4071788788,
-          37.7895778792
-        ]
-      },
-      "properties": {
-        "localrank": 5,
-        "maki": "clothing-store",
-        "name": "Aerosoles",
-        "name_de": "Aerosoles",
-        "name_en": "Aerosoles",
-        "name_es": "Aerosoles",
-        "name_fr": "Aerosoles",
-        "osm_id": -1492799040,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Clothes"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4053281546,
           37.7864407159
         ]
@@ -22404,6 +22020,29 @@
         "name_es": "Aerosoles",
         "name_fr": "Aerosoles",
         "osm_id": -1629217174,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Clothes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4071788788,
+          37.7895778792
+        ]
+      },
+      "properties": {
+        "localrank": 5,
+        "maki": "clothing-store",
+        "name": "Aerosoles",
+        "name_de": "Aerosoles",
+        "name_en": "Aerosoles",
+        "name_es": "Aerosoles",
+        "name_fr": "Aerosoles",
+        "osm_id": -1492799040,
         "ref": "",
         "scalerank": 4,
         "type": "Clothes"
@@ -22507,29 +22146,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.3995238543,
-          37.7862541777
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "school",
-        "name": "Academy of Art University",
-        "name_de": "Academy of Art University",
-        "name_en": "Academy of Art University",
-        "name_es": "Academy of Art University",
-        "name_fr": "Academy of Art University",
-        "osm_id": 1000080296763,
-        "ref": "",
-        "scalerank": 3,
-        "type": "School"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4006396532,
           37.7878397376
         ]
@@ -22545,6 +22161,29 @@
         "osm_id": -358803205,
         "ref": "",
         "scalerank": 4,
+        "type": "School"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3995238543,
+          37.7862541777
+        ]
+      },
+      "properties": {
+        "localrank": 1,
+        "maki": "school",
+        "name": "Academy of Art University",
+        "name_de": "Academy of Art University",
+        "name_en": "Academy of Art University",
+        "name_es": "Academy of Art University",
+        "name_fr": "Academy of Art University",
+        "osm_id": 1000080296763,
+        "ref": "",
+        "scalerank": 3,
         "type": "School"
       }
     },
@@ -22669,25 +22308,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4150162935,
-          37.8056601079
-        ]
-      },
-      "properties": {
-        "localrank": 2,
-        "maki": "fuel",
-        "name": "76",
-        "osm_id": 1000175080539,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Fuel"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3934137821,
           37.7861609084
         ]
@@ -22701,6 +22321,25 @@
         "name_es": "76",
         "name_fr": "76",
         "osm_id": -2025951166,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Fuel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4150162935,
+          37.8056601079
+        ]
+      },
+      "properties": {
+        "localrank": 2,
+        "maki": "fuel",
+        "name": "76",
+        "osm_id": 1000175080539,
         "ref": "",
         "scalerank": 4,
         "type": "Fuel"
@@ -22728,6 +22367,30 @@
         "ref": "",
         "scalerank": 4,
         "type": "Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4036544561,
+          37.7872292587
+        ]
+      },
+      "properties": {
+        "address": "711 Market Street",
+        "localrank": 7,
+        "maki": "grocery",
+        "name": "7-Eleven",
+        "name_de": "7-Eleven",
+        "name_en": "7-Eleven",
+        "name_es": "7-Eleven",
+        "name_fr": "7-Eleven",
+        "osm_id": -386392308,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Convenience"
       }
     },
     {
@@ -22781,23 +22444,18 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4036544561,
-          37.7872292587
+          -122.4011063576,
+          37.7893235195
         ]
       },
       "properties": {
-        "address": "711 Market Street",
-        "localrank": 7,
-        "maki": "grocery",
-        "name": "7-Eleven",
-        "name_de": "7-Eleven",
-        "name_en": "7-Eleven",
-        "name_es": "7-Eleven",
-        "name_fr": "7-Eleven",
-        "osm_id": -386392308,
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1677860436,
         "ref": "",
         "scalerank": 4,
-        "type": "Convenience"
+        "type": "Rail Station"
       }
     },
     {
@@ -22961,6 +22619,348 @@
         "ref": "",
         "scalerank": 4,
         "type": "Bicycle Rental"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4021470547,
+          37.7885519566
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -3063596865,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4018573761,
+          37.789166664
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1677860418,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3960638046,
+          37.7936644704
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -309820436,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4005484581,
+          37.7897601697
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1677860415,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4022275209,
+          37.7887893615
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1677860443,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3958224058,
+          37.7934694722
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -309820442,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4080049992,
+          37.7842870187
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1950609166,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3978340626,
+          37.7922358849
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -386586392,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4056661129,
+          37.7860803576
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1677844660,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4021685123,
+          37.788522281
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -2068535608,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4008005857,
+          37.7899212633
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -2068535617,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4054354429,
+          37.785906537
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1677844648,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4013102055,
+          37.7895142893
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1677860408,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400687933,
+          37.7904554131
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -3078438194,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4081498384,
+          37.7837655432
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1677844664,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4023669958,
+          37.7888487126
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -386569186,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4065297842,
+          37.7850501469
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -1677844661,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3976463079,
+          37.7920875139
+        ]
+      },
+      "properties": {
+        "localrank": 0,
+        "maki": "entrance",
+        "network": "entrance",
+        "osm_id": -386587552,
+        "ref": "",
+        "scalerank": 4,
+        "type": "Rail Station"
       }
     },
     {

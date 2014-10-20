@@ -14,6 +14,8 @@ proto = proto.replace('extensions 16 to 8191;', '');
 var mvt = protobuf(proto);
 
 module.exports = vtfx;
+module.exports.encode = encode;
+module.exports.decode = decode;
 module.exports.processors = {};
 module.exports.processors.drop = require('./fx/drop');
 module.exports.processors.labelgrid = require('./fx/labelgrid');
@@ -28,7 +30,7 @@ function vtfx(data, options, callback) {
     if (typeof options !== 'object') return callback(new Error('options must be an object'));
 
     var changed = false;
-    var vt = mvt.tile.decode(data);
+    var vt = decode(data);
     var changedLayers = {};
 
     try {
@@ -51,6 +53,14 @@ function vtfx(data, options, callback) {
         return callback(err);
     }
 
-    callback(null, changed ? mvt.tile.encode(vt) : data);
+    callback(null, changed ? encode(vt) : data);
+}
+
+function decode(pbf) {
+    return mvt.tile.decode(pbf);
+}
+
+function encode(pbf) {
+    return mvt.tile.encode(pbf);
 }
 
