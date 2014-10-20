@@ -39,7 +39,7 @@ tape('drop single invalid geom', function(assert) {
     vt.layers[0] = dropinvalid(vt.layers[0], {id:'dropinvalid'});
     var after = util.toGeoJSON(vt);
     
-    console.log('AFTER:', JSON.stringify(after));
+    assert.deepEquals(after, JSON.parse('{"type":"FeatureCollection","features":[],"name":"layer"}'));
 
     assert.end();
 });
@@ -80,8 +80,8 @@ tape('valid geom', function(assert) {
 
     vt.layers[0] = dropinvalid(vt.layers[0], {id:'dropinvalid'});
     var after = util.toGeoJSON(vt);
-    
-    console.log('AFTER:', JSON.stringify(after));
+
+    assert.deepEquals(after, JSON.parse('{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-41.484374999999986,57.136239319177434],[22.85156250000002,51.6180165487737],[-1.7578124999999813,-24.5271348225978],[-52.38281249999999,18.646245142670608],[-41.484374999999986,57.136239319177434],[-41.484374999999986,57.136239319177434]]]},"properties":{}}],"name":"layer"}'));
 
     assert.end();
 });
