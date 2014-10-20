@@ -36,3 +36,17 @@ module.exports.parameters = {
 Based on the above parameters, the Mapbox Studio UI would submit:
 
 `{"id":"orderby","field":"ACQYEAR","sort":"1"}`
+
+### Notes:
+If the `chainable` flag is set to `false`, expected arguments would be:
+
+`layer`: a decoded protobuf
+
+`options`: `{"id":"drop", "limit": 100}`
+
+
+If the `chainable` flag is set to `true`, expected arguments would be:
+
+`layer`: a decoded protobuf
+
+`options`: `{"id":"dropkey", "options": [{"field":"elevation"}, {"field":"population"}]}`
