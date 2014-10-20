@@ -42,3 +42,20 @@ tape('drop limit 5', function(assert) {
 
     assert.end();
 });
+
+tape('drop parameters', function(assert){
+    var options = {id:'drop', limit: 5};
+
+    var parameters = drop.parameters;
+    assert.equal(parameters.name, options.id);
+    delete options.id;
+
+    assert.equal(Object.keys(options).length, parameters.options.length);
+    for (var ix in parameters.options){
+      assert.equal(parameters.options[ix].type, typeof options[parameters.options[ix].field]);
+    }
+
+    assert.ok(parameters.display, 'display field exists');
+    assert.ok(parameters.description, 'description field exists');
+    assert.end();
+});

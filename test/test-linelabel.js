@@ -31,3 +31,20 @@ tape('linelabel by name', function(assert) {
 
     assert.end();
 });
+
+tape('linelabel parameters', function(assert){
+    var options = {id:'linelabel', labelfield:'name'};
+
+    var parameters = linelabel.parameters;
+    assert.equal(parameters.name, options.id);
+    delete options.id;
+
+    assert.equal(Object.keys(options).length, parameters.options.length);
+    for (var ix in parameters.options){
+      assert.equal(parameters.options[ix].type, typeof options[parameters.options[ix].field]);
+    }
+
+    assert.ok(parameters.display, 'display field exists');
+    assert.ok(parameters.description, 'description field exists');
+    assert.end();
+});

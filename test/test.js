@@ -66,37 +66,6 @@ tape('linelabel', function(t) {
     });
 });
 
-tape('test parameters', function(t) {
-    var params = [
-        {id:'drop', limit: 100},
-        {id:'orderby', field: 'scalerank', sort: -1},
-        {id:'linelabel', labelfield:'class'},
-        {id:'labelgrid', size:1024}
-    ]
-    for (var i = 0; i < params.length; i++){
-        var option = params[i];
-        var parameters = vtfx.processors[option.id].parameters;
-        console.log('##'+option.id);
-        t.equal(parameters.name, option.id)
-        delete option.id;
-
-        t.equal(Object.keys(option).length, parameters.options.length);
-        for (var ix in parameters.options){
-            t.equal(parameters.options[ix].type, typeof option[parameters.options[ix].field]);
-            // if (parameters.options[i].options){
-            //     for (var ix in parameters.options[i].options){
-            //         // t.equal(typeof Object.keys(parameters.options[i].options[ix])[0], parameters.options[i].type) 
-            //     }
-            // }
-        }
-
-        t.ok(parameters.display, 'display field exists');
-        t.ok(parameters.description, 'description field exists');
-    }
-    t.end();
-});
-
-
 function pbfEqual(buffer, filepath, assert) {
     if (UPDATE) fs.writeFileSync(filepath, buffer);
     assert.deepEqual(buffer, fs.readFileSync(filepath));
