@@ -66,7 +66,6 @@ tape('linelabel', function(t) {
     });
 });
 
-<<<<<<< HEAD
 tape('collect on field', function(t) {
     vtfx(beforepbf, {'road':[{id:'collect', field:'class'}]}, function(err, afterpbf) {
         pbfEqual(afterpbf, __dirname + '/after-collect-field-road.pbf', t);
@@ -131,8 +130,6 @@ tape('garbage collection', function(t) {
     t.end();
 });
 
-=======
->>>>>>> master
 function pbfEqual(buffer, filepath, assert) {
     if (UPDATE) fs.writeFileSync(filepath, buffer);
     assert.deepEqual(buffer, fs.readFileSync(filepath));
