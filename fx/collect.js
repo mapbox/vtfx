@@ -26,7 +26,6 @@ function fx(layer, options) {
                 break;
             case 2:
                 place(value+"_line");
-                parseGeom(feature.geometry)
                 break;
             case 3:
                 place(value+"_poly");
@@ -37,6 +36,10 @@ function fx(layer, options) {
             if (!bucket[pail]) {
                 bucket[pail] = feature;
             } else {
+                var last = last || [0,0];
+                last = getLastCoord(bucket[pail].geometry, last);
+                feature.geometry[1] = rezig(last[0] - unzig(feature.geometry[1]));
+                feature.geometry[2] = rezig(last[1] - unzig(feature.geometry[2]));
                 bucket[pail].geometry = bucket[pail].geometry.concat(feature.geometry);
             }
             bucket[pail].tags = (arr != "") ? [arr[0],feature.tags[arr[0]+1]] : [];
@@ -61,35 +64,28 @@ function fx(layer, options) {
     }
 }
 
-// - turn vt geom array into 2d array of coordinates in the vt-space
-// - 2d array respects mutli-* geoms: e.g. geom = [ [x,y,x,y], [x,y,x,y] ]
-// - each part's initial moveto() is relative to last coordinate of previous part
-// - within each part, x coords have an even index, y coord have an odd index
-function parseGeom(raw) {
-    var pos = 0, geom = [];
-    var x = 0, y = 0;
-    while (pos < raw.length) {
-        var part = [];
-        var repeat = (raw[pos+3]>>3);
-        if (geom.length == 0) {
-            var x = raw[pos+1];
-            var y = raw[pos+2];
-        } else {
-            var x = geom[geom.length - 1][geom[geom.length - 1].length - 2] + unzig(raw[pos+1]);
-            var y = geom[geom.length - 1][geom[geom.length - 1].length - 1] + unzig(raw[pos+2]);
-        }
-        part.push(x, y);
+// TODO: supply old [last] array
+// so we dont start from zero / the beginning of the geom array everytime
+function getLastCoord(geom, last) {
+    var pos = 0;
+    var x = last[0];
+    var y = last[1];
+    while (pos < geom.length) {
+        var repeat = (geom[pos+3]>>3);
+        x += unzig(geom[pos+1]);
+        y += unzig(geom[pos+2]);
         for (var d=pos+4; d<pos+4+(repeat*2); d+=2) {
-            x += unzig(raw[d]);
-            y += unzig(raw[d+1]);
-            part.push(x,y);
+            x += unzig(geom[d]);
+            y += unzig(geom[d+1]);
         }
-        geom.push(part);
         pos+=5+(repeat*2);
     }
-    return geom;
+    return [x,y];
 }
 
 // un-zigzag encoding so we can understand coords as real deltas in vt plane
 // from https://github.com/mapbox/pbf/blob/98f1f4487801a1ae5d0eaa8137c1bda44cf73c6c/index.js#L74-L75
 function unzig(x) { return ((x >> 1) ^ -(x & 1)); }
+
+// re-zigzag encode coordinates so its like we decoded anything
+function rezig(x) { return (x << 1) ^ ( x >> 31); }
