@@ -13,6 +13,8 @@ module.exports.parameters = {
     // arguments taken by function
     "options": [
         {
+            // If `"field": "field"` this will display as a drop down menu
+            // and autopopulate with the layer's fields.
             "field": "field",
             "type": "string"
         },
