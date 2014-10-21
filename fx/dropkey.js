@@ -24,5 +24,5 @@ function dropkey(layer, options) {
                 layer.features[featId].tags.splice(tagId * 2, 2);
         }
     }
-    return cleaner(layer);
+    return layer;
 }
