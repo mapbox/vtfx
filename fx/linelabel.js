@@ -3,10 +3,10 @@ module.exports = fx;
 module.exports.parameters = {
     "name": "linelabel",
     "display": "Only keep line geometries long enough display labels",
-    "description": "Check line length against the value of a given labelfield, dropping all geometries too short to be labeled.",
+    "description": "Check line length against the value of a given field, dropping all geometries too short to be labeled.",
     "options": [
         {
-            "field": "labelfield",
+            "field": "field",
             "type": "string"
         }
     ],
