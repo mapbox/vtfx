@@ -10,8 +10,9 @@ module.exports.parameters = {
     "options": [ { "field": "field", "type": "string" } ], "chainable": true };
 
 function dropkey(layer, options) {
-    if (!options.options[0].field) throw new Error('field must be given option required');
-    var keyNames = options.options.map(function (field) { return field.field });
+    if (!options.options) throw new Error('Field options not provided');
+    if (options.options.length > 0 && options.options[0] && !options.options[0].field) throw new Error('field must be given option required');
+    var keyNames = options.options.map(function (field) { return field.field; });
     var keyIds = [];
     var l = layer.keys.length;
     while (l--) if (keyNames.indexOf(layer.keys[l]) !== -1) keyIds.push(l);
