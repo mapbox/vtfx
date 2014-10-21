@@ -9,7 +9,7 @@ tape('linelabel by name', function(assert) {
         "features": [{
             "type": "Feature",
             "geometry": {"type": "LineString","coordinates": [[0,0], [0, 20], [0, 40], [0, 60]]},
-            "properties": {"id": 0,"name": 'road one'}
+            "properties": {"id": 0, "name": 'road one'}
         },
         {
             "type": "Feature",
@@ -31,3 +31,4 @@ tape('linelabel by name', function(assert) {
 
     assert.end();
 });
+

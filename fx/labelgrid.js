@@ -7,14 +7,15 @@ module.exports.parameters = {
     "options": [
         {
             "field": "size",
-            "type": "number"
+            "type": "number",
+            "default": 256
         }
     ],
     "chainable": false
 };
 
 function fx(layer, options) {
-    var size = options.size || null;
+    var size = options.size || 256;
 
     // is this how errors work?
     if (layer.extent%size !== 0) throw new Error(size+" does not divide evenly into layer extent");

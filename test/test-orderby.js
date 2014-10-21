@@ -90,4 +90,3 @@ tape('orderby number', function(assert) {
 
     assert.end();
 });
-

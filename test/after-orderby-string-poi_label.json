@@ -3895,19 +3895,19 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.403203845,
-          37.7873734
+          -122.4083644152,
+          37.7853299586
         ]
       },
       "properties": {
-        "localrank": 3,
+        "localrank": 2,
         "maki": "fast-food",
         "name": "Subway",
         "name_de": "Subway",
         "name_en": "Subway",
         "name_es": "Subway",
         "name_fr": "Subway",
-        "osm_id": -2365742143,
+        "osm_id": -808884817,
         "ref": "",
         "scalerank": 4,
         "type": "Fast Food"
@@ -4036,19 +4036,19 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4083644152,
-          37.7853299586
+          -122.403203845,
+          37.7873734
         ]
       },
       "properties": {
-        "localrank": 2,
+        "localrank": 3,
         "maki": "fast-food",
         "name": "Subway",
         "name_de": "Subway",
         "name_en": "Subway",
         "name_es": "Subway",
         "name_fr": "Subway",
-        "osm_id": -808884817,
+        "osm_id": -2365742143,
         "ref": "",
         "scalerank": 4,
         "type": "Fast Food"
@@ -20958,20 +20958,19 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4030214548,
-          37.7925241477
+          -122.4080854654,
+          37.784634667
         ]
       },
       "properties": {
-        "address": "345 Montgomery Street",
-        "localrank": 5,
+        "localrank": 4,
         "maki": "bank",
         "name": "Bank of America",
         "name_de": "Bank of America",
         "name_en": "Bank of America",
         "name_es": "Bank of America",
         "name_fr": "Bank of America",
-        "osm_id": 1000288511103,
+        "osm_id": -1393986231,
         "ref": "",
         "scalerank": 4,
         "type": "Bank"
@@ -21005,20 +21004,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.401766181,
-          37.7887088135
+          -122.4030214548,
+          37.7925241477
         ]
       },
       "properties": {
-        "address": "33 New Montgomery Street",
-        "localrank": 29,
+        "address": "345 Montgomery Street",
+        "localrank": 5,
         "maki": "bank",
         "name": "Bank of America",
         "name_de": "Bank of America",
         "name_en": "Bank of America",
         "name_es": "Bank of America",
         "name_fr": "Bank of America",
-        "osm_id": -340235848,
+        "osm_id": 1000288511103,
         "ref": "",
         "scalerank": 4,
         "type": "Bank"
@@ -21077,19 +21076,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4080854654,
-          37.784634667
+          -122.401766181,
+          37.7887088135
         ]
       },
       "properties": {
-        "localrank": 4,
+        "address": "33 New Montgomery Street",
+        "localrank": 29,
         "maki": "bank",
         "name": "Bank of America",
         "name_de": "Bank of America",
         "name_en": "Bank of America",
         "name_es": "Bank of America",
         "name_fr": "Bank of America",
-        "osm_id": -1393986231,
+        "osm_id": -340235848,
         "ref": "",
         "scalerank": 4,
         "type": "Bank"
@@ -22626,15 +22626,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4018573761,
-          37.789166664
+          -122.4021470547,
+          37.7885519566
         ]
       },
       "properties": {
         "localrank": 0,
         "maki": "entrance",
         "network": "entrance",
-        "osm_id": -1677860418,
+        "osm_id": -3063596865,
         "ref": "",
         "scalerank": 4,
         "type": "Rail Station"
@@ -22645,15 +22645,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.3976463079,
-          37.7920875139
+          -122.4018573761,
+          37.789166664
         ]
       },
       "properties": {
         "localrank": 0,
         "maki": "entrance",
         "network": "entrance",
-        "osm_id": -386587552,
+        "osm_id": -1677860418,
         "ref": "",
         "scalerank": 4,
         "type": "Rail Station"
@@ -22949,15 +22949,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4021470547,
-          37.7885519566
+          -122.3976463079,
+          37.7920875139
         ]
       },
       "properties": {
         "localrank": 0,
         "maki": "entrance",
         "network": "entrance",
-        "osm_id": -3063596865,
+        "osm_id": -386587552,
         "ref": "",
         "scalerank": 4,
         "type": "Rail Station"
