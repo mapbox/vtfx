@@ -18,8 +18,9 @@ function fx(layer, options) {
 
     for (var i=0; i<layer.features.length; i++) {
         var feature = layer.features[i];
-        var arr = (field != null) ? getvalue(feature) : "";
+        var arr = (field !== null) ? getvalue(feature) : "";
         var value = (arr != "") ? arr[1] : "";
+
         switch (feature.type) {
             case 1:
                 place(value+"_point");
@@ -64,7 +65,7 @@ function fx(layer, options) {
                 v.sint_value !== null ? v.sint_value : v.sint_value ||
                 v.bool_value !== null ? v.bool_value : values.bool_value || null;
         }
-        return value;
+        return [i, value];
     }
 }
 
