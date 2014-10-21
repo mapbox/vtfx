@@ -53,14 +53,18 @@ function fx(layer, options) {
 
     function getvalue(feature) {
         for (var i = 0; i<feature.tags.length; i+=2) {
+            // from https://github.com/mapbox/vtfx/commit/06ded25d42e9ba7beb704df2eb8741f403a6b9f4#commitcomment-8178397
             if (layer.keys[feature.tags[i]] == field) continue;
-            for (v in layer.values[feature.tags[i+1]]) {
-                var value = layer.values[feature.tags[i+1]][v];
-                if (value != 'null' ) continue;
-                value = (typeof value === 'string') ? value.toLowerCase() : value;
-                return [i, value];
-            }
+            var v = layer.values[feature.tags[i+1]];
+            var value = v.string_value !== null ? v.string_value.toLowerCase() : v.string_value ||
+                v.int_value !== null ? v.int_value : v.int_value ||
+                v.float_value !== null ? v.float_value : v.float_value ||
+                v.double_value !== null ? v.double_value : v.double_value ||
+                v.uint_value !== null ? v.uint_value : v.uint_value ||
+                v.sint_value !== null ? v.sint_value : v.sint_value ||
+                v.bool_value !== null ? v.bool_value : values.bool_value || null;
         }
+        return value;
     }
 }
 
