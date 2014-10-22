@@ -115,6 +115,107 @@ tape('drop single invalid line geom', function(assert) {
     assert.end();
 });
 
+tape('ignore points', function(assert) {
+    // Creates geojson with features where the line segment is long enough to be labeled with the given string
+    var vt = util.fromGeoJSON(    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.43395996093749994,
+          1.2221363183974527
+        ]
+      }
+    });
+
+    vt.layers[0] = dropinvalid(vt.layers[0], {id:'dropinvalid'});
+    var after = util.toGeoJSON(vt);
+
+    assert.deepEquals(after, JSON.parse('{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[0.4394531250000215,1.2303741774326145]},"properties":{}}],"name":"layer"}'));
+
+    assert.end();
+});
+
+tape('single line segment', function(assert) {
+    // Creates geojson with features where the line segment is long enough to be labeled with the given string
+    var vt = util.fromGeoJSON({
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.71685791015625,
+            1.6587038068676245
+          ],
+          [
+            0.63720703125,
+            0.8651404631516638
+          ]
+        ]
+      }
+    });
+
+    vt.layers[0] = dropinvalid(vt.layers[0], {id:'dropinvalid'});
+    var after = util.toGeoJSON(vt);
+    assert.deepEquals(after, JSON.parse('{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"LineString","coordinates":[[0.7031250000000142,1.669685500986571],[0.6152343750000143,0.8788717828324148]]},"properties":{}}],"name":"layer"}'));
+
+    assert.end();
+});
+
+tape('point and invalid line', function(assert) {
+    // Creates geojson with features where the line segment is long enough to be labeled with the given string
+    var vt = util.fromGeoJSON({
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.70166015624999,
+          44.941473354802504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.228759765625,
+            43.59630591596548
+          ],
+          [
+            -93.812255859375,
+            45.82114340079471
+          ],
+          [
+            -98.09692382812499,
+            45.48324350868221
+          ],
+          [
+            -94.2626953125,
+            43.77902662160831
+          ]
+        ]
+      }
+    }
+  ]
+});
+
+    vt.layers[0] = dropinvalid(vt.layers[0], {id:'dropinvalid'});
+    var after = util.toGeoJSON(vt);
+
+    assert.deepEquals(after, JSON.parse('{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-96.6796875,44.96479793033101]},"properties":{}}],"name":"layer"}'));
+
+    assert.end();
+});
+
 tape('keep single valid line geom', function(assert) {
     // Creates geojson with features where the line segment is long enough to be labeled with the given string
     var vt = util.fromGeoJSON({
