@@ -1,5 +1,13 @@
 module.exports = dropinvalid;
 
+module.exports.parameters = {
+    "name": "dropinvalid",
+    "display": "Drop invalid geometres",
+    "description": "Checks lines and polygons for self intersection and if detected removes them",
+    "options": [],
+    "chainable": false
+};
+
 function dropinvalid(layer) {
     var newFeatures = [];
     l = layer.features.length;
