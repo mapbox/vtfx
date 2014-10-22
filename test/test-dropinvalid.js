@@ -38,7 +38,7 @@ tape('drop single invalid poly geom', function(assert) {
 
     vt.layers[0] = dropinvalid(vt.layers[0], {id:'dropinvalid'});
     var after = util.toGeoJSON(vt);
-    
+
     assert.deepEquals(after, JSON.parse('{"type":"FeatureCollection","features":[],"name":"layer"}'));
 
     assert.end();
@@ -54,35 +54,28 @@ tape('keep single valid poly geom', function(assert) {
             "coordinates": [
                 [
                     [
-                    -41.484375,
-                     57.136239319177434
+                        0,0
                     ],
                     [
-                        22.8515625,
-                        51.6180165487737
+                        0,1
                     ],
                     [
-                        -1.7578125,
-                        -24.5271348225978
+                        1,1
                     ],
                     [
-                        -52.3828125,
-                        18.646245142670608
+                        1,0
                     ],
                     [
-                        -41.484375,
-                        57.136239319177434
+                        0,0
                     ]
                 ]
             ]
         }
-    });
+});
 
     vt.layers[0] = dropinvalid(vt.layers[0], {id:'dropinvalid'});
     var after = util.toGeoJSON(vt);
-
-    assert.deepEquals(after, JSON.parse('{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-41.484374999999986,57.136239319177434],[22.85156250000002,51.6180165487737],[-1.7578124999999813,-24.5271348225978],[-52.38281249999999,18.646245142670608],[-41.484374999999986,57.136239319177434],[-41.484374999999986,57.136239319177434]]]},"properties":{}}],"name":"layer"}'));
-
+    assert.deepEquals(after.features[0], JSON.parse('{"type": "Feature","properties": {},"geometry": {"type": "Polygon","coordinates": [ [ [ 0, 0 ], [ 0, 0.9667509997666425 ], [ 0.9667968750000001, 0.9667509997666425 ], [ 0.9667968750000001, 0 ], [ 0, 0 ], [ 0, 0 ] ] ]}}'));
     assert.end();
 });
 

@@ -7,17 +7,12 @@ function dropinvalid(layer) {
         if (layer.features[l].type === 2 || layer.features[l].type === 3) {
             var geom = layer.features[l].geometry;
             var segs = [];
-            var orig = [geom[1]>>3, geom[2]>>3];
-            segs.push([orig, [orig[0] + (geom[4]>>3), orig[1] + (geom[5]>>3)]]);
-            var current = segs[0][1];
-            var closer = 2;
-            if (layer.features[l].type === 3) closer = 4; 
-            for (var i = 5; i < geom.length - closer; i=i+2) {
-                var line = [current, [current[0] + (geom[i]>>3), current[1] + (geom[i+1]>>3) ]]
+            var current = [unzig(geom[1]), unzig(geom[2])];
+            for (var i = 4; i < geom.length - 1; i=i+2) {
+                var line = [current, [current[0] - (unzig(geom[i])), current[1] - (unzig(geom[i+1]))]]
                 current = line[1];
                 segs.push(line);
             }
-            if (layer.features[l].type === 3) segs.push([current, orig]);
             validSegs = [segs[0]];
             var invalid = false;
             for (var i = 1; i < segs.length; i++) {
@@ -53,6 +48,5 @@ function intersects (seg, validSegs) {
     return false;
 }
 
-function inRange(a, b, x) {
-    return (x-a)*(x-b)<0;
-}
+function inRange(a, b, x) { return (x-a)*(x-b)<0; }
+function unzig(x) { return (x % 2 == 0) ? x / 2 : -1 * Math.floor(x / 2) -1; }
