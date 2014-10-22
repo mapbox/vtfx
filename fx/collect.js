@@ -23,30 +23,31 @@ function fx(layer, options) {
 
         switch (feature.type) {
             case 1:
-                place(value+"_point");
+                place(value+"_point", 0);
                 break;
             case 2:
-                place(value+"_line");
+                place(value+"_line", 0);
                 break;
             case 3:
-                place(value+"_poly");
+                place(value+"_poly", 1);
                 break;
         }
 
-        function place(pail) {
+        function place(pail, close) {
             if (!bucket[pail]) {
                 bucket[pail] = feature;
             } else {
-                var last = last || [0,0];
-                last = getLastCoord(bucket[pail].geometry, last);
-                feature.geometry[1] = rezig(last[0] - unzig(feature.geometry[1]));
-                feature.geometry[2] = rezig(last[1] - unzig(feature.geometry[2]));
+                var last = bucket[pail].last || [0,0]
+                bucket[pail].last = getLastCoord(bucket[pail].geometry, last, close);
+                feature.geometry[1] = rezig( bucket[pail].last[0] - unzig(feature.geometry[1]) );
+                feature.geometry[2] = rezig( bucket[pail].last[1] - unzig(feature.geometry[2]) );
                 bucket[pail].geometry = bucket[pail].geometry.concat(feature.geometry);
             }
             bucket[pail].tags = (arr != "") ? [arr[0],feature.tags[arr[0]+1]] : [];
         }
     }
     for (b in bucket) {
+        delete bucket[b].last;
         newfeatures.push(bucket[b]);
     }
     layer.features = newfeatures;
@@ -69,9 +70,7 @@ function fx(layer, options) {
     }
 }
 
-// TODO: supply old [last] array
-// so we dont start from zero / the beginning of the geom array everytime
-function getLastCoord(geom, last) {
+function getLastCoord(geom, last, close) {
     var pos = 0;
     var x = last[0];
     var y = last[1];
@@ -83,14 +82,14 @@ function getLastCoord(geom, last) {
             x += unzig(geom[d]);
             y += unzig(geom[d+1]);
         }
-        pos+=5+(repeat*2);
+        pos+=4+close+(repeat*2);
     }
     return [x,y];
 }
 
 // un-zigzag encoding so we can understand coords as real deltas in vt plane
 // from https://github.com/mapbox/pbf/blob/98f1f4487801a1ae5d0eaa8137c1bda44cf73c6c/index.js#L74-L75
-function unzig(x) { return ((x >> 1) ^ -(x & 1)); }
+function unzig(x) { return (x % 2 == 0) ? x / 2 : -1 * Math.floor(x / 2) - 1; }
 
 // re-zigzag encode coordinates so its like we decoded anything
 function rezig(x) { return (x << 1) ^ ( x >> 31); }
