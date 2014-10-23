@@ -37,11 +37,12 @@ function fx(layer, options) {
             if (!bucket[pail]) {
                 bucket[pail] = feature;
             } else {
-                var last = bucket[pail].last || [0,0]
-                bucket[pail].last = getLastCoord(bucket[pail].geometry, last, close);
-                feature.geometry[1] = rezig( bucket[pail].last[0] - unzig(feature.geometry[1]) );
-                feature.geometry[2] = rezig( bucket[pail].last[1] - unzig(feature.geometry[2]) );
+                var last = bucket[pail].last || [0,0];
+                feature.geometry[1] = rezig( unzig(feature.geometry[1]) - last[0] );
+                feature.geometry[2] = rezig( unzig(feature.geometry[2]) - last[1] );
+
                 bucket[pail].geometry = bucket[pail].geometry.concat(feature.geometry);
+                bucket[pail].last = getLastCoord(feature.geometry, last, close);
             }
             bucket[pail].tags = (arr != "") ? [arr[0],feature.tags[arr[0]+1]] : [];
         }
@@ -51,7 +52,7 @@ function fx(layer, options) {
         newfeatures.push(bucket[b]);
     }
     layer.features = newfeatures;
-    return layer
+    return layer;
 
     function getvalue(feature) {
         for (var i = 0; i<feature.tags.length; i+=2) {
@@ -75,21 +76,22 @@ function getLastCoord(geom, last, close) {
     var x = last[0];
     var y = last[1];
     while (pos < geom.length) {
-        var repeat = (geom[pos+3]>>3);
+        var repeat = (geom[pos+3] >> 3);
+        if (geom.length - repeat*2 !== 4) console.log(geom.length - repeat*2)
         x += unzig(geom[pos+1]);
         y += unzig(geom[pos+2]);
-        for (var d=pos+4; d<pos+4+(repeat*2); d+=2) {
+        for (var d=pos+4; d < pos+4+(repeat*2); d +=2 ) {
             x += unzig(geom[d]);
             y += unzig(geom[d+1]);
         }
-        pos+=4+close+(repeat*2);
+        pos += 4+close+(repeat*2);
     }
     return [x,y];
 }
 
 // un-zigzag encoding so we can understand coords as real deltas in vt plane
 // from https://github.com/mapbox/pbf/blob/98f1f4487801a1ae5d0eaa8137c1bda44cf73c6c/index.js#L74-L75
-function unzig(x) { return (x % 2 == 0) ? x / 2 : -1 * Math.floor(x / 2) - 1; }
+function unzig(x) { return ((x >> 1) ^ -(x & 1)); }
 
 // re-zigzag encode coordinates so its like we decoded anything
 function rezig(x) { return (x << 1) ^ ( x >> 31); }
