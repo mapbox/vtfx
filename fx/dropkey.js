@@ -15,13 +15,17 @@ function dropkey(layer, options) {
     var keyNames = options.options.map(function (field) { return field.field; });
     var keyIds = [];
     var l = layer.keys.length;
-    while (l--) if (keyNames.indexOf(layer.keys[l]) !== -1) keyIds.push(l);
+    while (l--) if (keyNames.indexOf(layer.keys[l]) !== -1) {
+        keyIds.push(l);
+        layer.keys.splice(l);
+    }
     var featId = layer.features.length;
     while (featId--) {
         var tagId = layer.features[featId].tags.length / 2;
         while (tagId--) {
-            if (keyIds.indexOf(layer.features[featId].tags[tagId * 2]) !== -1)
+            if (keyIds.indexOf(layer.features[featId].tags[tagId * 2]) !== -1) {
                 layer.features[featId].tags.splice(tagId * 2, 2);
+            }
         }
     }
     return layer;
