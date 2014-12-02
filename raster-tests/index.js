@@ -22,9 +22,9 @@ function decodeLoadImage(zxy, filepath, format, callback) {
         var image = mapnik.Image.fromBytesSync(decoded.layers[0].features[0].raster);
 
         // Try getting a pixel
-        return callback(null, image.getPixel(100,100));
+        return callback(null, image.getPixel(100,100), format);
     } catch(err) {
-        return callback(err);
+        return callback(err, null, format);
     }
 }
 
@@ -37,19 +37,54 @@ var zxy = {
 // UINT8 RGB
 // ---------
 
-var uint8query = decodeLoadImage(zxy, '24989.png', 'png', function(err, pData) {
-    if (err) throw err;
-    console.log(pData);
+decodeLoadImage(zxy, '24989.png', 'png_uint8_3band', function(err, pData, dType) {
+    if (err) {
+        console.log(dType + ' failed: ' + err.message);
+    } else {
+        console.log(dType + ' worked - pixel query: ' + JSON.stringify(pData));
+    }
 });
 
-console.log(uint8query);
+// UINT8 Tiff Single Band
+// ---------
 
-// Float32 single band
+decodeLoadImage(zxy, '24989_rgb_uint8.tif', 'tif_uint8_3band', function(err, pData, dType) {
+    if (err) {
+        console.log(dType + ' failed: ' + err.message);
+    } else {
+        console.log(dType + ' worked - pixel query: ' + JSON.stringify(pData));
+    }
+});
+
+// UINT8 Tiff Single Band
+// ---------
+
+decodeLoadImage(zxy, '24989_ndvi_uint8.tif', 'tif_uint8_1band', function(err, pData, dType) {
+    if (err) {
+        console.log(dType + ' failed: ' + err.message);
+    } else {
+        console.log(dType + ' worked - pixel query: ' + JSON.stringify(pData));
+    }
+});
+
+// UINT16 Tiff Single Band
+// ---------
+
+decodeLoadImage(zxy, '24989_ndvi_uint16.tif', 'tif_uint16_1band', function(err, pData, dType) {
+    if (err) {
+        console.log(dType + ' failed: ' + err.message);
+    } else {
+        console.log(dType + ' worked - pixel query: ' + JSON.stringify(pData));
+    }
+});
+
+// Float32 Tiff single band
 // -------------------
 
-var Float32query = decodeLoadImage(zxy, '24989_ndvi.tif', 'png', function(err, pData) {
-    if (err) throw err;
-    console.log(pData);
+decodeLoadImage(zxy, '24989_ndvi.tif', 'tif_float32_1band', function(err, pData, dType) {
+    if (err) {
+        console.log(dType + ' failed: ' + err.message);
+    } else {
+        console.log(dType + ' worked - pixel query: ' + JSON.stringify(pData));
+    }
 });
-
-console.log(Float32query)
