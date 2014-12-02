@@ -67,6 +67,18 @@ decodeLoadImage(zxy, '24989_ndvi_uint8.tif', 'tif_uint8_1band', function(err, pD
     }
 });
 
+// UINT16 png Single Band
+// ---------
+
+decodeLoadImage(zxy, '24989_ndvi_uint16.png', 'png_uint16_1band', function(err, pData, dType) {
+    if (err) {
+        console.log(dType + ' failed: ' + err.message);
+    } else {
+        console.log(dType + ' worked - pixel query: ' + JSON.stringify(pData));
+    }
+});
+
+
 // UINT16 Tiff Single Band
 // ---------
 
