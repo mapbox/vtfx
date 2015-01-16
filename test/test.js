@@ -72,7 +72,12 @@ function pbfEqual(buffer, filepath, assert) {
 }
 
 function jsonEqual(data, filepath, assert, encoded) {
-    var parsed = JSON.parse(data);
+    try {
+    var parsed = JSON.parse(data);        
+    } catch (err) {
+        fs.writeFileSync("bogus.json",data);
+        process.exit(0)
+    }
 
     if (encoded !== false){
         if (Array.isArray(parsed.features)) {
