@@ -1,30 +1,7 @@
 {
   "type": "FeatureCollection",
+  "name": "poi_label",
   "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4069106579,
-          37.7849314386
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "rail-light",
-        "name": "Powell",
-        "name_de": "Powell",
-        "name_en": "Powell",
-        "name_es": "Powell",
-        "name_fr": "Powell",
-        "network": "light",
-        "osm_id": -2150077204,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Rail Station"
-      }
-    },
     {
       "type": "Feature",
       "geometry": {
@@ -97,49 +74,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4078816175,
-          37.7843845299
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "name": "Powell Station",
-        "name_de": "Powell Station",
-        "name_en": "Powell Station",
-        "name_es": "Powell Station",
-        "name_fr": "Powell Station",
-        "network": "entrance",
-        "osm_id": -1950609210,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4054354429,
-          37.785906537
-        ]
-      },
-      "properties": {
-        "localrank": 0,
-        "maki": "entrance",
-        "network": "entrance",
-        "osm_id": -1677844648,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Rail Station"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3976463079,
           37.7920875139
         ]
@@ -193,122 +127,6 @@
         "ref": "",
         "scalerank": 2,
         "type": "Marketplace"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4071896076,
-          37.7870130462
-        ]
-      },
-      "properties": {
-        "address": "251-281 Geary Street",
-        "localrank": 1,
-        "maki": "shop",
-        "name": "Macy's",
-        "name_de": "Macy's",
-        "name_en": "Macy's",
-        "name_es": "Macy's",
-        "name_fr": "Macy's",
-        "osm_id": 1000032863633,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Department Store"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4148929119,
-          37.8085379234
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "restaurant",
-        "name": "Boudin",
-        "name_de": "Boudin",
-        "name_en": "Boudin",
-        "name_es": "Boudin",
-        "name_fr": "Boudin",
-        "osm_id": 1000037312428,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4009239674,
-          37.785834465
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "museum",
-        "name": "SFMOMA",
-        "name_de": "SFMOMA",
-        "name_en": "SFMOMA",
-        "name_es": "SFMOMA",
-        "name_fr": "SFMOMA",
-        "osm_id": 1000041692824,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Museum"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4033755064,
-          37.7843421337
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "shop",
-        "name": "Metreon",
-        "name_de": "Metreon",
-        "name_en": "Metreon",
-        "name_es": "Metreon",
-        "name_fr": "Metreon",
-        "osm_id": 1000024307421,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Mall"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4128705263,
-          37.8080378103
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "lodging",
-        "name": "Radisson",
-        "name_de": "Radisson",
-        "name_en": "Radisson",
-        "name_es": "Radisson",
-        "name_fr": "Radisson",
-        "osm_id": 3000001358120,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Hotel"
       }
     },
     {
@@ -385,30 +203,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4088257551,
-          37.7848720844
-        ]
-      },
-      "properties": {
-        "address": "55 Cyril Magnin Street San Francisco CA US 94102",
-        "localrank": 1,
-        "maki": "lodging",
-        "name": "Parc 55 Hotel",
-        "name_de": "Parc 55 Hotel",
-        "name_en": "Parc 55 Hotel",
-        "name_es": "Parc 55 Hotel",
-        "name_fr": "Parc 55 Hotel",
-        "osm_id": 1000288512967,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Hotel"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3992288113,
           37.7956144239
         ]
@@ -422,29 +216,6 @@
         "name_es": "Maritime Plaza",
         "name_fr": "Maritime Plaza",
         "osm_id": 1000032946402,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Common"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4084717035,
-          37.7840623183
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "park",
-        "name": "Hallidie Plaza",
-        "name_de": "Hallidie Plaza",
-        "name_en": "Hallidie Plaza",
-        "name_es": "Hallidie Plaza",
-        "name_fr": "Hallidie Plaza",
-        "osm_id": 1000128478755,
         "ref": "",
         "scalerank": 3,
         "type": "Common"
@@ -524,53 +295,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4133908749,
-          37.7982255854
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "park",
-        "name": "Ina Coolbrith Park",
-        "name_de": "Ina Coolbrith Park",
-        "name_en": "Ina Coolbrith Park",
-        "name_es": "Ina Coolbrith Park",
-        "name_fr": "Ina Coolbrith Park",
-        "osm_id": 1000114151121,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Park"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4110198021,
-          37.7976151923
-        ]
-      },
-      "properties": {
-        "address": "Broadway Street San Francicsco CA US 94133",
-        "localrank": 1,
-        "maki": "school",
-        "name": "Jean Parker School",
-        "name_de": "Jean Parker School",
-        "name_en": "Jean Parker School",
-        "name_es": "Jean Parker School",
-        "name_fr": "Jean Parker School",
-        "osm_id": 1000162056250,
-        "ref": "",
-        "scalerank": 3,
-        "type": "School"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3925340176,
           37.7893235195
         ]
@@ -617,29 +341,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4023723602,
-          37.784634667
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "park",
-        "name": "Yerba Buena Gardens",
-        "name_de": "Yerba Buena Gardens",
-        "name_en": "Yerba Buena Gardens",
-        "name_es": "Yerba Buena Gardens",
-        "name_fr": "Yerba Buena Gardens",
-        "osm_id": 1000028842443,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Park"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3943257332,
           37.7989334656
         ]
@@ -656,98 +357,6 @@
         "ref": "",
         "scalerank": 3,
         "type": "Museum"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4092924595,
-          37.8087667875
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "name": "Aquarium of the Bay",
-        "name_de": "Aquarium of the Bay",
-        "name_en": "Aquarium of the Bay",
-        "name_es": "Aquarium of the Bay",
-        "name_fr": "Aquarium of the Bay",
-        "osm_id": 1000288396169,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Aquarium"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3905545473,
-          37.7857963091
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "dog-park",
-        "name": "Rincon Hill Dog Park",
-        "name_de": "Rincon Hill Dog Park",
-        "name_en": "Rincon Hill Dog Park",
-        "name_es": "Rincon Hill Dog Park",
-        "name_fr": "Rincon Hill Dog Park",
-        "osm_id": 1000174826283,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Dog Park"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3876792192,
-          37.7846897818
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "park",
-        "name": "Brannan Street Wharf",
-        "name_de": "Brannan Street Wharf",
-        "name_en": "Brannan Street Wharf",
-        "name_es": "Brannan Street Wharf",
-        "name_fr": "Brannan Street Wharf",
-        "osm_id": 1000207811319,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Park"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4099308252,
-          37.7987808693
-        ]
-      },
-      "properties": {
-        "address": "766 Vallejo Street San Francicsco CA US 94133",
-        "localrank": 1,
-        "maki": "police",
-        "name": "Central Police Station",
-        "name_de": "Central Police Station",
-        "name_en": "Central Police Station",
-        "name_es": "Central Police Station",
-        "name_fr": "Central Police Station",
-        "osm_id": 1000162056245,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Police"
       }
     },
     {
@@ -794,122 +403,6 @@
         "ref": "",
         "scalerank": 3,
         "type": "Park"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4140882492,
-          37.8061644754
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "lodging",
-        "name": "Best Western Tuscan Inn",
-        "name_de": "Best Western Tuscan Inn",
-        "name_en": "Best Western Tuscan Inn",
-        "name_es": "Best Western Tuscan Inn",
-        "name_fr": "Best Western Tuscan Inn",
-        "osm_id": 1000033807615,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Hotel"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4109178782,
-          37.8047827545
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "school",
-        "name": "Francisco Middle School",
-        "name_de": "Francisco Middle School",
-        "name_en": "Francisco Middle School",
-        "name_es": "Francisco Middle School",
-        "name_fr": "Francisco Middle School",
-        "osm_id": 1000093420020,
-        "ref": "",
-        "scalerank": 3,
-        "type": "School"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4086219072,
-          37.7877846251
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "lodging",
-        "name": "The Westin Saint Francis",
-        "name_de": "The Westin Saint Francis",
-        "name_en": "The Westin Saint Francis",
-        "name_es": "The Westin Saint Francis",
-        "name_fr": "The Westin Saint Francis",
-        "osm_id": 1000032863405,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Hotel"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4118620157,
-          37.7948090146
-        ]
-      },
-      "properties": {
-        "address": "San Francicsco CA",
-        "localrank": 1,
-        "maki": "museum",
-        "name": "Cable Car Barn and Museum",
-        "name_de": "Cable Car Barn and Museum",
-        "name_en": "Cable Car Barn and Museum",
-        "name_es": "Cable Car Barn and Museum",
-        "name_fr": "Cable Car Barn and Museum",
-        "osm_id": 1000030029681,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Museum"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3995238543,
-          37.7862541777
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "school",
-        "name": "Academy of Art University",
-        "name_de": "Academy of Art University",
-        "name_en": "Academy of Art University",
-        "name_es": "Academy of Art University",
-        "name_fr": "Academy of Art University",
-        "osm_id": 1000080296763,
-        "ref": "",
-        "scalerank": 3,
-        "type": "School"
       }
     },
     {
@@ -1010,78 +503,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4101775885,
-          37.7923884947
-        ]
-      },
-      "properties": {
-        "address": "950 Mason Street San Francisco 94108",
-        "localrank": 1,
-        "maki": "lodging",
-        "name": "The Fairmont San Francisco Hotel",
-        "name_de": "The Fairmont San Francisco Hotel",
-        "name_en": "The Fairmont San Francisco Hotel",
-        "name_es": "The Fairmont San Francisco Hotel",
-        "name_fr": "The Fairmont San Francisco Hotel",
-        "osm_id": 1000032947165,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Hotel"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3969221115,
-          37.7860125252
-        ]
-      },
-      "properties": {
-        "address": "299 2nd Street San Francisco 94105",
-        "localrank": 1,
-        "maki": "lodging",
-        "name": "Courtyard San Francisco Downtown",
-        "name_de": "Courtyard San Francisco Downtown",
-        "name_en": "Courtyard San Francisco Downtown",
-        "name_es": "Courtyard San Francisco Downtown",
-        "name_fr": "Courtyard San Francisco Downtown",
-        "osm_id": 1000112774492,
-        "ref": "",
-        "scalerank": 3,
-        "type": "Hotel",
-        "website": "http://www.marriott.com/hotels/maps/travel/sfocd-courtyard-san-francisco-downtown/"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3934137821,
-          37.7861609084
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "fuel",
-        "name": "76",
-        "name_de": "76",
-        "name_en": "76",
-        "name_es": "76",
-        "name_fr": "76",
-        "osm_id": -2025951166,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Fuel"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4029248953,
           37.7968479549
         ]
@@ -1124,94 +545,6 @@
         "ref": "",
         "scalerank": 4,
         "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4035793543,
-          37.7873013294
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "name": "AT&T",
-        "name_de": "AT&T",
-        "name_en": "AT&T",
-        "name_es": "AT&T",
-        "name_fr": "AT&T",
-        "osm_id": -2338806865,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Mobile Phone"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3992073536,
-          37.7877295126
-        ]
-      },
-      "properties": {
-        "address": "123 2nd Street",
-        "localrank": 1,
-        "maki": "restaurant",
-        "name": "Tara",
-        "name_de": "Tara",
-        "name_en": "Tara",
-        "name_es": "Tara",
-        "name_fr": "Tara",
-        "osm_id": -1613829039,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3939073086,
-          37.7875133016
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "fuel",
-        "name": "PG&E",
-        "osm_id": -603369655,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Fuel"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3952645063,
-          37.784655865
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "post",
-        "name": "Fedex",
-        "name_de": "Fedex",
-        "name_en": "Fedex",
-        "name_es": "Fedex",
-        "name_fr": "Fedex",
-        "osm_id": -2923715576,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Post Office"
       }
     },
     {
@@ -1288,55 +621,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.3977911472,
-          37.7843802903
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "restaurant",
-        "name": "Canton",
-        "name_de": "Canton",
-        "name_en": "Canton",
-        "name_es": "Canton",
-        "name_fr": "Canton",
-        "osm_id": 1000149102132,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant",
-        "website": "http://www.cantonsf.com/"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.3874485493,
-          37.7882806359
-        ]
-      },
-      "properties": {
-        "address": "Pier 28 Embarcadero San Francisco",
-        "localrank": 1,
-        "maki": "beer",
-        "name": "Hi Dive",
-        "name_de": "Hi Dive",
-        "name_en": "Hi Dive",
-        "name_es": "Hi Dive",
-        "name_fr": "Hi Dive",
-        "osm_id": -2422144977,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Pub",
-        "website": "http://www.hidivesf.com/"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.4000656605,
           37.793253278
         ]
@@ -1399,31 +683,6 @@
         "ref": "",
         "scalerank": 4,
         "type": "Hotel"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4122428894,
-          37.8059864638
-        ]
-      },
-      "properties": {
-        "address": "320 Bay and Powell 94133",
-        "localrank": 1,
-        "maki": "grocery",
-        "name": "Walgreens",
-        "name_de": "Walgreens",
-        "name_en": "Walgreens",
-        "name_es": "Walgreens",
-        "name_fr": "Walgreens",
-        "osm_id": -1945590093,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Supermarket",
-        "website": "http://www.walgreens.com/locator/Walgreens-320-BAY-ST-SAN-FRANCISCO-CA-94133/id=2125"
       }
     },
     {
@@ -1502,29 +761,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.4146568775,
-          37.8090719387
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "restaurant",
-        "name": "Franciscan",
-        "name_de": "Franciscan",
-        "name_en": "Franciscan",
-        "name_es": "Franciscan",
-        "name_fr": "Franciscan",
-        "osm_id": 1000288472567,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.3985207081,
           37.8009044734
         ]
@@ -1542,29 +778,6 @@
         "ref": "",
         "scalerank": 4,
         "type": "Museum"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.4100059271,
-          37.8085845439
-        ]
-      },
-      "properties": {
-        "localrank": 1,
-        "maki": "restaurant",
-        "name": "Hard Rock Cafe",
-        "name_de": "Hard Rock Cafe",
-        "name_en": "Hard Rock Cafe",
-        "name_es": "Hard Rock Cafe",
-        "name_fr": "Hard Rock Cafe",
-        "osm_id": -643445596,
-        "ref": "",
-        "scalerank": 4,
-        "type": "Restaurant"
       }
     },
     {
@@ -1707,6 +920,5 @@
         "type": "Ferry Terminal"
       }
     }
-  ],
-  "name": "poi_label"
+  ]
 }

@@ -19,6 +19,6 @@ function toGeoJSON(decoded) {
     var vt = new mapnik.VectorTile(0,0,0);
     vt.setData(vtfx.encode(decoded));
     vt.parse();
-    return vt.toGeoJSON('layer');
+    return JSON.parse(vt.toGeoJSON('layer'));
 }
 

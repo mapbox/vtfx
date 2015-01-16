@@ -72,15 +72,17 @@ function pbfEqual(buffer, filepath, assert) {
 }
 
 function jsonEqual(data, filepath, assert, encoded) {
+    var parsed = JSON.parse(data);        
+
     if (encoded !== false){
-        if (Array.isArray(data.features)) {
-            for (var i = 0; i < data.features.length; i++) {
-                data.features[i].geometry.coordinates = precision(data.features[i].geometry.coordinates);
+        if (Array.isArray(parsed.features)) {
+            for (var i = 0; i < parsed.features.length; i++) {
+                parsed.features[i].geometry.coordinates = precision(parsed.features[i].geometry.coordinates);
             }
         }
     }
-    if (UPDATE) fs.writeFileSync(filepath, JSON.stringify(data, null, 2));
-    assert.deepEqual(data, JSON.parse(fs.readFileSync(filepath)));
+    if (UPDATE) fs.writeFileSync(filepath, JSON.stringify(parsed, null, 2));
+    assert.deepEqual(parsed, JSON.parse(fs.readFileSync(filepath)));
 }
 
 function precision(coords) {

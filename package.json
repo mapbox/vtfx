@@ -8,7 +8,7 @@
     "protocol-buffers": "https://github.com/mapbox/protocol-buffers/archive/mvt-hacks.tar.gz"
   },
   "devDependencies": {
-    "mapnik": "1.4.15",
+    "mapnik": "~3.1.4",
     "tape": "2.13.x",
     "benchmark": "1.0.0"
 
