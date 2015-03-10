@@ -1,6 +1,7 @@
 var mapnik = require('mapnik');
 var fs = require('fs');
 var vtfx = require('../index.js');
+var zlib = require('zlib');
 
 function decodeLoadImage(zxy, filepath, format, callback) {
     try {
@@ -12,8 +13,10 @@ function decodeLoadImage(zxy, filepath, format, callback) {
         vtile.addImage(iBuffer, 'raster');
 
         // Write the vector tile to disk
-        fs.writeFileSync('rasterbuffer-' + format + '.vector.pbf', vtile.getData());
-
+        zlib.gzip(vtile.getData(), function(err, data) {
+            if (err) throw err;
+            fs.writeFileSync(format + '.vector.pbf', data);
+        });
         // Try decoding the image with vtfx
         var decoded = vtfx.decode(vtile.getData());
 
@@ -29,10 +32,11 @@ function decodeLoadImage(zxy, filepath, format, callback) {
 }
 
 var zxy = {
-    z: 16,
-    x: 10642,
-    y: 24989
+    z: 0,
+    x: 0,
+    y: 0
 };
+
 
 // UINT8 RGB
 // ---------
